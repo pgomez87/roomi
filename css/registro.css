@@ -1,0 +1,73 @@
+.sct-registro {
+    background-image: url("../images/vivienda-back.jpg");
+    background-size: cover;
+    min-height: 400px;
+    opacity: .9;
+    overflow: hidden;
+}
+
+.reg-form {
+    background-color: black;
+    color: white;
+    float: right;
+    opacity: .9;
+    width: 50%;
+    text-align: center;
+}
+
+.reg-form form {
+    border: solid 1px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    margin-top: 10%;
+    padding: 5% 10% 2% 10%;
+    margin-bottom: 10%;
+}
+
+.reg-form form h1 {
+    margin-bottom: 20px;
+}
+
+.reg-form form div {
+    padding: 2.3%;
+}
+
+.reg-form form input {
+    background: black;
+    border: solid 1px rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    color: #ffffff;
+    height: 20px;
+    outline: none;
+    width: 80%;
+}
+
+.reg-form form textarea {
+    background: black;
+    border: solid 1px rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    color: #ffffff;
+    height: 70px;
+    outline: none;
+    width: 85%;
+}
+
+.side-form {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+button:hover {
+    background-color: #bbbbbf;
+}
+
+button {
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: #52D1DC;
+    font-weight: bold;
+    cursor: pointer;
+    color: #232525;
+    padding: 10px;
+    border-color: #52D1DC;
+    outline: none;
+}

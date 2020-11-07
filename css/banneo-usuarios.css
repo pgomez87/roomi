@@ -1,0 +1,47 @@
+.container-banneo {
+    width: 100%;
+    /* background-color: red; */
+    float: left;
+}
+
+.info-banneo h1 {
+    font-size: 40px;
+    margin: 15px;
+}
+
+.usuarios-banneados {
+    /* background-color: blue; */
+}
+
+.container-banneo h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 12.4%;
+    margin-top: 20px;
+}
+
+table {
+    margin: 0 auto;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+td,
+th {
+    border: 1px solid #bbbbbf;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #bbbbbf;
+}
+
+th {
+    background-color: #252323;
+    color: #52d1dc;
+    font-weight: bold;
+}

@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*Header*/
+
+header {
+    background-color: #232525;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 70px;
+}
+
+.container-header {
+    width: 100%;
+    height: 70px;
+}
+
+.nav-header {
+    width: 85%;
+    float: left;
+}
+
+.logo-header img {
+    width: 90%;
+    padding: 6px 0 0 10px;
+}
+
+.logo-header {
+    height: 70px;
+    width: 10%;
+    float: left;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin-left: 70%;
+    margin-top: 2%;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding-left: 2%;
+}
+
+header nav p {
+    color: #fff;
+}
+
+button {
+    background-color: #52d1dc;
+    border-radius: 10px;
+    border: none;
+    color: #252323;
+    padding: 2px;
+    width: 100px;
+}
+
+
+/*Body General*/
+
+main {
+    margin-top: 1%;
+    padding: 2%;
+}
+
+main h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.h1-offdiv {
+    margin: 2%;
+}
+
+main section {
+    display: flow-root;
+}
+
+main p {
+    font-size: 15px;
+}
+
+
+/*Viviendas*/
+
+.sct-viviendas div {
+    float: left;
+    width: 45%;
+    min-height: 300px;
+    margin-top: 4%;
+    margin: 2%;
+}
+
+.img-viviendas {
+    background-image: url("../images/apartamento.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.txt-viviendas p {
+    margin-top: 7%;
+}
+
+
+/*Roommates*/
+
+.sct-roommates {
+    margin-top: 1%;
+}
+
+.sct-roommates div {
+    float: left;
+    width: 45%;
+    min-height: 300px;
+    margin-top: 4%;
+    margin: 2%;
+}
+
+.img-roommates {
+    background-image: url("../images/roomiesmesa.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.txt-roommates p {
+    margin-top: 7%;
+}
+
+
+/*Features*/
+
+.sct-features {
+    margin-top: 1%;
+}
+
+.sct-features div {
+    float: left;
+    width: 45%;
+    min-height: 50px;
+    margin-top: 4%;
+    margin: 2%;
+}
+
+.sct-features i {
+    margin-bottom: 5%;
+    color: #232525;
+}
+
+
+/*Testimonios*/
+
+.sct-testimonios {
+    margin-top: 2%;
+}
+
+.sct-testimonios div {
+    float: left;
+    width: 45%;
+    min-height: 50px;
+    margin-top: 4%;
+    margin: 2%;
+}
+
+.sct-testimonios img {
+    background-color: #232525;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    margin: 4%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sct-testimonios #testimonio-user1 {
+    background-image: url(../images/fotomujer1.jpg);
+}
+
+.sct-testimonios #testimonio-user2 {
+    background-image: url(../images/fotohombre1.jpg);
+}
+
+
+/*Footer*/
+
+footer {
+    width: 100%;
+    background-color: #232525;
+    position: absolute;
+    left: 0;
+    margin-top: 1%;
+}
+
+.footer {
+    height: 100px;
+    display: flow-root;
+    bottom: 100px;
+}
+
+.foot-3D {
+    float: left;
+}
+
+.foot-3D img {
+    height: 100px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+.iconos-sociales {
+    position: absolute;
+    left: 46%;
+    float: left;
+}
+
+.texto-social p {
+    position: absolute;
+    color: #fff;
+    width: 220px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.iconos-sociales .imagenes-sociales i {
+    color: #ffff;
+    padding-top: 50px;
+    padding-left: 10px;
+}
+
+.foot-roomi {
+    float: left;
+}
+
+.foot-roomi img {
+    height: 75px;
+    position: absolute;
+    right: 0;
+    padding-right: 20px;
+    margin-top: 30px;
+}
+
+.texto-roomi {
+    position: absolute;
+    right: 0;
+    color: #fff;
+    padding-top: 20px;
+    padding-right: 55px;
+}
+
+.copyright {
+    height: 30px;
+}
+
+.foot-copyright h2 {
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    padding-left: 10px;
+}

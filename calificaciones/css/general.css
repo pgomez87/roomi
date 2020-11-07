@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Este documento requiere el uso del archivo "reset.css" para que funcione correctamente */
+
+
+/*Empieza header*/
+
+header {
+    background-color: #232525;
+    height: 70px;
+}
+
+.container-header {
+    width: 100%;
+    height: 70px;
+}
+
+.nav-header a {
+    color: white;
+    text-decoration: none;
+    margin: 1%;
+    display: inline-block;
+    padding-top: 15px;
+    font-weight: bold;
+}
+
+.nav-header a:hover {
+    color: #52D1DC;
+}
+
+.nav-header {
+    width: 85%;
+    height: 70px;
+    float: left;
+}
+
+.logo-header img {
+    width: 90%;
+    padding: 10px 0 0 10px;
+}
+
+.logo-header {
+    height: 70px;
+    width: 10%;
+    float: left;
+}
+
+.icon-header i {
+    color: white;
+    margin: 18px;
+}
+
+.icon-header {
+    width: 5%;
+    height: 70px;
+    float: left;
+    font-size: 26pt;
+    color: white;
+}
+
+
+/*Empieza footer*/
+
+section {
+    width: 100%;
+    overflow: hidden;
+}
+
+footer {
+    background-color: #232525;
+    left: 0;
+}
+
+.footer-final {
+    height: 100px;
+    display: flow-root;
+    bottom: 100px;
+}
+
+.foot-3D {
+    float: left;
+}
+
+.foot-3D img {
+    height: 100px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+.foot-3D:hover img {
+    filter: hue-rotate(60deg) brightness(500%);
+}
+
+.iconos-sociales {
+    position: absolute;
+    left: 46%;
+    float: left;
+}
+
+.texto-social p {
+    position: absolute;
+    color: #fff;
+    width: 220px;
+    padding-top: 20px;
+}
+
+.iconos-sociales .imagenes-sociales i {
+    color: #ffff;
+    padding-top: 50px;
+}
+
+.foot-roomi {
+    float: left;
+}
+
+.foot-roomi img {
+    height: 75px;
+    position: absolute;
+    right: 0;
+    padding-right: 20px;
+    margin-top: 30px;
+}
+
+.foot-roomi:hover img {
+    filter: hue-rotate(60deg) brightness(500%);
+}
+
+.texto-roomi {
+    position: absolute;
+    right: 0;
+    color: #fff;
+    padding-top: 20px;
+    padding-right: 55px;
+}
+
+.copyright {
+    height: 30px;
+}
+
+.copyright h2 {
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.error-input {
+    border: 1px solid #ee5253 !important;
+}

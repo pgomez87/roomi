@@ -1,0 +1,208 @@
+.container-cajas {
+    margin-top: 20px;
+    height: 100%;
+    width: 90%;
+    /* background-color: red; */
+    float: left;
+    background: BBBBBF;
+}
+
+.caja-info-main {
+    padding: 10px;
+    margin: 5px 10px 10px 24px;
+    width: 45%;
+    height: 50%;
+    /* background-color: blue; */
+    float: left;
+    border: solid 2px #136f63;
+    border-radius: 5px;
+}
+
+.caja-info-main h3 {
+    margin: 5px;
+}
+
+.container-cajas-main {
+    width: 75%;
+    height: 100%;
+    /* background-color: coral; */
+    float: left;
+}
+
+.container-cajas-side {
+    width: 25%;
+    /* height:100%; */
+    /* background-color: blueviolet; */
+    float: left;
+}
+
+#caja-info-side-1 {
+    border: solid 2px #136f63;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 0px 9px 0px;
+    width: 95%;
+    height: 70%;
+    /* background-color: palegoldenrod; */
+    float: left;
+}
+
+#caja-info-side-2 {
+    border: solid 2px #136f63;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 30px 9px 9px 0px;
+    width: 95%;
+    height: 30%;
+    /* background-color: palegreen; */
+    float: left;
+}
+
+.container-sidebar {
+    width: 10%;
+    height: 100%;
+    /* background-color: gold; */
+    float: left;
+}
+
+.publicidad img {
+    margin-top: 70%;
+    margin-left: 16%;
+    margin-bottom: 40%;
+}
+
+.sos {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: solid 1px #252323;
+    background-color: red;
+    color: white;
+    margin-bottom: 20px;
+    top: 90%;
+    left: 93%;
+    position: sticky;
+    overflow: visible;
+}
+
+.sos h3 {
+    position: relative;
+    color: black;
+}
+
+.caja-info-side h1 {
+    height: 100%;
+    display: inline-block;
+}
+
+.caja-info-side p {
+    height: 100%;
+    display: inline-block;
+}
+
+.container-cajas h1 {
+    font-size: 40px;
+    margin-left: 1.4%;
+    margin-bottom: 0.5%;
+}
+
+.botones-dashboard {
+    display: inline-block;
+    float: right;
+    margin-top: 8px;
+    margin-right: 5px;
+    padding: 5px;
+    border: solid 2px #136f63;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #136f63;
+    cursor: pointer;
+    outline: none;
+}
+
+.botones-dashboard:hover {
+    background-color: #136f63;
+    border: solid 2px #136f63;
+    color: #fff;
+}
+
+#info-viviendas {
+    height: 400px;
+    width: 100%;
+    /* background-color: #bbbbbf; */
+    float: left;
+    margin-top: 10px;
+    border: solid 2px #136f63;
+    border-radius: 5px;
+}
+
+#info-proveedores {
+    height: 400px;
+    width: 100%;
+    /* background-color: #bbbbbf; */
+    float: left;
+    margin-top: 10px;
+    border: solid 2px #136f63;
+    border-radius: 5px;
+}
+
+#info-notificaciones {
+    height: 400px;
+    width: 100%;
+    /* background-color: #bbbbbf; */
+    float: left;
+    margin-top: 10px;
+    border: solid 2px #136f63;
+    border-radius: 5px;
+}
+
+#info-publicidad {
+    height: 400px;
+    width: 100%;
+    /* background-color: #bbbbbf; */
+    float: left;
+    margin-top: 10px;
+    border: solid 2px #136f63;
+    border-radius: 5px;
+}
+
+.search-bar {
+    margin: 0 auto;
+    width: 95%;
+    height: 30px;
+    /* background-color: green; */
+    border: solid 2px #136f63;
+    border-radius: 5px;
+}
+
+.search-bar input {
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+#search-proveedores,
+#search-notificaciones {
+    visibility: hidden;
+}
+
+#info-usuarios {
+    height: 500px;
+    width: 100%;
+    /* background-color: #bbbbbf; */
+    float: left;
+    margin-top: 10px;
+    border: solid 2px #136f63;
+    border-radius: 5px;
+}
+
+#info-anuncios {
+    height: 315px;
+    width: 100%;
+    /* background-color: #bbbbbf; */
+    float: left;
+    margin-top: 10px;
+    border: solid 2px #136f63;
+    border-radius: 5px;
+}

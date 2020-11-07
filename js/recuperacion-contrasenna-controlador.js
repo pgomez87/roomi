@@ -1,0 +1,85 @@
+'use strict';
+
+const boton_confirmar = document.querySelector('#btn-enviar');
+const input_txtcorreo = document.querySelector('#txt-correo');
+const input_nuevasenna = document.querySelector('#pass-nueva');
+const input_verificasenna = document.querySelector('#pass-verifica');
+const input_checkbox = document.querySelector('#robot-select');
+
+const limpiar = () => {
+    input_txtcorreo.value = '';
+    input_nuevasenna.value = '';
+    input_verificasenna.value = '';
+};
+
+
+const obtener_datos = () => {
+
+    let txtcorreo = input_txtcorreo.value;
+    let nuevasenna = input_nuevasenna.value;
+    let verificasenna = input_verificasenna.value;
+
+    console.log('El correo es: ', txtcorreo);
+    console.log('La nueva contraseña es: ', nuevasenna);
+    console.log('La contraseña de verificación es: ', verificasenna);
+
+    Swal.fire({
+        'title': 'Su contraseña ha sido cambiada',
+        'icon': 'success',
+        'text': 'Nos pondremos en contacto con usted lo antes posible'
+    }).then(() => {
+        limpiar();
+    });
+
+};
+
+const validar = () => {
+    let error = false;
+    let regex_correo = /^[a-zA-Z0-9.]+@{1}[a-zA-Z]+(.com|.net|.org|.ac.cr)$/
+    let regex_contrasenna = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+    let campos_requeridos = document.querySelectorAll(':required');
+
+
+    campos_requeridos.forEach(campo => {
+        if (campo.value == '') {
+            error = true;
+            campo.classList.add('error-input');
+        } else {
+            campo.classList.remove('error-input');
+        }
+    });
+
+    if (!regex_correo.test(input_txtcorreo.value)) {
+        error = true;
+        input_txtcorreo.classList.add('error-input');
+    } else {
+        input_txtcorreo.classList.remove('error-input');
+    }
+
+    if (!regex_contrasenna.test(input_nuevasenna.value)) {
+        error = true;
+        input_nuevasenna.classList.add('error-input');
+    } else {
+        input_nuevasenna.classList.remove('error-input');
+    }
+
+    if (!regex_contrasenna.test(input_verificasenna.value)) {
+        error = true;
+        input_verificasenna.classList.add('error-input');
+    } else {
+        input_verificasenna.classList.remove('error-input');
+    }
+
+    if (error == false) {
+        obtener_datos();
+    } else {
+        Swal.fire({
+            'title': 'No se pudo cambiar su contraseña',
+            'icon': 'warning',
+            'text': 'Por favor revise los datos que se le solicitan'
+        });
+    }
+
+};
+
+boton_confirmar.addEventListener('click', validar);

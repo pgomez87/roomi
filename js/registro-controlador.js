@@ -1,0 +1,117 @@
+'use strict';
+
+const boton_enviar = document.querySelector('#btn-enviar');
+const input_nombre = document.querySelector('#txt-nombre');
+const input_apellido = document.querySelector('#txt-apellido');
+const input_contrasena = document.querySelector('#txt-contrasena');
+const input_correo = document.querySelector('#txt-correo');
+const input_telefono = document.querySelector('#txt-telefono');
+const input_cedula = document.querySelector('#txt-cedula');
+const input_direccion = document.querySelector('#txt-direccion');
+
+
+
+const limpiar = () => {
+    input_nombre.value = '';
+    input_apellido.value = '';
+    input_contrasena.value = '';
+    input_correo.value = '';
+    input_telefono.value = '';
+    input_cedula.value = '';
+    input_direccion.value = '';
+}
+
+const obtener_datos = () => {
+
+    let nombre = input_nombre.value;
+    let apellido = input_apellido.value;
+    let contrasena = input_contrasena.value;
+    let correo = input_correo.value;
+    let telefono = input_telefono.value;
+    let cedula = input_cedula.value;
+    let direccion = input_direccion.value;
+
+    console.log(nombre);
+    console.log(apellido);
+    console.log(contrasena);
+    console.log(correo);
+    console.log(telefono);
+    console.log(cedula);
+    console.log(direccion);
+
+    Swal.fire({
+        'title': 'Excelente!',
+        'icon': 'success',
+        'text': 'Su registro fue exitoso.'
+    }).then(() => {
+        limpiar();
+    });
+};
+
+
+const validar = () => {
+    let error = false;
+    let regex_nombre = /^[a-zA-Z ]+$/;
+    let regex_telefono = /^[a-zA-Z0-9]+$/;
+    let regex_correo = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let regex_direccion = /^[a-zA-Z]+$/;
+    let campos_requeridos = document.querySelectorAll(':required');
+
+    campos_requeridos.forEach(campo => {
+        if (campo.value == '') {
+            error = true;
+            campo.classList.add('error-input');
+        } else {
+            campo.classList.remove('error-input');
+        }
+    });
+
+    if (regex_nombre.test(input_nombre.value)) {
+        input_nombre.classList.remove('error-input');
+    } else {
+        error = true;
+        input_nombre.classList.add('error-input');
+    };
+
+    if (regex_telefono.test(input_telefono.value)) {
+        input_telefono.classList.remove('error-input');
+    } else {
+        error = true;
+        input_telefono.classList.add('error-input');
+    };
+
+    if (regex_correo.test(input_correo.value)) {
+        input_correo.classList.remove('error-input');
+    } else {
+        error = true;
+        input_correo.classList.add('error-input');
+    };
+
+    if (regex_direccion.test(input_direccion.value)) {
+        input_direccion.classList.remove('error-input');
+    } else {
+        error = true;
+        input_direccion.classList.add('error-input');
+    };
+
+    if (error == false) {
+        obtener_datos();
+
+    } else {
+        Swal.fire({
+            'title': 'Debes revisar los datos. ',
+            'text': 'Su formulario no fue enviado.',
+            'icon': 'warning'
+        });
+
+    };
+
+};
+
+
+
+
+
+
+
+boton_enviar.addEventListener('click', validar);

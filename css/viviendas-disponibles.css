@@ -1,0 +1,69 @@
+main{
+    padding: 2%;
+    overflow: hidden;
+}
+h1{
+    font-weight: bold;
+    font-size: 14pt;
+    margin: 1%;
+}
+.contenedor-viviendas{
+    width: 25%;
+    padding: 1%;
+    border: solid 3px #136F63;
+    border-radius: 5px;
+    float: left;
+}
+.contenedor-viviendas h2{
+    font-weight: bold;
+    margin: 3%;
+}
+.contenedor-viviendas p{
+    margin: 4%;
+}
+.contenedor-viviendas img{
+    width: 32%;
+    height: 12vh;
+}
+button{
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #52D1DC;
+    width: 150px;
+    margin: 3% 0;
+}
+iframe{
+    margin-left: 2.5%;
+    width: 53%;
+    float: left;
+    height: 65vh;
+}
+.anuncio{
+    width: 16%;
+    height: 70vh;
+    float: right;
+    margin: 0 1%;
+    position: relative;
+}
+.anuncio img{
+    width: 100%;
+}
+.sos-boton{
+    width: 90px;
+    height: 90px;
+    background-color: #e74c3c;
+    border-radius: 50px;
+    border: solid 2px black;
+    padding-top: 10px;
+    margin-left: 60%;
+    position: absolute;
+    bottom: 0;
+}
+.sos-icon{
+    font-size: 36pt;
+    text-align: center;
+}
+.sos-boton p{
+    text-align: center;
+}

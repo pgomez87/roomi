@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+.container-inicio-sesion {
+    height: 800px;
+    width: 100%;
+    /* background-color: red; */
+    float: left;
+    background-image: url(../images/Roommates.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container-form-sesion {
+    height: 100%;
+    width: 50%;
+    background-color: #252323;
+    float: left;
+    opacity: 0.9;
+}
+
+.container-imagen-inicio-sesion {
+    height: 100%;
+    width: 50%;
+    float: left;
+    /* background-color: blue; */
+}
+
+.container-imagen-inicio-sesion p {
+    float: right;
+    font-size: 15px;
+    visibility: hidden;
+}
+
+.form-inicio-sesion {
+    display: inline-block;
+    margin-left: 26%;
+    margin-top: 30%;
+    /* background-color: aquamarine; */
+}
+
+.form-inicio-sesion input {
+    margin: 20px;
+    height: 40px;
+    width: 400px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: solid 2px #136f63;
+}
+
+.form-inicio-sesion input:focus {
+    border: solid 2px #52d1dc;
+    outline: none;
+}
+
+.form-inicio-sesion button {
+    border: solid 2px #136f63;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+    height: 40px;
+    width: 110px;
+    font-size: 20px;
+    outline: none;
+    background-color: #136f63;
+}
+
+.form-inicio-sesion button:hover {
+    background-color: #52d1dc;
+    border: solid 2px #52d1dc;
+}
+
+.form-inicio-sesion a {
+    margin: 20px;
+    height: 40px;
+    width: 400px;
+    font-size: 15px;
+    text-decoration: none;
+    color: #136F63;
+}
+
+.form-inicio-sesion a:hover {
+    color: #52d1dc;
+}
+
+.error-input {
+    border: solid 3px red !important;
+}
