@@ -65,6 +65,24 @@ header {
     color: white;
 }
 
+.icon-header #links {
+    display: none;
+}
+
+.icon-header a {
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 10px;
+    display: block;
+}
+
+.icon-header:hover a,
+.icon-header:hover i {
+    background-color: #bbbbbf;
+    color: black;
+}
+
 
 /*Empieza footer*/
 
