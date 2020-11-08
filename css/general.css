@@ -52,35 +52,50 @@ header {
     float: left;
 }
 
-.icon-header i {
-    color: white;
-    margin: 18px;
-}
-
-.icon-header {
+.icon-burguer {
     width: 5%;
     height: 70px;
     float: left;
+}
+
+.icon-burguer i {
+    color: white;
+    cursor: pointer;
     font-size: 26pt;
-    color: white;
-}
-
-.icon-header #links {
-    display: none;
-}
-
-.icon-header a {
-    color: white;
-    padding: 5px 5px;
+    margin: 18px;
     text-decoration: none;
-    font-size: 10px;
     display: block;
 }
 
-.icon-header:hover a,
-.icon-header:hover i {
-    background-color: #bbbbbf;
+.icon-burguer:hover i {
     color: black;
+}
+
+.burguer-menu {
+    background-color: #252323;
+    border-radius: 5px;
+    color: #fff;
+    opacity: 0;
+    position: absolute;
+    text-decoration: #fff;
+    width: 150px;
+    right: 0px;
+    transition: 0.3s;
+    top: 60px;
+    z-index: 90;
+}
+
+.burguer-menu-active {
+    opacity: 1;
+}
+
+.burguer-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.burguer-menu ul li {
+    padding: 10px;
 }
 
 

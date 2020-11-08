@@ -1,10 +1,15 @@
+/* .dash-admin {
+    background-image: url(../images/back-admin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
 .container-cajas {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     height: 100%;
     width: 90%;
-    /* background-color: red; */
+    /* background-color: white; */
     float: left;
-    background: BBBBBF;
 }
 
 .caja-info-main {
@@ -104,6 +109,7 @@
     font-size: 40px;
     margin-left: 1.4%;
     margin-bottom: 0.5%;
+    margin-top: 0.5%;
 }
 
 .botones-dashboard {

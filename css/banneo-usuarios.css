@@ -2,6 +2,8 @@
     width: 100%;
     /* background-color: red; */
     float: left;
+    background-color: white;
+    opacity: 0.9;
 }
 
 .info-banneo h1 {
@@ -31,7 +33,7 @@ table {
 
 td,
 th {
-    border: 1px solid #bbbbbf;
+    border: 1px solid #252323;
     text-align: left;
     padding: 8px;
 }
@@ -44,4 +46,16 @@ th {
     background-color: #252323;
     color: #52d1dc;
     font-weight: bold;
+}
+
+.info-banneo {
+    background-image: url(../images/apartments.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.95;
+}
+
+tr:hover {
+    background-color: #52d1dc;
+    cursor: pointer;
 }
