@@ -4,6 +4,8 @@
 <head>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/landing-page.css">
+    <link rel="stylesheet" href="css/general.css">
+
     <title>Roomi</title>
     <meta charset="utf-8">
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
@@ -11,25 +13,36 @@
 </head>
 
 <body>
+
     <header>
         <div class="container-header">
             <div class="logo-header">
-                <img src="images/Logo_1500x600.png">
+                <a href="landing-page.html"><img src="images/Logo_1500x600.png"></a>
             </div>
             <div class="nav-header">
                 <nav>
-                    <ul>
-                        <li><a href="registro.html"><button type="button" class="btn-register">Registrarse</button></a></button>
-                        </li>
-                        <li>
+
+                    <div class="der-nav">
+                        <div class="consulta">
                             <p>¿Ya es miembro?</p>
-                        </li>
-                        <li><a href="inicio-sesion.html"><button type="button" class="btn-ingresar">Ingresar</button></a></li>
-                    </ul>
+                        </div>
+
+                        <div class="btns-nav">
+                            <div class="btn-registrarse">
+                                <a href="registro.html"><button type="button" class="btns-nav" id="btns-nav">Registrarse</button></a>
+                            </div>
+
+                            <div class="btn-ingresar">
+                                <a href="inicio-sesion.html"><button type="button" class="btns-nav" id="btns-nav">Ingresar</button></a>
+                            </div>
+                        </div>
+                    </div>
+
                 </nav>
             </div>
         </div>
     </header>
+
     <main>
         <section class="sct-viviendas">
             <div class="img-viviendas"></div>

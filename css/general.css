@@ -98,6 +98,22 @@ header {
     padding: 10px;
 }
 
+header nav p {
+    color: #fff;
+}
+
+.der-nav {
+    float: right;
+}
+
+.btns-nav {
+    display: inline-block;
+}
+
+.consulta {
+    display: inline-block;
+}
+
 
 /*Empieza footer*/
 

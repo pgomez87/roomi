@@ -36,19 +36,8 @@ header {
     float: left;
 }
 
-header nav ul {
-    list-style-type: none;
-    margin-left: 70%;
-    margin-top: 2%;
-}
-
-header nav ul li {
-    display: inline-block;
-    padding-left: 2%;
-}
-
-header nav p {
-    color: #fff;
+.nav-header a {
+    padding-top: 9px !important;
 }
 
 button {
@@ -56,7 +45,7 @@ button {
     border-radius: 10px;
     border: none;
     color: #252323;
-    padding: 2px;
+    cursor: pointer;
     width: 100px;
 }
 
