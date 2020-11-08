@@ -113,7 +113,7 @@
 }
 
 .botones-dashboard {
-    display: inline-block;
+    /* display: inline-block; */
     float: right;
     margin-top: 8px;
     margin-right: 5px;
@@ -140,6 +140,8 @@
     margin-top: 10px;
     border: solid 2px #136f63;
     border-radius: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 #info-proveedores {
@@ -150,6 +152,8 @@
     margin-top: 10px;
     border: solid 2px #136f63;
     border-radius: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 #info-notificaciones {
@@ -160,6 +164,8 @@
     margin-top: 10px;
     border: solid 2px #136f63;
     border-radius: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 #info-publicidad {
@@ -170,6 +176,8 @@
     margin-top: 10px;
     border: solid 2px #136f63;
     border-radius: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .search-bar {
@@ -201,6 +209,8 @@
     margin-top: 10px;
     border: solid 2px #136f63;
     border-radius: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 #info-anuncios {
@@ -211,4 +221,115 @@
     margin-top: 10px;
     border: solid 2px #136f63;
     border-radius: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.container-datos-usuarios {
+    width: 100%;
+    background-color: green;
+    margin: 10px;
+}
+
+.nombre-usuario {
+    height: 50px;
+    width: 80%;
+    /* background-color: yellow; */
+    float: left;
+    padding: 32px 10px 0px 24px;
+    margin-bottom: 20px;
+}
+
+.contenedor-imagen-usuario {
+    height: 50px;
+    width: 20%;
+    /* background-color: lightcoral; */
+    padding: 10px 10px 10px 10px;
+    float: left;
+    /* margin-bottom: 50px; */
+}
+
+.imagen-usuario {
+    height: 60px;
+    width: 60px;
+    /* background-color: red; */
+    border-radius: 50%;
+    float: left;
+}
+
+#usuario1 {
+    background-image: url(../images/profile1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#usuario2 {
+    background-image: url(../images/profile2.jpg);
+    background-size: cover;
+    background-position: 80%;
+}
+
+#usuario3 {
+    background-image: url(../images/profile3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#usuario4 {
+    background-image: url(../images/profile4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#usuario5 {
+    background-image: url(../images/profile5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#usuario6 {
+    background-image: url(../images/profile6.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+
+/*tablas*/
+
+table {
+    margin-left: 10px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 95%;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    table-layout: fixed;
+}
+
+td,
+th {
+    border: 1px solid #252323;
+    text-align: left;
+    padding: 5px;
+    word-wrap: break-word;
+}
+
+tr:nth-child(odd) {
+    background-color: #bbbbbf;
+}
+
+tr:hover {
+    background-color: #52d1dc;
+    cursor: pointer;
+}
+
+tr:focus {
+    background-color: #52d1dc;
+    cursor: pointer;
+}
+
+th {
+    background-color: #252323;
+    color: #52d1dc;
+    font-weight: bold;
 }
