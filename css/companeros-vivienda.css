@@ -103,5 +103,9 @@
     background-size: cover;
 }
 
+section {
+    overflow: visible;
+}
+
 
 /*sidebar publicidad*/
