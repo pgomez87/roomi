@@ -71,23 +71,23 @@
 }
 
 #foto1 {
-    background-image: url(../images/profile6.jpg);
+    background-image: url(../images/profile1.jpg);
     background-size: cover;
 }
 
 #foto2 {
-    background-image: url(../images/profile3.jpg);
+    background-image: url(../images/profile2.jpg);
     background-size: cover;
 }
 
 #foto3 {
-    background-image: url(../images/profile1.jpg);
+    background-image: url(../images/profile3.jpg);
     background-size: cover;
     background-position: center;
 }
 
 #foto4 {
-    background-image: url(../images/profile2.jpg);
+    background-image: url(../images/profile4.jpg);
     background-size: cover;
     background-position: right;
 }
