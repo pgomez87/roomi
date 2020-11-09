@@ -42,13 +42,13 @@ function obtenerDatos() {
 
     detectar_usuario();
 
-    Swal.fire({
-        'title': 'Su mensaje ha sido enviado',
-        'icon': 'success',
-        'text': 'Nos pondremos en contacto con usted lo antes posible.'
-    }).then(() => {
-        limpiar();
-    });
+    // Swal.fire({
+    //     'title': '',
+    //     'icon': 'success',
+    //     'text': 'Nos pondremos en contacto con usted lo antes posible.'
+    // }).then(() => {
+    //     limpiar();
+    // });
 }
 
 const validar = () => {
@@ -86,9 +86,10 @@ const validar = () => {
 
     if (error == false) {
         obtenerDatos();
+        window.open("dashboard-coordinador.html", "_self")
     } else {
         Swal.fire({
-            'title': 'No se pudo enviar su mensaje',
+            'title': 'No se puede iniciar sesión',
             'icon': 'warning',
             'text': 'Por favor revise los campos resaltados'
         });
