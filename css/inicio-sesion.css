@@ -2,51 +2,8 @@
     box-sizing: border-box;
 }
 
-
-/*Header*/
-
-header {
-    background-color: #232525;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 70px;
-}
-
-.container-header {
-    width: 100%;
-    height: 70px;
-}
-
-.nav-header {
-    width: 85%;
-    float: left;
-}
-
-.logo-header img {
-    width: 90%;
-    padding: 6px 0 0 10px;
-}
-
-.logo-header {
-    height: 70px;
-    width: 10%;
-    float: left;
-}
-
-.nav-header a {
-    padding-top: 9px !important;
-}
-
-button {
-    background-color: #52d1dc;
-    border-radius: 10px;
-    border: none;
-    color: #252323;
-    cursor: pointer;
-    width: 100px;
-}
-
 .container-inicio-sesion {
-    height: 800px;
+    height: 769px;
     width: 100%;
     /* background-color: red; */
     float: left;
@@ -99,21 +56,21 @@ button {
 }
 
 .form-inicio-sesion button {
-    border: solid 2px #136f63;
+    border: solid 2px #52d1dc;
     color: white;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
     margin: 20px;
     height: 40px;
     width: 110px;
     font-size: 20px;
     outline: none;
-    background-color: #136f63;
+    background-color: #52d1dc;
 }
 
 .form-inicio-sesion button:hover {
     background-color: #52d1dc;
-    border: solid 2px #52d1dc;
+    border: solid 2px white;
 }
 
 .form-inicio-sesion a {
@@ -122,13 +79,27 @@ button {
     width: 400px;
     font-size: 15px;
     text-decoration: none;
-    color: #136F63;
+    color: #52d1dc;
 }
 
 .form-inicio-sesion a:hover {
-    color: #52d1dc;
+    color: white;
 }
 
 .error-input {
     border: solid 3px red !important;
+}
+
+form {
+    border: solid 1px #bbbbbf;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #52d1dc;
+    border-radius: 10px;
+    border: none;
+    color: #252323;
+    cursor: pointer;
+    width: 100px;
 }
