@@ -42,7 +42,7 @@ p {
 /*Body*/
 
 main {
-    background-image: url(../imgs/fondo-compras3.jpg);
+    background-image: url(../images/fondo-compras3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 55%;
@@ -179,7 +179,7 @@ section {
 /*Publicidad*/
 
 .img-publicidad {
-    background-image: url(../imgs/unnamed.gif);
+    background-image: url(../images/unnamed.gif);
     background-repeat: no-repeat;
     background-size: contain;
     float: right;
