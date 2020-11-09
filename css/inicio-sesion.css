@@ -94,3 +94,12 @@ form {
     border: solid 1px #bbbbbf;
     border-radius: 5px;
 }
+
+button {
+    background-color: #52d1dc;
+    border-radius: 10px;
+    border: none;
+    color: #252323;
+    cursor: pointer;
+    width: 100px;
+}
