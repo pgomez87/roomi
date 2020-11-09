@@ -17,24 +17,51 @@
         <div class="container-header">
 
             <div class="logo-header">
-                <img src="images/roomie-logo.png">
+                <a href="/landing-page.html"><img src="images/Logo_1500x600.png"></a>
             </div>
+
 
             <div class="nav-header">
                 <nav>
-                    <a href="">Inicio</a>
-                    <a href="">Viviendas</a>
-                    <a href="">Proveedores</a>
-                    <a href="">Publicidad</a>
-                    <a href="">Usuarios</a>
+                    <a href="dashboard-usuario.html">Inicio</a>
+                    <a href="viviendas-disponibles.html">Viviendas</a>
+                    <a href="proveedores-servicios.html">Proveedores</a>
+                    <a href="noticias.html">Noticias</a>
+                    <a href="companeros-vivienda.html">Compañeros</a>
+                    <a href="perfil.html">Mi perfil</a>
                 </nav>
             </div>
 
-            <div class="icon-header">
-                <i class="fas fa-bars"></i>
+            <div class="icon-burguer">
+                <i class="fa fa-bars"></i>
             </div>
+
+            <div class="burguer-menu">
+                <ul>
+                    <li>
+                        <a href="dashboard-usuario.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="viviendas-disponibles.html">Viviendas</a>
+                    </li>
+                    <li>
+                        <a href="proveedores-servicios.html">Proveedores</a>
+                    </li>
+                    <li>
+                        <a href="noticias.html">Noticias</a>
+                    </li>
+                    <li>
+                        <a href="companeros-vivienda.html">Compañeros</a>
+                    </li>
+                    <li>
+                        <a href="perfil.html">Mi perfil</a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </header>
+
     <section class="notisuario">
         <div class="noticiasfr">
             <h1>Noticias</h1>
@@ -88,11 +115,11 @@
             <p>SOS</p>
         </div>
     </section>
+
     <footer>
         <div class="footer-final">
-
             <div class="foot-3D">
-                <a href=""><img src="images/3D-logo.png" alt="logotid"></a>
+                <a href="/landing-equipo.html"><img src="images/3D-logo.png" alt="logotid"></a>
             </div>
 
             <div class="iconos-sociales">
@@ -102,19 +129,20 @@
                     </p>
                 </div>
                 <div class="imagenes-sociales">
-                    <a href="#"><i class="fab fa-facebook fa-2x hvr-grow-rotate"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp fa-2x hvr-grow-rotate"></i></a>
-                    <a href="#"><i class="fab fa-waze fa-2x hvr-grow-rotate"></i></a>
+                    <a target="blank" href="https://www.facebook.com"><i  class="fab fa-facebook fa-2x hvr-grow-rotate"></i></a>
+                    <a target="blank" href="https://web.whatsapp.com"><i class="fab fa-whatsapp fa-2x hvr-grow-rotate"></i></a>
+                    <a target="blank" href="https://www.waze.com"><i class="fab fa-waze fa-2x hvr-grow-rotate"></i></a>
                 </div>
             </div>
             <div class="foot-roomi">
-                <div class="texto-roomi">
-                    <p>
-                        Sobre Nosotros
-                    </p>
-                </div>
-                <img src="images/roomie-logo.png" alt="logotir">
-
+                <a href="/landing-page.html">
+                    <div class="texto-roomi">
+                        <p>
+                            Sobre Nosotros
+                        </p>
+                    </div>
+                    <img src="images/roomie-logo.png" alt="logotir">
+                </a>
             </div>
         </div>
         <div class="copyright">
@@ -122,6 +150,10 @@
         </div>
     </footer>
 
+    <script src="js/burguer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/registro-controlador.js"></script>
+    <script src="https://kit.fontawesome.com/16599b263d.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
