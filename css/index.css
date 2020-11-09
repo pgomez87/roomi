@@ -24,7 +24,7 @@ html {
 }
 
 .logo-nav {
-    background-image: url("../imagenes/logo.jpg");
+    background-image: url("../images/logo.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     height: 50px;
@@ -58,7 +58,7 @@ html {
 /*empieza main*/
 
 .logo-banner {
-    background-image: url("../imagenes/logotxt.png");
+    background-image: url("../images/logotxt.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 300px;
@@ -186,7 +186,9 @@ html {
     border-collapse: separate;
 }
 
-.logo-roomi {}
+.logo-roomi {
+    margin-left: 25%;
+}
 
 
 /*Footer*/
@@ -244,18 +246,18 @@ html {
 }
 
 .fb {
-    background-image: url(../imagenes/facebook.png);
+    background-image: url(../images/facebook.png);
     margin-left: 18%;
     margin-right: 50px;
 }
 
 .ig {
-    background-image: url(../imagenes/insta.png);
+    background-image: url(../images/insta.png);
     margin-right: 50px;
 }
 
 .lki {
-    background-image: url(../imagenes/linked.png);
+    background-image: url(../images/linked.png);
 }
 
 #container {
