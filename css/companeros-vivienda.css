@@ -19,11 +19,8 @@
 
 .tarjeta-companeros {
     height: 80%;
-    width: 12%;
-    /* background-color: gold; */
-    margin-left: 30px;
-    margin-top: 20px;
-    margin-right: 30px;
+    width: 14%;
+    margin: 1% 1% 0 1%;
     float: left;
     border: 2px solid #136f63;
     border-radius: 5px;
@@ -42,14 +39,8 @@
     margin-top: 20%;
 }
 
-.sos {
-    float: right;
-    height: 100px;
-    width: 100px;
-    background-color: red;
-    border-radius: 50%;
-    margin-top: 20px;
-    margin-right: 40px;
+.sos-boton{
+    margin: 60% 10% 0 0;
 }
 
 .tarjeta-companeros h3 {
