@@ -17,6 +17,10 @@ h1 {
     float: left;
 }
 
+.contenedor-viviendas button{
+    margin: 3% 0;
+}
+
 .contenedor-viviendas h2 {
     font-weight: bold;
     margin: 3%;
@@ -37,7 +41,7 @@ button {
     border-radius: 20px;
     background-color: #52D1DC;
     width: 150px;
-    margin: 3% 0;
+    margin-bottom: 1%;
 }
 
 iframe {
@@ -60,22 +64,7 @@ iframe {
 }
 
 .sos-boton {
-    width: 90px;
-    height: 90px;
-    background-color: #e74c3c;
-    border-radius: 50px;
-    border: solid 2px black;
-    padding-top: 10px;
-    margin-left: 60%;
     position: absolute;
     bottom: 0;
-}
-
-.sos-icon {
-    font-size: 36pt;
-    text-align: center;
-}
-
-.sos-boton p {
-    text-align: center;
+    margin-left: 75%;
 }
