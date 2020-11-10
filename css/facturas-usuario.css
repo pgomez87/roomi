@@ -13,7 +13,7 @@
 }
 
 .container-publicidad {
-    height: 100%;
+    height: 100vh;
     width: 10%;
     background-color: white;
     opacity: 0.95;
@@ -88,14 +88,14 @@
     margin: auto;
 }
 
-.sos {
+/* .sos {
     height: 100px;
     width: 100px;
     border-radius: 50%;
     background-color: red;
     float: right;
     margin-right: 5%;
-}
+} */
 
 .publicidad {
     height: 100%;

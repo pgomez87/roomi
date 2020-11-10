@@ -42,8 +42,7 @@ function obtenerDatos() {
 
     Swal.fire({
         'title': '',
-        'icon': 'success',
-        'text': 'Nos pondremos en contacto con usted lo antes posible.'
+        'icon': 'success'
     }).then(() => {
         detectar_usuario(); // Esta linea fue agragada y su funcion respectiva tambien
         limpiar();
@@ -85,7 +84,7 @@ const validar = () => {
 
     if (error == false) {
         obtenerDatos();
-        // window.open("dashboard-coordinador.html", "_self");
+        window.location.href = "dashboard-coordinador.html";
     } else {
         Swal.fire({
             'title': 'No se pudo iniciar sesión',

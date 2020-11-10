@@ -164,11 +164,11 @@ th {
     border: solid 1px red;
 } */
 
-#creacion-facturas {
+.creacion-facturas {
     margin-top: 50px;
 }
 
-#creacion-facturas select,
+.creacion-facturas select,
 input {
     display: block;
     margin: 20px 20px 20px 20%;
