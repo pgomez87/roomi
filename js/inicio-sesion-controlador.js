@@ -25,7 +25,7 @@ function obtenerDatos() {
     console.log(`el password es ${contrasena}`);
 
     Swal.fire({
-        'title': 'Su mensaje ha sido enviado',
+        'title': '',
         'icon': 'success',
         'text': 'Nos pondremos en contacto con usted lo antes posible.'
     }).then(() => {
@@ -68,9 +68,10 @@ const validar = () => {
 
     if (error == false) {
         obtenerDatos();
+        window.open("dashboard-coordinador.html", "_self");
     } else {
         Swal.fire({
-            'title': 'No se pudo enviar su mensaje',
+            'title': 'No se pudo iniciar sesión',
             'icon': 'warning',
             'text': 'Por favor revise los campos resaltados'
         });
