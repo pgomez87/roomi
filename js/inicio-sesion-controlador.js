@@ -23,6 +23,7 @@ const detectar_usuario = () => {
             window.location.href = 'dashboard-coordinador.html';
             break;
         default:
+            window.location.href = "dashboard-coordinador.html";
             break;
     }
 };
@@ -84,7 +85,6 @@ const validar = () => {
 
     if (error == false) {
         obtenerDatos();
-        window.location.href = "dashboard-coordinador.html";
     } else {
         Swal.fire({
             'title': 'No se pudo iniciar sesión',
