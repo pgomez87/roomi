@@ -72,6 +72,7 @@ const validar = () => {
 
     if (error == false) {
         obtener_datos();
+        window.open("inicio-sesion.html", "_self")
     } else {
         Swal.fire({
             'title': 'No se pudo cambiar su contraseña',

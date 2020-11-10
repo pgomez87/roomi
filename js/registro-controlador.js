@@ -54,7 +54,7 @@ const validar = () => {
     let regex_nombre = /^[a-zA-Z ]+$/;
     let regex_telefono = /^[a-zA-Z0-9]+$/;
     let regex_correo = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    let regex_direccion = /^[a-zA-Z]+$/;
+    let regex_direccion = /^[a-zA-Z0-9]+$/;
     let campos_requeridos = document.querySelectorAll(':required');
 
     campos_requeridos.forEach(campo => {
@@ -99,7 +99,7 @@ const validar = () => {
 
     } else {
         Swal.fire({
-            'title': 'Debes revisar los datos. ',
+            'title': 'Debe revisar sus datos. ',
             'text': 'Su formulario no fue enviado.',
             'icon': 'warning'
         });
