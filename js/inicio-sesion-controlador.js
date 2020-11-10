@@ -42,8 +42,7 @@ function obtenerDatos() {
 
     Swal.fire({
         'title': '',
-        'icon': 'success',
-        'text': 'Nos pondremos en contacto con usted lo antes posible.'
+        'icon': 'success'
     }).then(() => {
         detectar_usuario(); // Esta linea fue agragada y su funcion respectiva tambien
         limpiar();
