@@ -48,13 +48,6 @@ const validar = () => {
         }
     });
 
-    /*if (console.log(input_checkbox.checked)) {
-        input_checkbox.classList.remove('error-input');
-    } else {
-        error = true;
-        input_checkbox.classList.add('error-input');
-    }*/
-
     if (!regex_contrasenna.test(input_anteriorsenna.value)) {
         error = true;
         input_anteriorsenna.classList.add('error-input');
