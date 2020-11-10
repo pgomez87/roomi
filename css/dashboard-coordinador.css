@@ -247,17 +247,12 @@ button {
     width: 100px;
     border-radius: 50%;
     border: solid 1px #252323;
-    background-color: red;
+    background-color: #e74c3c;
     color: white;
-    margin-bottom: 20px;
-    top: 90%;
     left: 90%;
     position: sticky;
     overflow: visible;
-}
-
-.sos-boton p {
-    text-align: center;
-    color: #ffffff;
-    font-weight: bold;
+    padding: 1%;
+    margin-right: 2%;
+    align-items: center;
 }
