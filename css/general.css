@@ -205,11 +205,11 @@ footer {
 
 .sos-boton {
     display: flow-root;
-    align-items: center;
+    text-align: center;
     background-color: #e74c3c;
     border-radius: 50%;
     float: right;
     border: solid 2px black;
-    padding: 1%;
-    margin-right: 2%;
+    padding: 12px;
+    color: #fff;
 }
