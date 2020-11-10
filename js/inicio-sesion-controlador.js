@@ -11,22 +11,6 @@ const textoContrasena = document.querySelector('#txt-contrasena');
 
 //validar edad, entre 1 y 99 años: ^[0-9]{1,2}+$ 
 
-const detectar_usuario = () => {
-    switch (textoEmail.value) {
-        case 'user@roomi.com':
-            window.location.href = 'dashboard-usuario.html';
-            break;
-        case 'admin@roomi.com':
-            window.location.href = 'dashboard-admin.html';
-            break;
-        case 'coordinador@roomi.com':
-            window.location.href = 'dashboard-coordinador.html';
-            break;
-        default:
-            break;
-    }
-};
-
 const limpiar = () => {
     textoEmail.value = '';
     textoContrasena.value = '';
@@ -40,22 +24,19 @@ function obtenerDatos() {
     console.log(`el username es ${nombre}`);
     console.log(`el password es ${contrasena}`);
 
-    detectar_usuario();
-
-    // Swal.fire({
-    //     'title': '',
-    //     'icon': 'success',
-    //     'text': 'Nos pondremos en contacto con usted lo antes posible.'
-    // }).then(() => {
-    //     limpiar();
-    // });
+    Swal.fire({
+        'title': 'Su mensaje ha sido enviado',
+        'icon': 'success',
+        'text': 'Nos pondremos en contacto con usted lo antes posible.'
+    }).then(() => {
+        limpiar();
+    });
 }
 
 const validar = () => {
     let error = false;
     let regexEmail = /^[a-zA-Z0-9]+@{1}[a-zA-Z]+(.com|.net.org.ac.cr)$/;
-    // let regexContrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
-    let regexContrasena = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+    let regexContrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
     let camposRequeridos = document.querySelectorAll(':required');
 
     camposRequeridos.forEach(campo => {
@@ -87,10 +68,9 @@ const validar = () => {
 
     if (error == false) {
         obtenerDatos();
-        window.open("dashboard-coordinador.html", "_self")
     } else {
         Swal.fire({
-            'title': 'No se puede iniciar sesión',
+            'title': 'No se pudo enviar su mensaje',
             'icon': 'warning',
             'text': 'Por favor revise los campos resaltados'
         });
