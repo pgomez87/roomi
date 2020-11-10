@@ -131,11 +131,11 @@ button {
     display: flow-root;
     align-items: center;
     background-color: #e74c3c;
+    cursor: pointer;
+    color: aliceblue;
     border-radius: 50%;
     float: right;
     border: solid 2px black;
-    padding: 1%;
-    margin-right: 2%;
-    color: #fff;
+    padding: 12px;
     margin-top: 63vh;
 }

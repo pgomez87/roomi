@@ -127,5 +127,10 @@ button:hover {
     color: #252323;
 }
 
+button a {
+    text-decoration: none;
+    color: #252323;
+}
+
 
 /*sidebar publicidad*/
