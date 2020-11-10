@@ -76,25 +76,6 @@
     margin-bottom: 40%;
 }
 
-.sos-boton {
-    height: 75px;
-    width: 75px;
-    display: flow-root;
-    border-radius: 50%;
-    border: solid 1px #252323;
-    background-color: #e74c3c;
-    color: white;
-    margin-bottom: 20px;
-    top: 100%;
-    left: 93%;
-    padding: 1%;
-    border: solid 2px black;
-}
-
-.sos h3 {
-    position: relative;
-}
-
 .caja-info-side h1 {
     height: 100%;
     display: inline-block;
