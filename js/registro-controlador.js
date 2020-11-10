@@ -1,6 +1,6 @@
 'use strict';
 
-const boton_enviar = document.querySelector('#btn-enviar');
+const boton_enviar = document.querySelector('#btn-registrarse');
 const input_nombre = document.querySelector('#txt-nombre');
 const input_apellido = document.querySelector('#txt-apellido');
 const input_contrasena = document.querySelector('#txt-contrasena');
@@ -54,7 +54,7 @@ const validar = () => {
     let regex_nombre = /^[a-zA-Z ]+$/;
     let regex_telefono = /^[a-zA-Z0-9]+$/;
     let regex_correo = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    let regex_direccion = /^[a-zA-Z]+$/;
+    let regex_direccion = /^[a-zA-Z0-9]+$/;
     let campos_requeridos = document.querySelectorAll(':required');
 
     campos_requeridos.forEach(campo => {
