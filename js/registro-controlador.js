@@ -1,6 +1,6 @@
 'use strict';
 
-const boton_enviar = document.querySelector('#btn-enviar');
+const boton_enviar = document.querySelector('#btn-registrarse');
 const input_nombre = document.querySelector('#txt-nombre');
 const input_apellido = document.querySelector('#txt-apellido');
 const input_contrasena = document.querySelector('#txt-contrasena');
