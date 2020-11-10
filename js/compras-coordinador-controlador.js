@@ -31,7 +31,7 @@ const validar = () => {
     let error = false;
     let regex_producto = /^[a-zA-Z0-9 ]+$/;
     let regex_categoria = /^[a-zA-Z ]+$/;
-    let regex_cantidad = /^[0-9]/;
+    let regex_cantidad = /^[1-9]{1}+[0-9]{0,2}$/;
     let campos_requeridos = document.querySelectorAll(":required");
 
     campos_requeridos.forEach(campo => {
