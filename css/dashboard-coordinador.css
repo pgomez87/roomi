@@ -243,16 +243,16 @@ button {
 }
 
 .sos-boton {
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
-    border: solid 1px #252323;
+    border: solid 2px #252323;
     background-color: #e74c3c;
     color: white;
     left: 90%;
     position: sticky;
     overflow: visible;
     padding: 1%;
-    margin-right: 2%;
+    margin-right: 3%;
     align-items: center;
 }
