@@ -107,5 +107,25 @@ section {
     overflow: visible;
 }
 
+button {
+    height: 50px;
+    width: 100px;
+    outline: none;
+    border: solid 2px #136f63;
+    background-color: white;
+    border-radius: 30px;
+    color: #252323;
+    font-size: 15px;
+    float: left;
+    margin-top: 30.6%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #52d1dc;
+    border: solid 2px #52d1dc;
+    color: #252323;
+}
+
 
 /*sidebar publicidad*/
