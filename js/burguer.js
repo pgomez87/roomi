@@ -1,4 +1,4 @@
-'strict'
+'use strict';
 
 const navSlide = () => {
     const iconBurguer = document.querySelector('.icon-burguer');
