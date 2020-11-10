@@ -85,7 +85,7 @@ const validar = () => {
 
     if (error == false) {
         obtenerDatos();
-        // window.open("dashboard-coordinador.html", "_self");
+        window.location.href = "dashboard-coordinador.html";
     } else {
         Swal.fire({
             'title': 'No se pudo iniciar sesión',
