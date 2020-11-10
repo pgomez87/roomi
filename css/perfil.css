@@ -1,81 +1,98 @@
-.div-principal{
+.div-principal {
     margin: 3%;
     height: 500px;
 }
-.imagen-perfil{
+
+.imagen-perfil {
     width: 20%;
     float: left;
 }
-.imagen-perfil img{
+
+.imagen-perfil img {
     width: 175px;
     height: 175px;
     margin: 5%;
     border: solid 3px #136F63;
     border-radius: 3px;
 }
-.image-container{
+
+.image-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.boton-imagen{
+
+.boton-imagen {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.boton-imagen button{
+
+.boton-imagen button {
     border-radius: 10px;
     height: 40px;
     width: 150px;
     border: none;
     background-color: #52D1DC;
 }
-.imagen-perfil table{
+
+.imagen-perfil table {
     margin: 0 auto;
 }
-.imagen-perfil td{
+
+.imagen-perfil td {
     padding: 20px;
 }
-.info-perfil{
+
+.info-perfil {
     padding: 2%;
     width: 80%;
     display: inline-block;
 }
-.info-perfil h1{
+
+.info-perfil h1 {
     font-weight: bold;
     font-size: 20pt;
 }
-.nombre{
+
+.nombre {
     float: left;
     margin-left: 70px;
 }
-.boton-editar{
+
+.boton-editar {
     float: right;
 }
-.info-perfil table{
+
+.info-perfil table {
     margin: 5%;
     margin-bottom: 0;
 }
-.info-perfil td{
+
+.info-perfil td {
     padding: 15px 20px;
 }
-.info-perfil button{
+
+.info-perfil button {
     border-radius: 10px;
     height: 40px;
     width: 125px;
     border: none;
     background-color: #52D1DC;
 }
-.sobre-mi{
+
+.sobre-mi {
     padding: 2% 4%;
     width: 75%;
 }
-.sobre-mi h1{
+
+.sobre-mi h1 {
     font-size: 16pt;
     font-weight: bold;
     margin-bottom: 1%;
 }
-.sos-boton{
+
+.sos-boton {
     width: 90px;
     height: 90px;
     background-color: #e74c3c;
@@ -85,10 +102,12 @@
     margin: 2%;
     margin-left: 90%;
 }
-.sos-icon{
+
+.sos-icon {
     font-size: 36pt;
     text-align: center;
 }
-.sos-boton p{
+
+.sos-boton p {
     text-align: center;
 }
