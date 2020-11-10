@@ -11,6 +11,22 @@ const textoContrasena = document.querySelector('#txt-contrasena');
 
 //validar edad, entre 1 y 99 años: ^[0-9]{1,2}+$ 
 
+const detectar_usuario = () => {
+    switch (textoEmail.value) {
+        case 'user@roomi.com':
+            window.location.href = 'dashboard-usuario.html';
+            break;
+        case 'admin@roomi.com':
+            window.location.href = 'dashboard-admin.html';
+            break;
+        case 'coordinador@roomi.com':
+            window.location.href = 'dashboard-coordinador.html';
+            break;
+        default:
+            break;
+    }
+};
+
 const limpiar = () => {
     textoEmail.value = '';
     textoContrasena.value = '';
@@ -29,6 +45,7 @@ function obtenerDatos() {
         'icon': 'success',
         'text': 'Nos pondremos en contacto con usted lo antes posible.'
     }).then(() => {
+        detectar_usuario(); // Esta linea fue agragada y su funcion respectiva tambien
         limpiar();
     });
 }
@@ -68,7 +85,7 @@ const validar = () => {
 
     if (error == false) {
         obtenerDatos();
-        window.open("dashboard-coordinador.html", "_self");
+        // window.open("dashboard-coordinador.html", "_self");
     } else {
         Swal.fire({
             'title': 'No se pudo iniciar sesión',
