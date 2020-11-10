@@ -99,7 +99,7 @@ const validar = () => {
 
     } else {
         Swal.fire({
-            'title': 'Debes revisar los datos. ',
+            'title': 'Debe revisar sus datos. ',
             'text': 'Su formulario no fue enviado.',
             'icon': 'warning'
         });
