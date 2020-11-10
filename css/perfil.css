@@ -1,3 +1,7 @@
+main{
+    overflow: hidden;
+}
+
 .div-principal {
     margin: 3%;
     height: 500px;
@@ -62,6 +66,12 @@
 
 .boton-editar {
     float: right;
+    width: 25%;
+}
+
+.boton-editar button{
+    float: right;
+    margin: 0 1%;
 }
 
 .info-perfil table {
@@ -93,21 +103,14 @@
 }
 
 .sos-boton {
-    width: 90px;
-    height: 90px;
+    display: flow-root;
+    text-align: center;
     background-color: #e74c3c;
-    border-radius: 50px;
+    border-radius: 50%;
+    float: right;
     border: solid 2px black;
-    padding-top: 10px;
-    margin: 2%;
-    margin-left: 90%;
-}
-
-.sos-icon {
-    font-size: 36pt;
-    text-align: center;
-}
-
-.sos-boton p {
-    text-align: center;
+    padding: 1%;
+    margin-right: 2%;
+    color: #fff;
+    margin-bottom: 1%;
 }

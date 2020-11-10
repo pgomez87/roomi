@@ -128,25 +128,14 @@ button {
 }
 
 .sos-boton {
-    width: 90px;
-    height: 90px;
     display: flow-root;
     align-items: center;
-    background-color: #e41700;
-    cursor: pointer;
+    background-color: #e74c3c;
     border-radius: 50%;
     float: right;
     border: solid 2px black;
-    padding: 10px;
-    margin-top: 60vh;
-    margin-right: 1%;
-}
-
-.sos-icon {
-    font-size: 36pt;
-    align-items: center;
-}
-
-.sos-boton p {
-    align-items: center;
+    padding: 1%;
+    margin-right: 2%;
+    color: #fff;
+    margin-top: 63vh;
 }
