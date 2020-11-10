@@ -107,20 +107,5 @@ button {
 }
 
 .sos-boton {
-    width: 90px;
-    height: 90px;
-    background-color: #e74c3c;
-    border-radius: 50px;
-    border: solid 2px black;
-    padding-top: 10px;
-    margin: 5% 0 0 65%;
-}
-
-.sos-icon {
-    font-size: 36pt;
-    text-align: center;
-}
-
-.sos-boton p {
-    text-align: center;
+   margin: 5% 12% 0 0;
 }

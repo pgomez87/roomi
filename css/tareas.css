@@ -73,19 +73,5 @@ select{
     width: 100%;
 }
 .sos-boton{
-    width: 90px;
-    height: 90px;
-    background-color: #e74c3c;
-    border-radius: 50px;
-    border: solid 2px black;
-    padding-top: 10px;
-    float: right;
     margin-top: 10%;
-}
-.sos-icon{
-    font-size: 36pt;
-    text-align: center;
-}
-.sos-boton p{
-    text-align: center;
 }
