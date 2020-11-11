@@ -58,7 +58,7 @@ main {
 }
 
 main h1 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 5%;
 }
@@ -72,7 +72,7 @@ main section {
 }
 
 main p {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 
@@ -94,7 +94,8 @@ main p {
 }
 
 .txt-viviendas p {
-    margin-top: 7%;
+    margin-top: 9%;
+    font-size: 22px;
 }
 
 
@@ -120,7 +121,8 @@ main p {
 }
 
 .txt-roommates p {
-    margin-top: 7%;
+    margin-top: 9%;
+    font-size: 22px;
 }
 
 
