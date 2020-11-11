@@ -5,6 +5,7 @@ const input_anteriorsenna = document.querySelector('#pass-anterior');
 const input_nuevasenna = document.querySelector('#pass-nueva');
 const input_verificasenna = document.querySelector('#pass-verifica');
 const input_checkbox = document.querySelector('#robot-select');
+const caja_recaptcha = document.querySelector('#recaptcha-box');
 
 const limpiar = () => {
     input_anteriorsenna.value = '';
@@ -48,13 +49,6 @@ const validar = () => {
         }
     });
 
-    /*if (console.log(input_checkbox.checked)) {
-        input_checkbox.classList.remove('error-input');
-    } else {
-        error = true;
-        input_checkbox.classList.add('error-input');
-    }*/
-
     if (!regex_contrasenna.test(input_anteriorsenna.value)) {
         error = true;
         input_anteriorsenna.classList.add('error-input');
@@ -74,6 +68,13 @@ const validar = () => {
         input_verificasenna.classList.add('error-input');
     } else {
         input_verificasenna.classList.remove('error-input');
+    }
+
+    if (input_checkbox.checked) {
+        caja_recaptcha.classList.remove('error-input');
+    } else {
+        error = true;
+        caja_recaptcha.classList.add('error-input');
     }
 
     if (error == false) {

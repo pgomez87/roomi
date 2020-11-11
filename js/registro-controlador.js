@@ -10,7 +10,6 @@ const input_cedula = document.querySelector('#txt-cedula');
 const input_direccion = document.querySelector('#txt-direccion');
 
 
-
 const limpiar = () => {
     input_nombre.value = '';
     input_apellido.value = '';
@@ -55,6 +54,7 @@ const validar = () => {
     let regex_telefono = /^[a-zA-Z0-9]+$/;
     let regex_correo = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     let regex_direccion = /^[a-zA-Z0-9]+$/;
+    let regex_contrasena = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
     let campos_requeridos = document.querySelectorAll(':required');
 
     campos_requeridos.forEach(campo => {
@@ -93,6 +93,13 @@ const validar = () => {
         error = true;
         input_direccion.classList.add('error-input');
     };
+
+    if (regex_contrasena.test(input_contrasena.value)) {
+        input_contrasena.classList.remove('error-input');
+    } else {
+        error = true;
+        input_contrasena.classList.add('error-input');
+    }
 
     if (error == false) {
         obtener_datos();

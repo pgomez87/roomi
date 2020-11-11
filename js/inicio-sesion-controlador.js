@@ -23,6 +23,7 @@ const detectar_usuario = () => {
             window.location.href = 'dashboard-coordinador.html';
             break;
         default:
+            window.location.href = "dashboard-coordinador.html";
             break;
     }
 };
@@ -41,8 +42,11 @@ function obtenerDatos() {
     console.log(`el password es ${contrasena}`);
 
     Swal.fire({
-        'title': '',
-        'icon': 'success'
+        'title': 'Datos verificados',
+        'icon': 'success',
+        'text': 'Ingresando a perfil',
+        showConfirmButton: false,
+        timer: 1200
     }).then(() => {
         detectar_usuario(); // Esta linea fue agragada y su funcion respectiva tambien
         limpiar();
@@ -52,7 +56,7 @@ function obtenerDatos() {
 const validar = () => {
     let error = false;
     let regexEmail = /^[a-zA-Z0-9]+@{1}[a-zA-Z]+(.com|.net.org.ac.cr)$/;
-    let regexContrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    let regexContrasena = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
     let camposRequeridos = document.querySelectorAll(':required');
 
     camposRequeridos.forEach(campo => {
@@ -84,7 +88,6 @@ const validar = () => {
 
     if (error == false) {
         obtenerDatos();
-        window.location.href = "dashboard-coordinador.html";
     } else {
         Swal.fire({
             'title': 'No se pudo iniciar sesión',
