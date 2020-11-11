@@ -22,17 +22,17 @@ html {
     margin-left: 19%;
 }
 
-h1 {
-    font-size: 25px;
-    font-weight: 400;
-    color: #ffffff;
-}
-
-h2 {
+.sct-metricas-general h2{
     font-size: 20px;
     font-weight: 300;
     color: #000000;
     margin-bottom: 15%;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 400;
+    color: #ffffff;
 }
 
 h3 {

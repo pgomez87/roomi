@@ -1,3 +1,7 @@
+main{
+    height: 73.5vh;
+}
+
 .busqueda {
     background-blend-mode: luminosity;
     background-attachment: fixed;
@@ -5,7 +9,7 @@
     background-image: url(../images/buscar-back.jpg);
     background-size: cover;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.9);
-    min-height: 529px;
+    height: 73.5vh;
     padding: 50px;
     width: 100%;
 }
