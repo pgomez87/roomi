@@ -122,6 +122,9 @@ button a {
     text-decoration: none;
     color: #252323;
 }
-
+.div-boton{
+    width: 5%;
+    float: left;
+}
 
 /*sidebar publicidad*/
