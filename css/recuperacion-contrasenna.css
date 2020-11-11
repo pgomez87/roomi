@@ -1,3 +1,7 @@
+    main{
+        height: 73.5vh;
+    }
+
     body {
         overflow: hidden;
     }
@@ -50,7 +54,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         opacity: .9;
-        height: 70vh;
+        height: 73.5vh;
     }
     
     .rec-form {
@@ -61,7 +65,7 @@
         text-align: center;
         padding: 20px;
         margin: 0 auto;
-        height: 70vh;
+        height: 73.5vh;
         display: flex;
         align-items: center;
     }
