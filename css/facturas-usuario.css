@@ -88,14 +88,9 @@
     margin: auto;
 }
 
-/* .sos {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    background-color: red;
-    float: right;
-    margin-right: 5%;
-} */
+.sos-boton{
+    margin: 10% 10% 0 0;
+}
 
 .publicidad {
     height: 100%;
