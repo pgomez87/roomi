@@ -1,4 +1,4 @@
-main{
+main {
     overflow: hidden;
 }
 
@@ -69,7 +69,7 @@ main{
     width: 25%;
 }
 
-.boton-editar button{
+.boton-editar button {
     float: right;
     margin: 0 1%;
 }
@@ -113,4 +113,8 @@ main{
     margin-right: 2%;
     color: #fff;
     margin-bottom: 1%;
+}
+
+button {
+    cursor: pointer;
 }
