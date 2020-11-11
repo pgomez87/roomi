@@ -19,9 +19,8 @@ const obtener_datos = () => {
     console.log(`El producto es ${producto}, la categoria es ${categoria} y la cantidad ${cantidad}.`)
 
     Swal.fire({
-        'title': `Su solicitud ha sido enviada`,
+        'title': `El artículo ha sido registrado`,
         'icon': `success`,
-        'text': `Pronto nos pondremos en contacto con usted`,
     }).then(() => {
         limpiar();
     })
