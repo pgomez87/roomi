@@ -93,6 +93,19 @@ section {
     display: table-row-group;
 }
 
+#btn-guardar {
+    background-color: #52d1dc;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    padding: 4px;
+    margin-left: 4%;
+    width: 100px;
+    margin-top: 10px;
+    font-size: larger;
+    cursor: pointer;
+}
+
 
 /*Form Productos*/
 
@@ -116,6 +129,18 @@ section {
 }
 
 .form-compras div input {
+    background-color: rgba(163, 169, 170, .65);
+    height: 4%;
+    width: 50%;
+    border-width: 1px;
+    border-color: #ffffff;
+    border-radius: 5px;
+    border-style: inset;
+    padding: 15px;
+    color: #ffffff;
+}
+
+#txt-encargados {
     background-color: rgba(163, 169, 170, .65);
     height: 4%;
     width: 50%;
