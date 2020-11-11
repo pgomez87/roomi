@@ -140,18 +140,6 @@ section {
     color: #ffffff;
 }
 
-#txt-encargados {
-    background-color: rgba(163, 169, 170, .65);
-    height: 4%;
-    width: 50%;
-    border-width: 1px;
-    border-color: #ffffff;
-    border-radius: 5px;
-    border-style: inset;
-    padding: 15px;
-    color: #ffffff;
-}
-
 #btn-enviar {
     background-color: #52d1dc;
     border-radius: 20px;
