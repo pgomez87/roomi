@@ -10,7 +10,6 @@ const input_cedula = document.querySelector('#txt-cedula');
 const input_direccion = document.querySelector('#txt-direccion');
 
 
-
 const limpiar = () => {
     input_nombre.value = '';
     input_apellido.value = '';
