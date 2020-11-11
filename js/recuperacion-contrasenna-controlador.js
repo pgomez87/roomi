@@ -5,6 +5,7 @@ const input_txtcorreo = document.querySelector('#txt-correo');
 const input_nuevasenna = document.querySelector('#pass-nueva');
 const input_verificasenna = document.querySelector('#pass-verifica');
 const input_checkbox = document.querySelector('#robot-select');
+const caja_recaptcha = document.querySelector('#recaptcha-box');
 
 const limpiar = () => {
     input_txtcorreo.value = '';
@@ -68,6 +69,13 @@ const validar = () => {
         input_verificasenna.classList.add('error-input');
     } else {
         input_verificasenna.classList.remove('error-input');
+    }
+
+    if (input_checkbox.checked) {
+        caja_recaptcha.classList.remove('error-input');
+    } else {
+        error = true;
+        caja_recaptcha.classList.add('error-input');
     }
 
     if (error == false) {
