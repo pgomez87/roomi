@@ -26,8 +26,7 @@ const obtener_datos = () => {
 
     Swal.fire({
         'title': 'Su contraseña ha sido cambiada',
-        'icon': 'success',
-        'text': 'Nos pondremos en contacto con usted lo antes posible'
+        'icon': 'success'
     }).then(() => {
         limpiar();
     });
