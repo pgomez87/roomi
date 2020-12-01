@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/dashboard-admin.css">
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
@@ -214,34 +213,39 @@
                         </div>
                         <div id="info-publicidad">
                             <table id="informacion-publicidad">
-                                <tr>
-                                    <th>Anuncio</th>
-                                    <th>Expira</th>
-                                </tr>
-                                <tr>
-                                    <td>Anuncio Kölbi Promo Planes nuevos</td>
-                                    <td>05/12/2020</td>
-                                </tr>
-                                <tr>
-                                    <td>Anuncio Movistar Promo Planes nuevos</td>
-                                    <td>31/12/2020</td>
-                                </tr>
-                                <tr>
-                                    <td>Anuncio Siman Venta</td>
-                                    <td>22/11/2020</td>
-                                </tr>
-                                <tr>
-                                    <td>Anuncio CableTica internet/telefonia</td>
-                                    <td>01/01/2022</td>
-                                </tr>
-                                <tr>
-                                    <td>Anuncio Uber Eats</td>
-                                    <td>01/08/2022</td>
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>Anuncio</th>
+                                        <th>Expira</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody-publicidad">
+                                    <tr>
+                                        <td>Anuncio Kölbi Promo Planes nuevos</td>
+                                        <td>05/12/2020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anuncio Movistar Promo Planes nuevos</td>
+                                        <td>31/12/2020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anuncio Siman Venta</td>
+                                        <td>22/11/2020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anuncio CableTica internet/telefonia</td>
+                                        <td>01/01/2022</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anuncio Uber Eats</td>
+                                        <td>01/08/2022</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
 
-                        <a href="creacion-publicidad.html"><button id="ver-mas-publicidad" class="botones-dashboard" type="button">Ver más</button></a>
+
+                            <button id="ver-mas-publicidad" class="botones-dashboard" type="button">Ver más</button>
                         <button id="eliminar-publicidad" class="botones-dashboard" type="button">Eliminar publicidad</button>
 
                     </div>
@@ -310,7 +314,7 @@
                             </div>
                         </div>
 
-                        <a href="buscar-usuarios.html"><button id="ver-mas-notificaciones" class="botones-dashboard" type="button">Ver más</button></a>
+                            <button id="ver-mas-usuarios" class="botones-dashboard" type="button">Ver más</button>
                         <a href="baneo-usuarios.html"><button id="bannear-usuario" class="botones-dashboard" type="button">Bannear usuario</button></a>
                         <button id="eliminar-publicidad" class="botones-dashboard" type="button">Enviar Mensaje</button>
 
@@ -414,6 +418,7 @@
     </footer>
 
     <script src="js/burguer.js"></script>
+    <script src="js/dashboard-admin.js"></script>
 </body>
 
 </html>

@@ -304,6 +304,10 @@ tr:hover {
     cursor: pointer;
 }
 
+.selected{
+    background-color: #52d1dc !important;
+}
+
 tr:focus {
     background-color: #52d1dc;
     cursor: pointer;
