@@ -12,15 +12,11 @@
 </head>
 
 <body>
-
     <header>
         <div class="container-header">
-
             <div class="logo-header">
                 <a href="landing-page.html"><img src="images/Logo_1500x600.png"></a>
             </div>
-
-
             <div class="nav-header">
                 <nav>
                     <a href="dashboard-coordinador.html">Inicio</a>
@@ -31,10 +27,8 @@
                     <a href="perfil-coordinador.html">Mi perfil</a>
                 </nav>
             </div>
-
         </div>
     </header>
-
     <main>
         <section id="sct-registro">
             <form>
@@ -57,13 +51,75 @@
                 <div>
                     <input type="file" id="file-imagen">
                 </div>
+                <div id="config-secciones-vivienda">
+                    <div>
+                        <select id="slt-habitaciones" required>
+                        <option value="">Habitaciones</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="slt-bannos" required>
+                        <option value="">Baños</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="slt-cocina" required>
+                        <option value="">Cocina</option>
+                        <option value="1">1</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="slt-pilas" required>
+                        <option value="">Cuarto de Pilas</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="slt-comedor" required>
+                        <option value="">Comedor</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="slt-sala" required>
+                        <option value="">Sala</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="slt-jardin" required>
+                        <option value="">Jardin</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="slt-garaje" required>
+                        <option value="">Garaje</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        </select>
+                    </div>
+                </div>
                 <div>
                     <button type="button" id="btn-enviar" class="hvr-grow">Enviar</button>
                 </div>
             </form>
         </section>
     </main>
-
     <footer>
         <div class="footer-final">
             <div class="foot-3D">
@@ -97,7 +153,6 @@
             <h2>Copyright: © 2020</h2>
         </div>
     </footer>
-
     <script src="js/burguer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="js/registro-viviendas-controlador.js"></script>

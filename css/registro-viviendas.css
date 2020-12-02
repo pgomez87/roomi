@@ -88,6 +88,8 @@ main {
     font-family: 'Open Sans', sans-serif;
 }
 
+#config-secciones-vivienda {}
+
 #btn-enviar {
     background-color: #52d1dc;
     border-radius: 20px;
