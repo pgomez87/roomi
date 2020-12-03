@@ -1,93 +1,69 @@
-.facturas-coordinador {
-    background-image: url(../images/apartments.jpg);
-    background-position: bottom;
-    background-size: cover;
-    background-color: white;
-}
-
 .container-facturas {
-    height: 100%;
-    width: 90%;
-    background-color: white;
-    opacity: 0.95;
+    width: 100%;
+    height: 1000px;
+    /* background: red; */
     float: left;
 }
 
-.container-publicidad {
-    height: 200%;
-    width: 10%;
-    background-color: white;
-    opacity: 0.95;
-    float: left;
-    text-align: center;
-}
-
-.container-publicidad img {
-    margin-top: 50%;
-    margin-bottom: 48%;
-}
-
-.facturas-coordinador h1 {
-    display: inline;
+h1 {
     font-size: 40px;
     margin: 15px;
     margin-left: 20px;
 }
 
-.facturas-coordinador h2 {
+h2 {
     font-size: 24px;
     margin: 10px;
     margin-left: 20px;
 }
 
-.container-facturas-usuario {
-    height: 100%;
-    width: 100%;
+.container-info-facturas {
+    width: 90%;
+    height: 500px;
+    /* background-color: blue; */
+    float: left;
+}
+
+.container-form-facturas {
+    width: 90%;
+    height: 500px;
+    /* background-color: green; */
+    float: left;
+}
+
+.container-publicidad {
+    width: 10%;
+    height: 1000px;
     /* background-color: gold; */
-    float: left;
+    float: right;
 }
 
-.container-facturas-coordinador {
+.facturas-pagadas {
+    width: 50%;
     height: 500px;
-    width: 100%;
-    /* background-color: goldenrod; */
+    /* background-color: hotpink; */
     float: left;
 }
 
-#container-completadas {
-    height: 100%;
+.facturas-pendientes {
     width: 50%;
-    /* background-color: purple; */
-    float: left;
-    border-radius: 5px;
-}
-
-#container-pendientes {
-    height: 100%;
-    width: 50%;
-    /* background-color: indigo; */
-    float: left;
-}
-
-#container-crear-factura {
     height: 500px;
-    width: 50%;
-    /* background-color: darkblue; */
+    /* background-color: indianred; */
     float: left;
 }
 
-#container-asignar-factura {
+.agregar-factura {
+    width: 50%;
     height: 500px;
-    width: 50%;
-    /* background-color: dodgerblue; */
+    /* background-color: grey; */
     float: left;
 }
 
-#facturas-pendientes input {
-    height: auto;
-    width: auto;
-    padding: auto;
-    margin: auto;
+.asignar-factura {
+    width: 50%;
+    height: 500px;
+    /* background-color: lightgrey; */
+    float: left;
 }
 
 .sos-boton {
@@ -171,4 +147,11 @@ input {
 
 form button {
     margin-left: 20%;
+}
+
+#facturas-pendientes input {
+    height: auto;
+    width: auto;
+    padding: auto;
+    margin: auto;
 }
