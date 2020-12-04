@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/inicio-sesion.css">
+    <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+    <title>Inicio de Sesión</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container-header">
+            <div class="logo-header">
+                <a href="landing-page.html"><img src="images/Logo_1500x600.png"></a>
+            </div>
+            <div class="nav-header">
+                <nav>
+                    <div class="der-nav">
+                        <div class="consulta">
+                            <p>¿Ya es miembro?</p>
+                        </div>
+
+                        <div class="btns-nav">
+                            <div class="btn-registrarse">
+                                <a href="registro.html"><button type="button" class="btns-nav" id="btns-nav">Registrarse</button></a>
+                            </div>
+
+                            <div class="btn-ingresar">
+                                <a href="inicio-sesion.html"><button type="button" class="btns-nav" id="btns-nav">Ingresar</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="section-inicio-sesion">
+        <div class="container-inicio-sesion">
+            <div class="container-form-sesion">
+                <form class="form-inicio-sesion">
+                    <div>
+                        <input type="text" id="txt-email" placeholder="Correo Electrónico" required>
+                    </div>
+                    <div>
+                        <input type="password" id="txt-contrasena" placeholder="Contraseña" required>
+                    </div>
+                    <div>
+                        <a href="recuperacion-contrasenna.html">¿Ha olvidado su contraseña?</a>
+                    </div>
+                    <div>
+                        <button type="button" id="btn-enviar">Enviar</button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="container-imagen-inicio-sesion">
+                <p>Photo by Daria Shevtsova from Pexels</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-final">
+            <div class="foot-3D">
+                <a href="landing-equipo.html"><img src="images/3D-logo.png" alt="logotid"></a>
+            </div>
+
+            <div class="iconos-sociales">
+                <div class="texto-social">
+                    <p>
+                        Medios Sociales
+                    </p>
+                </div>
+                <div class="imagenes-sociales">
+                    <a target="blank" href="https://www.facebook.com"><i  class="fab fa-facebook fa-2x hvr-grow-rotate"></i></a>
+                    <a target="blank" href="https://web.whatsapp.com"><i class="fab fa-whatsapp fa-2x hvr-grow-rotate"></i></a>
+                    <a target="blank" href="https://www.waze.com"><i class="fab fa-waze fa-2x hvr-grow-rotate"></i></a>
+                </div>
+            </div>
+            <div class="foot-roomi">
+                <a href="landing-page.html">
+                    <div class="texto-roomi">
+                        <p>
+                            Sobre Nosotros
+                        </p>
+                    </div>
+                    <img src="images/roomie-logo.png" alt="logotir">
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <h2>Copyright: © 2020</h2>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/inicio-sesion-controlador.js"></script>
+
+</body>
+
+</html>

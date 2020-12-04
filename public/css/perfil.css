@@ -1,0 +1,120 @@
+main {
+    overflow: hidden;
+}
+
+.div-principal {
+    margin: 3%;
+    height: 500px;
+}
+
+.imagen-perfil {
+    width: 20%;
+    float: left;
+}
+
+.imagen-perfil img {
+    width: 175px;
+    height: 175px;
+    margin: 5%;
+    border: solid 3px #136F63;
+    border-radius: 3px;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-imagen button {
+    border-radius: 10px;
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: #52D1DC;
+}
+
+.imagen-perfil table {
+    margin: 0 auto;
+}
+
+.imagen-perfil td {
+    padding: 20px;
+}
+
+.info-perfil {
+    padding: 2%;
+    width: 80%;
+    display: inline-block;
+}
+
+.info-perfil h1 {
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+.nombre {
+    float: left;
+    margin-left: 70px;
+}
+
+.boton-editar {
+    float: right;
+    width: 25%;
+}
+
+.boton-editar button {
+    float: right;
+    margin: 0 1%;
+}
+
+.info-perfil table {
+    margin: 5%;
+    margin-bottom: 0;
+}
+
+.info-perfil td {
+    padding: 15px 20px;
+}
+
+.info-perfil button {
+    border-radius: 10px;
+    height: 40px;
+    width: 125px;
+    border: none;
+    background-color: #52D1DC;
+}
+
+.sobre-mi {
+    padding: 2% 4%;
+    width: 75%;
+}
+
+.sobre-mi h1 {
+    font-size: 16pt;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+
+.sos-boton {
+    display: flow-root;
+    text-align: center;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    float: right;
+    border: solid 2px black;
+    padding: 1%;
+    margin-right: 2%;
+    color: #fff;
+    margin-bottom: 1%;
+}
+
+button {
+    cursor: pointer;
+}

@@ -1,0 +1,77 @@
+main{
+    padding: 2%;
+    overflow: hidden;
+}
+.select-div{
+    margin-bottom: 2%;
+}
+select{
+    height: 25px;
+    width: 150px;
+    border-radius: 4px;
+    border: solid 2px  #136F63;
+    clear: both;
+}
+.card-container{
+    overflow: hidden;
+    width: 80%;
+    float: left;
+}
+.card, .card-agregar{
+    border: solid 2px  #136F63;
+    width: 31%;
+    overflow: hidden;
+    float: left;
+    margin: 0 2% 2% 0;
+    border-radius: 6px;
+}
+.card h2{
+    border: solid 2px  #136F63;
+    margin: -2px;
+    padding: 4%;
+    font-weight: bold;
+    background-color:  #52D1DC;
+    border-radius: 6px 6px 0 0;
+}
+.card h3{
+    font-weight: 600;
+    margin: 3%;
+}
+.card p{
+    margin: 3%;
+}
+.card button{
+    border: none;
+    height: 30px;
+    background: none;
+    border-radius: 20px;
+    float: right;
+    margin: 3% 0;
+    margin-right: 2%;
+}
+.card button:hover{
+    color: #52D1DC;
+}
+.card-agregar{
+    padding: 9% 0;
+}
+.plus-icon{
+    font-size: 30pt;
+    text-align: center;
+}
+.card-agregar p{
+    text-align: center;
+}
+.anuncio{
+    overflow: hidden;
+    text-align: center;
+    width: 15%;
+    float: right;
+    margin-right: 3%;
+}
+.anuncio img{
+    width: 100%;
+}
+.sos-boton{
+    margin-top: 10%;
+}
