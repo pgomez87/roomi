@@ -47,7 +47,7 @@ const listarFacturas = async() => {
 };
 
 
-//otro codigo
+//otro codigo que en realidad es exactamente el mismo pero tampoco funciona y jueputa jueputa jueputa
 
 // const listarFacturas = async() => {
 //     let listaFacturas = [];

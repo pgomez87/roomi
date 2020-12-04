@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const Factura = require('../models/registrar-facturas.model');
+const Factura = require('../models/registrar-facturas.model.js');
 
 router.post('/registrar-factura', (req, res) => {
     let nuevaFactura = new Factura({
@@ -29,21 +29,36 @@ router.post('/registrar-factura', (req, res) => {
     });
 });
 
-
 router.get('/listar-facturas', (req, res) => {
-    Factura.find((err, listaFacturas) => {
+    Factura.find((err, lista_facturas) => {
         if (err) {
             res.json({
-                msj: 'No se pudo listar las tareas',
+                msj: 'no se pudo listar nada',
                 err
             });
         } else {
             res.json({
-                msj: 'Las tareas se listaron con éxito',
-                listaFacturas
+                msj: 'se listo todo',
+                lista_facturas
             });
         }
     });
 });
 
 module.exports = router;
+
+// router.get('/listar-facturas', (req, res) => {
+//     Factura.find((err, listaFacturas) => {
+//         if (err) {
+//             res.json({
+//                 msj: 'No se pudo listar las tareas',
+//                 err
+//             });
+//         } else {
+//             res.json({
+//                 msj: 'Las tareas se listaron con éxito',
+//                 listaFacturas
+//             });
+//         }
+//     });
+// });

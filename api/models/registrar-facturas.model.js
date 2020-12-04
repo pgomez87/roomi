@@ -11,4 +11,4 @@ const schemaFacturas = new mongoose.Schema({
     activa: { type: String, required: true, unique: false }
 });
 
-module.exports = mongoose.model('Facturas', schemaFacturas, 'facturas');
+module.exports = mongoose.model('Factura', schemaFacturas, 'facturas');

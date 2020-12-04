@@ -1,19 +1,19 @@
 'use strict';
 
-const tabla = document.querySelector('#tabla-facturas-pagadas tbody');
+const tabla = document.querySelector('#tablaFacturasPagadas tbody');
 // const tablaPagada = document.querySelector('#facturas-pagadas tbody');
 
 const mostrarTablas = async() => {
     let listaFacturas = await listarFacturas();
     tabla.innerHTML = '';
 
-    listaFacturas.forEach((factura) => {
-        let fila = tabla.insertRow();
-        fila.insertCell().innerHTML = factura.nombre;
-        console.log(factura.nombre);
-    });
+
+    let fila = tabla.insertRow();
+    fila.insertCell().innerHTML = "fuck";
+
+    console.log(listaFacturas);
+
 }
 
-mostrarTablas();
 
-listarFacturas();
+mostrarTablas();
