@@ -23,14 +23,8 @@ const obtener_datos = () => {
     console.log('Las pruebas adjuntadas son: ', pruebas);
     console.log('El comentario es: ' + comentario);
 
-    Swal.fire({
-        'title': 'El reporte ha sido enviado',
-        'icon': 'success',
-        'text': 'Nos pondremos en contacto con usted lo antes posible'
-    }).then(() => {
-        registrar_abusos(usuario, abuso, pruebas, comentario);
-        limpiar();
-    });
+    registrar_abusos(usuario, abuso, pruebas, comentario);
+
 
 };
 

@@ -14,6 +14,7 @@ const registrar_abusos = async(usuario_reportar, tipo_abuso, pruebas, comentario
         }
 
     }).then((response) => {
+        console.log('Sí llega al servicio');
         Swal.fire({
             'title': 'Su reporte se registró correctamente',
             'icon': 'success',
