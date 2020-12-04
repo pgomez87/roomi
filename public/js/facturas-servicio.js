@@ -20,7 +20,11 @@ const registrarFacturas = async(nombre, fecha, tipo, proveedor, porcentaje, acti
             'text': ''
         })
     }).catch((response) => {
-        alert('no se ha podido registrar nada');
+        Swal.fire({
+            'title': response.msj,
+            'icon': 'error',
+            'text': response.err
+        });
     });
 };
 
@@ -33,9 +37,9 @@ const listarFacturas = async() => {
         responseType: 'json'
     }).then((response) => {
         listaTareas = response.data.listaFacturas;
-    }).cath((response) => {
+    }).catch((response) => {
 
     });
 
     return listaFacturas;
-}
+};

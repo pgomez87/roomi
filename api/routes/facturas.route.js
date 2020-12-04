@@ -29,20 +29,20 @@ router.post('/registrar-factura', (req, res) => {
 });
 
 
-router.get('listar-facturas', (req, res) => {
+router.get('/listar-facturas', (req, res) => {
     Factura.find((err, listaFacturas) => {
         if (err) {
             res.json({
                 msj: 'No se pudo listar las tareas',
                 err
-            })
+            });
         } else {
             res.json({
                 msj: 'Las tareas se listaron con éxito',
                 listaFacturas
-            })
+            });
         }
-    })
-})
+    });
+});
 
 module.exports = router;
