@@ -239,23 +239,23 @@
                 <div class="agregar-factura">
                     <h2>Agregar facturas</h2>
                     <form class="creacion-facturas">
-                        <input type="text" placeholder="Nombre de la Factura">
-                        <input type="date" id="fecha-factura" name="fecha">
-                        <select name="recibo" id="tipo-recibo">
+                        <input type="text" id="nombre-factura" placeholder="Nombre de la Factura" required>
+                        <input type="date" id="fecha-factura" name="fecha" required>
+                        <select name="recibo" id="tipo-factura" required>
                             <option value="" selected>--Elegir tipo de recibo--</option>
-                            <option value="Kolbi">Electricidad</option>
-                            <option value="telecable">Internet</option>
-                            <option value="cableTica">Agua</option>
-                            <option value="tigo">Teléfono</option>
+                            <option value="electricidad">Electricidad</option>
+                            <option value="internet">Internet</option>
+                            <option value="agua">Agua</option>
+                            <option value="telefono">Teléfono</option>
                         </select>
-                        <select name="proveedor" id="proveedor-crear-factura">
+                        <select name="proveedor" id="proveedor-crear-factura" required>
                             <option value="" selected>--Elegir proveedor de servicio--</option>
                             <option value="kolbi">Kolbi</option>
                             <option value="telecable">Telecable</option>
                             <option value="cableTica">CableTica</option>
                             <option value="tigo">Tigo</option>
                         </select>
-                        <select name="porcentaje" id="porcentaje-pagar">
+                        <select name="porcentaje" id="porcentaje-pagar" required>
                             <option value="" selected>--Elegir porcentaje por pagar--</option>
                             <option value="25">25%</option>
                             <option value="50">50%</option>
@@ -328,9 +328,13 @@
         </div>
     </footer>
 
-    <script src="js/burguer.js"></script>
+    <!-- js terceros -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- js propio -->
     <script src="js/facturas-coordinador-controlador.js"></script>
+    <script src="js/facturas-servicio.js"></script>
 
 </body>
 

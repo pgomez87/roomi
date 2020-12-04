@@ -5,11 +5,11 @@ const Factura = require('../models/registrar-facturas.model');
 
 router.post('/registrar-factura', (req, res) => {
     let nuevaFactura = new Factura({
-        nombre: nombre,
-        fecha: fecha,
-        tipo: tipo,
-        proveedor: proveedor,
-        porcentaje: porcentaje
+        nombre: req.body.nombre,
+        fecha: req.body.fecha,
+        tipo: req.body.tipo,
+        proveedor: req.body.proveedor,
+        porcentaje: req.body.porcentaje
     });
 
     nuevaFactura.save((err, roomi_bd) => {
