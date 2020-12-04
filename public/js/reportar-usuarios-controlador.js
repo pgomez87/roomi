@@ -3,20 +3,20 @@
 const select_usuarios = document.querySelector('#txt-usuarios');
 const select_abuso = document.querySelector('#txt-abuso');
 const select_pruebas = document.querySelector('#img-pruebas');
-const select_cometarios = document.querySelector('#txt-comentario');
+const select_comentarios = document.querySelector('#txt-comentario');
 const boton_enviar = document.querySelector('#btn-enviar');
 
 const limpiar = () => {
-    select_usuarios.value = 'blanco';
-    select_abuso.value = 'blanco';
-    select_cometarios.value = '';
+    select_usuarios.value = '';
+    select_abuso.value = '';
+    select_comentarios.value = '';
 };
 
 const obtener_datos = () => {
     let usuario = select_usuarios.value;
     let abuso = select_abuso.value;
     let pruebas = select_pruebas.value;
-    let comentario = select_cometarios.value;
+    let comentario = select_comentarios.value;
 
     console.log('El usuario reportado por abuso es: ', usuario);
     console.log('El tipo de abuso es: ', abuso);
@@ -28,6 +28,7 @@ const obtener_datos = () => {
         'icon': 'success',
         'text': 'Nos pondremos en contacto con usted lo antes posible'
     }).then(() => {
+        registrar_abusos(usuario, abuso, pruebas, comentario);
         limpiar();
     });
 
@@ -46,19 +47,6 @@ const validar = () => {
         }
     });
 
-    if (select_usuarios.value == 'blanco') {
-        error = true;
-        select_usuarios.classList.add('error-input');
-    } else {
-        select_usuarios.classList.remove('error-input');
-    }
-
-    if (select_abuso.value == 'blanco') {
-        error = true;
-        select_abuso.classList.add('error-input');
-    } else {
-        select_abuso.classList.remove('error-input');
-    }
 
     //Si no hay error previo se llama a la funcion obtener datos
     if (error == false) {
