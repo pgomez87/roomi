@@ -1,8 +1,5 @@
 'use strict';
 
-//para poder elegir un elemento:
-//const botonEnviar = document.getElementById('btn-enviar');
-//const botonEnviar = document.querySelector('#btn-enviar'); <--- 
 const btnRegistrarFactura = document.querySelector('#btn-crear-factura');
 
 const obtenerDatos = () => {
@@ -11,43 +8,12 @@ const obtenerDatos = () => {
     let tipo = document.querySelector('#tipo-factura').value;
     let proveedor = document.querySelector('#proveedor-crear-factura').value;
     let porcentaje = document.querySelector('#porcentaje-pagar').value;
+    let activa = 'activa';
 
-    console.log(nombre, fecha, tipo, proveedor, porcentaje);
-    registrarFacturas(nombre, fecha, tipo, proveedor, porcentaje);
+    console.log(nombre, fecha, tipo, proveedor, porcentaje, activa);
+    registrarFacturas(nombre, fecha, tipo, proveedor, porcentaje, activa);
 }
 
-
-
-// const validar = () => {
-//     let error = false;
-//     let regexNombre = /^[a-zA-Z0-9äöüÄÖÜ]*$/;
-
-
-
-//     if (regexNombre.test(txtNombreFactura.value)) {
-//         error = false;
-//         txtNombreFactura.classList.remove('error-input');
-//     } else {
-//         error = true;
-//         txtNombreFactura.classList.add('error-input');
-//     }
-
-//     if (txtNombreFactura.value == '') {
-//         error = true;
-//         txtNombreFactura.classList.add('error-input');
-//     }
-
-//     if (error == false) {
-//         obtenerDatos();
-//     } else {
-//         Swal.fire({
-//             'title': 'No se pudo enviar su mensaje',
-//             'icon': 'warning',
-//             'text': 'Por favor revise los campos resaltados'
-//         });
-//     }
-
-// }
 
 const validar = () => {
     let camposRequeridos = document.querySelectorAll(':required');
@@ -109,10 +75,6 @@ const validar = () => {
     if (fechaConvertida >= fechaInput) {
         document.querySelector('#fecha-factura').classList.add('error-input');
         error = true;
-        console.log(fechaConvertida);
-        console.log(fechaInput);
-        console.log(dia);
-        console.log(error);
         Swal.fire({
             'title': 'Por favor revise los Campos resaltados',
             'icon': 'error',
@@ -120,10 +82,6 @@ const validar = () => {
         })
     } else {
         document.querySelector('#fecha-factura').classList.remove('error-input');
-        console.log(fechaConvertida);
-        console.log(fechaInput);
-        console.log(dia);
-        console.log(error);
     }
 
     if (error == false) {
@@ -138,3 +96,41 @@ const mensajePrueba = () => {
 }
 
 btnRegistrarFactura.addEventListener('click', validar);
+
+
+
+
+
+//codigo medio obsoleto.
+
+
+// const validar = () => {
+//     let error = false;
+//     let regexNombre = /^[a-zA-Z0-9äöüÄÖÜ]*$/;
+
+
+
+//     if (regexNombre.test(txtNombreFactura.value)) {
+//         error = false;
+//         txtNombreFactura.classList.remove('error-input');
+//     } else {
+//         error = true;
+//         txtNombreFactura.classList.add('error-input');
+//     }
+
+//     if (txtNombreFactura.value == '') {
+//         error = true;
+//         txtNombreFactura.classList.add('error-input');
+//     }
+
+//     if (error == false) {
+//         obtenerDatos();
+//     } else {
+//         Swal.fire({
+//             'title': 'No se pudo enviar su mensaje',
+//             'icon': 'warning',
+//             'text': 'Por favor revise los campos resaltados'
+//         });
+//     }
+
+// }

@@ -9,7 +9,8 @@ router.post('/registrar-factura', (req, res) => {
         fecha: req.body.fecha,
         tipo: req.body.tipo,
         proveedor: req.body.proveedor,
-        porcentaje: req.body.porcentaje
+        porcentaje: req.body.porcentaje,
+        activa: req.body.activa
     });
 
     nuevaFactura.save((err, roomi_bd) => {
@@ -27,5 +28,21 @@ router.post('/registrar-factura', (req, res) => {
     });
 });
 
+
+router.get('listar-facturas', (req, res) => {
+    Factura.find((err, listaFacturas) => {
+        if (err) {
+            res.json({
+                msj: 'No se pudo listar las tareas',
+                err
+            })
+        } else {
+            res.json({
+                msj: 'Las tareas se listaron con éxito',
+                listaFacturas
+            })
+        }
+    })
+})
 
 module.exports = router;
