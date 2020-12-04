@@ -53,3 +53,4 @@ function handleError(res, reason, message, code) {
 }
 
 // Conexión a todas la rutas.
+app.use('/api', require('./routes/registrar-factura.route.js'));
