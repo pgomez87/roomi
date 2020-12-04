@@ -29,6 +29,8 @@ const registrarFacturas = async(nombre, fecha, tipo, proveedor, porcentaje, acti
 };
 
 
+
+
 const listarFacturas = async() => {
     let listaFacturas = [];
     await axios({
@@ -43,3 +45,21 @@ const listarFacturas = async() => {
 
     return listaFacturas;
 };
+
+
+//otro codigo
+
+// const listarFacturas = async() => {
+//     let listaFacturas = [];
+//     await axios({
+//         method: 'get',
+//         url: 'http://localhost:3000/api/listar-facturas',
+//         responseType: 'json'
+//     }).then((response) => {
+//         listaTareas = response.data.listaFacturas;
+//     }).catch((response) => {
+
+//     });
+
+//     return listaFacturas;
+// };
