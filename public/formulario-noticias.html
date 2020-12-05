@@ -45,9 +45,9 @@
             <div class="container-form-noticias">
                 <form id="formulario-noticias">
                     <h2>Crear Noticia</h2>
-                    <input type="text" placeholder="Titulo de la noticia">
-                    <textarea name="textoNot" id="txtNoticias" placeholder="escriba el texto de la noticia"></textarea>
-                    <input type="file" name="fotoNot" id="imgNoticias">
+                    <input type="text" placeholder="Titulo de la noticia" required>
+                    <textarea name="textoNot" id="txtNoticias" placeholder="escriba el texto de la noticia" required></textarea>
+                    <input type="file" name="fotoNot" id="imgNoticias" placeholder="no es obligatorio">
                     <button type="button" id="agregarNoticia">Agregar Noticia</button>
                 </form>
 
@@ -100,8 +100,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <!-- scripts propios -->
-    <script src="js/registro-controlador.js"></script>
-    <script src="js/noticias-coordinador-controlador.js"></script>
+    <script src="js/formulario-noticias-controlador.js"></script>
 
 
 </body>

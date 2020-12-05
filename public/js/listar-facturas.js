@@ -7,11 +7,11 @@ const mostrarTablas = async() => {
     const facturas = await listarFacturas();
     tabla.innerHTML = '';
 
-    facturas.forEach((factura) => {
-        let fila = tabla.insertRow();
-        fila.insertCell().innerHTML = factura.fecha;
-        console.log(facturas);
-    });
+    // facturas.forEach((factura) => {
+    //     let fila = tabla.insertRow();
+    //     fila.insertCell().innerHTML = factura.fecha;
+    console.log(facturas);
+    // });
 }
 
 
