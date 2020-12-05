@@ -40,9 +40,15 @@ router.post('/registrar-vivienda', (req, res) => {
 router.get('/listar-viviendas', (req, res) => {
     Vivienda.find((err, lista_viviendas) => {
         if (err) {
-            res.json({})
+            res.json({
+                msj: 'No se listaron las viviendas correctamente',
+                err
+            })
         } else {
-            res.json({})
+            res.json({
+                msj: 'Se listaron las viviendas correctamente',
+                lista_viviendas
+            })
         }
     })
 })

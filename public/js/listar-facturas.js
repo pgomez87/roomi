@@ -4,14 +4,14 @@ const tabla = document.querySelector('#tablaFacturasPagadas tbody');
 // const tablaPagada = document.querySelector('#facturas-pagadas tbody');
 
 const mostrarTablas = async() => {
-    let listaFacturas = await listarFacturas();
+    const facturas = await listarFacturas();
     tabla.innerHTML = '';
 
-    // listaFacturas.forEach((factura) => {
-    //     let fila = tabla.insertRow();
-    //     fila.insertCell().innerHTML = factura.fecha;
-    console.log(listaFacturas);
-    // });
+    facturas.forEach((factura) => {
+        let fila = tabla.insertRow();
+        fila.insertCell().innerHTML = factura.fecha;
+        console.log(facturas);
+    });
 }
 
 
@@ -19,9 +19,9 @@ const mostrarTablas = async() => {
 //     tabla.innerHTML = '';
 
 //     let fila = tabla.insertRow();
-//     fila.insertCell().innerHTML = 'mierda';
-//     fila.insertCell().innerHTML = 'pal';
-//     fila.insertCell().innerHTML = 'estao';
+//     fila.insertCell().innerHTML = 'm';
+//     fila.insertCell().innerHTML = 'p';
+//     fila.insertCell().innerHTML = 'e';
 
 
 // }

@@ -32,22 +32,23 @@ const registrarFacturas = async(nombre, fecha, tipo, proveedor, porcentaje, acti
 
 
 const listarFacturas = async() => {
-    let listaFacturas = [];
+    const listaFacturas = [];
     await axios({
         method: 'get',
         url: 'http://localhost:3000/api/listar-facturas',
         responseType: 'json'
     }).then((response) => {
-        listaTareas = response.data.listaFacturas;
+        listaFacturas = response.data.listaFacturas;
+        return listaFacturas;
     }).catch((response) => {
 
     });
 
-    return listaFacturas;
+
 };
 
 
-//otro codigo que en realidad es exactamente el mismo pero tampoco funciona y jueputa jueputa jueputa
+//otro codigo que en realidad es exactamente el mismo pero tampoco funciona 
 
 // const listarFacturas = async() => {
 //     let listaFacturas = [];
@@ -56,7 +57,7 @@ const listarFacturas = async() => {
 //         url: 'http://localhost:3000/api/listar-facturas',
 //         responseType: 'json'
 //     }).then((response) => {
-//         listaTareas = response.data.listaFacturas;
+//         listaFacturas = response.data.listaFacturas;
 //     }).catch((response) => {
 
 //     });
