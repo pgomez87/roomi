@@ -97,6 +97,7 @@ div.imagen-noticia {
     grid-template-columns: 50% 50%;
     padding: 1%;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 button:hover {

@@ -37,6 +37,19 @@
     </header>
 
     <section class="notisuario">
+        <div class="form-noticias" id="box-noticias">
+            <div class="container-form-noticias">
+                <form id="formulario-noticias">
+                    <h2>Crear Noticia</h2>
+                    <input type="text" placeholder="Titulo de la noticia">
+                    <textarea name="textoNot" id="txtNoticias" placeholder="escriba el texto de la noticia"></textarea>
+                    <input type="file" name="fotoNot" id="imgNoticias">
+                    <button type="button" id="agregarNoticia">Agregar Noticia</button>
+                </form>
+
+            </div>
+        </div>
+
         <div class="noticiasfr">
             <h1>Noticias</h1>
             <div class="grid-container">
@@ -70,7 +83,7 @@
                         <button class="boton" type="button" id="btn-eliminar">Información</button>
                     </div>
                 </div>
-                <div class="cajita-agregar">
+                <div class="cajita-agregar" id='agregar-noticias'>
                     <div class="plus-icon">
                         <p>Agregar noticia</p>
                         <i class="fas fa-plus"></i>
@@ -86,6 +99,7 @@
             <p>SOS</p>
         </div>
     </section>
+
 
     <footer>
         <div class="footer-final">
@@ -121,10 +135,16 @@
         </div>
     </footer>
 
-    <script src="js/burguer.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="js/registro-controlador.js"></script>
+    <!-- scripts terceros -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://kit.fontawesome.com/16599b263d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- scripts propios -->
+    <script src="js/registro-controlador.js"></script>
+    <script src="js/noticias-coordinador-controlador.js"></script>
+
+
 </body>
 
 </html>
