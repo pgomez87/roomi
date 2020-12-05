@@ -7,13 +7,23 @@ const mostrarTablas = async() => {
     let listaFacturas = await listarFacturas();
     tabla.innerHTML = '';
 
-
-    let fila = tabla.insertRow();
-    fila.insertCell().innerHTML = "fuck";
-
+    // listaFacturas.forEach((factura) => {
+    //     let fila = tabla.insertRow();
+    //     fila.insertCell().innerHTML = factura.fecha;
     console.log(listaFacturas);
-
+    // });
 }
 
+
+// let mostrarTablas = () => {
+//     tabla.innerHTML = '';
+
+//     let fila = tabla.insertRow();
+//     fila.insertCell().innerHTML = 'mierda';
+//     fila.insertCell().innerHTML = 'pal';
+//     fila.insertCell().innerHTML = 'estao';
+
+
+// }
 
 mostrarTablas();

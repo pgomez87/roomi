@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const Factura = require('../models/registrar-facturas.model.js');
+const Factura = require('../models/registrar-facturas.model');
 
 router.post('/registrar-factura', (req, res) => {
     let nuevaFactura = new Factura({
@@ -38,7 +38,7 @@ router.get('/listar-facturas', (req, res) => {
             });
         } else {
             res.json({
-                msj: 'se listo todo',
+                msj: 'se listo todo, TLPVI',
                 lista_facturas
             });
         }
