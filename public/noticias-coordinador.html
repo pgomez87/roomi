@@ -41,11 +41,13 @@
     <section class="notisuario">
         <h1>Noticias</h1>
 
-        <div class="noticiasfr">
+        <div class="noticiasfr" id="noticiasFr">
 
             <h1>Noticias</h1>
-            <div class="grid-container">
-                <div class="cajita">
+
+            <div class="grid-container" id="gridContainer">
+
+                <!-- <div class="cajita">
                     <div class="imagen-noticia">
                         <img src="https://res.cloudinary.com/imagenes3d/image/upload/v1607224716/ikigugeyxgro8gc0j7hk.jpg">
                     </div>
@@ -54,47 +56,8 @@
                         <p>Se alquila lujoso apartamento para 2 personas ubicado en Escazú.<br> Cuenta con servicios incluidos de agua, luz e internet<br> Se acepta una mascota<br>Información al 84858988</p>
                         <button class="boton" type="button" id="btn-eliminar">Información</button>
                     </div>
-                </div>
-                <div class="cajita">
-                    <div class="imagen-noticia">
-                        <img src="images/buscocompa.jpg">
-                    </div>
-                    <div class="texto-noticia">
-                        <h2>Se Alquila<br> Apartamento</h2>
-                        <p>Se alquila lujoso apartamento para 2 personas ubicado en Escazú.<br> Cuenta con servicios incluidos de agua, luz e internet<br> Se acepta una mascota<br>Información al 84858988</p>
-                        <button class="boton" type="button" id="btn-eliminar">Información</button>
-                    </div>
-                </div>
-                <div class="cajita">
-                    <div class="imagen-noticia">
-                        <img src="images/buscocompa.jpg">
-                    </div>
-                    <div class="texto-noticia">
-                        <h2>Se Alquila<br> Apartamento</h2>
-                        <p>Se alquila lujoso apartamento para 2 personas ubicado en Escazú.<br> Cuenta con servicios incluidos de agua, luz e internet<br> Se acepta una mascota<br>Información al 84858988</p>
-                        <button class="boton" type="button" id="btn-eliminar">Información</button>
-                    </div>
-                </div>
-                <div class="cajita">
-                    <div class="imagen-noticia">
-                        <img src="images/perrito.jpg">
-                    </div>
-                    <div class="texto-noticia">
-                        <h2>Mascota<br> Perdida</h2>
-                        <p>Mi mascota Hachi se encuentra desaparecido desde el viernes a las 11am.<br>Tiene el pelaje gris con café yojos oscuros<br>Si lo encuentra favor llamar al 84858988</p>
-                        <button class="boton" type="button" id="btn-eliminar">Información</button>
-                    </div>
-                </div>
-                <div class="cajita">
-                    <div class="imagen-noticia">
-                        <img src="images/perrito.jpg">
-                    </div>
-                    <div class="texto-noticia">
-                        <h2>Mascota<br> Perdida</h2>
-                        <p>Mi mascota Hachi se encuentra desaparecido desde el viernes a las 11am.<br>Tiene el pelaje gris con café yojos oscuros<br>Si lo encuentra favor llamar al 84858988</p>
-                        <button class="boton" type="button" id="btn-eliminar">Información</button>
-                    </div>
-                </div>
+                </div> -->
+
 
                 <div class="cajita-agregar" id='agregar-noticias'>
                     <div class="plus-icon">
@@ -103,6 +66,7 @@
 
                     </div>
                 </div>
+
             </div>
         </div>
         <div class="sos-boton">
@@ -156,10 +120,58 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <!-- scripts propios -->
-    <script src="js/registro-controlador.js"></script>
+    <!-- <script src="js/registro-controlador.js"></script> -->
+    <script src="js/noticias-servicio.js"></script>
     <script src="js/noticias-coordinador-controlador.js"></script>
+    <script src="js/listar.noticias.js"></script>
+
 
 
 </body>
 
 </html>
+
+
+
+
+<!-- data vieja -->
+<!-- <div class="cajita">
+                    <div class="imagen-noticia">
+                        <img src="images/buscocompa.jpg">
+                    </div>
+                    <div class="texto-noticia">
+                        <h2>Se Alquila<br> Apartamento</h2>
+                        <p>Se alquila lujoso apartamento para 2 personas ubicado en Escazú.<br> Cuenta con servicios incluidos de agua, luz e internet<br> Se acepta una mascota<br>Información al 84858988</p>
+                        <button class="boton" type="button" id="btn-eliminar">Información</button>
+                    </div>
+                </div>
+                <div class="cajita">
+                    <div class="imagen-noticia">
+                        <img src="images/buscocompa.jpg">
+                    </div>
+                    <div class="texto-noticia">
+                        <h2>Se Alquila<br> Apartamento</h2>
+                        <p>Se alquila lujoso apartamento para 2 personas ubicado en Escazú.<br> Cuenta con servicios incluidos de agua, luz e internet<br> Se acepta una mascota<br>Información al 84858988</p>
+                        <button class="boton" type="button" id="btn-eliminar">Información</button>
+                    </div>
+                </div>
+                <div class="cajita">
+                    <div class="imagen-noticia">
+                        <img src="images/perrito.jpg">
+                    </div>
+                    <div class="texto-noticia">
+                        <h2>Mascota<br> Perdida</h2>
+                        <p>Mi mascota Hachi se encuentra desaparecido desde el viernes a las 11am.<br>Tiene el pelaje gris con café yojos oscuros<br>Si lo encuentra favor llamar al 84858988</p>
+                        <button class="boton" type="button" id="btn-eliminar">Información</button>
+                    </div>
+                </div>
+                <div class="cajita">
+                    <div class="imagen-noticia">
+                        <img src="images/perrito.jpg">
+                    </div>
+                    <div class="texto-noticia">
+                        <h2>Mascota<br> Perdida</h2>
+                        <p>Mi mascota Hachi se encuentra desaparecido desde el viernes a las 11am.<br>Tiene el pelaje gris con café yojos oscuros<br>Si lo encuentra favor llamar al 84858988</p>
+                        <button class="boton" type="button" id="btn-eliminar">Información</button>
+                    </div>
+                </div>   -->

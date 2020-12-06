@@ -209,3 +209,9 @@ textarea {
 #btnFoto {
     margin-bottom: 10px;
 }
+
+.cajaPrueba {
+    height: 150px;
+    width: 150px;
+    background-color: gold;
+}
