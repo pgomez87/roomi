@@ -3,7 +3,7 @@
 const registrar_proveedor = async(nombre, servicio) => {
     await axios({
         method: 'post',
-        url: 'http://localhost3000/api/registrar-proveedor',
+        url: 'http://localhost:3000/api/registrar-proveedor',
         responseType: 'json',
         data: {
             nombre: nombre,
@@ -30,7 +30,7 @@ const listar_proveedores = async() => {
     let lista_proveedores = [];
     await axios({
         method: 'get',
-        url: 'http://localhost3000/api/lista-proveedores',
+        url: 'http://localhost:3000/api/lista-proveedores',
         responseType: 'json'
     }).then((response) => {
         lista_proveedores = response.data.lista_proveedores;
