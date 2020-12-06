@@ -33,3 +33,18 @@ const registrar_abusos = async(usuario_reportar, tipo_abuso, pruebas, comentario
     });
 
 };
+
+const listar_abusos = async() => {
+    let lista_abusos = [];
+    await axios({
+        method: 'get',
+        url: 'http://localhost:3000/api/listar-abusos',
+        responseType: 'json'
+    }).then((response) => {
+        lista_abusos = response.data.lista_abusos;
+
+    }).catch((response) => {
+        //console.log(response.data.err);
+    });
+    return lista_abusos;
+};

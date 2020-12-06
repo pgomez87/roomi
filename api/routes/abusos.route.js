@@ -29,5 +29,20 @@ router.post('/registrar-abuso', (req, res) => {
     });
 });
 
+router.get('/listar-abusos', (req, res) => {
+    Abuso.find((err, lista_abusos) => {
+        if (err) {
+            res.json({
+                msj: 'No se pudo listar los abusos',
+                err
+            });
+        } else {
+            res.json({
+                msj: 'Los abusos se listaron correctamente',
+                lista_abusos
+            });
+        }
+    });
+});
 
 module.exports = router;

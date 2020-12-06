@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/reportar-usuarios.css">
+    <link rel="stylesheet" href="css/listar-reportes.css">
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
     <title>Roomi</title>
 </head>
@@ -35,44 +35,19 @@
     </header>
 
     <main>
-        <section class="reporsuario">
-            <div class="rep-form">
-                <form action="" class="reportform" name="subida-imagen" type="POST" enctype="multipart/formdata">
-                    <h1>Reporte de Abusos</h1>
-                    <div class="abusuario">
-                        <label for="txt-usuarios">Usuario a reportar:</label>
-                        <select name="zona" id="txt-usuarios" value="" required>
-                            <option value="" style="display: none">Seleccionar</option>
-                            <option value="Jonas">Jonas</option>
-                            <option value="Martha">Martha</option>
-                            <option value="Agatha">Agatha</option>
-                            <option value="Isaac">Isaac</option>
-                        </select>
-                    </div>
-                    <div class="reportipo">
-                        <label for="txt-abuso">Tipo de abuso:</label>
-                        <select name="zona2" id="txt-abuso" value="" required>
-                            <option value="" style="display: none">Seleccionar</option>
-                            <option value="Físico">Físico</option>
-                            <option value="Psicológico">Psicológico</option>
-                            <option value="Sexual">Sexual</option>
-                            <option value="Todos">Todos</option>
-                        </select>
-                    </div>
-                    <div class="adjuntapruebas">
-                        <label for="img-pruebas">Pruebas:</label>
-                        <input id=img-pruebas type="file" name="imagen1">
-                    </div>
-                    <div class="repormentario">
-                        <label for="txt-comentario">Comentario:</label>
-                        <textarea id="txt-comentario" required></textarea>
-                    </div>
-                    <div class="boton">
-                        <button type="button" id="btn-enviar">Enviar</button>
-                    </div>
-                </form>
-
-            </div>
+        <section class="reporlistar">
+            <table id="tablaReportes">
+                <thead>
+                    <tr>
+                        <th class="titulotablas">Usuario reportado</th>
+                        <th class="titulotablas">Tipo de abuso</th>
+                        <th class="titulotablas">Pruebas</th>
+                        <th class="titulotablas">Comentario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
             <div class="sos-boton">
                 <div class="sos-icon">
                     <i class="fas fa-exclamation-circle"></i>
@@ -119,7 +94,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="js/servicio-abusos.js"></script>
-    <script src="js/reportar-usuarios-controlador.js"></script>
+    <script src="js/listar-abusos.js"></script>
 </body>
 
 </html>
