@@ -7,4 +7,4 @@ const schemaProveedores = new mongoose.Schema({
     servicio: { type: Date, required: true, unique: false },
 });
 
-module.exports = mongoose.model('Proveedor', schemaFacturas, 'proveedores');
+module.exports = mongoose.model('Proveedor', schemaProveedores, 'proveedores');
