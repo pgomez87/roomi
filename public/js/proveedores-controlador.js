@@ -13,11 +13,11 @@ const obtener_datos = () => {
     let nombre = input_nombre.value;
     let servicio = input_servicio.value;
 
-    console.log(`El nombre del proveedor es ${nombre}, y el servicio que brinda es ${servicio}`)
+    registrar_proveedor(nombre, servicio)
 
     Swal.fire({
-        'title': `El proveedor ha sido registrado con éxito`,
-        'icon': `success`,
+        'title': 'El proveedor ha sido registrado con éxito',
+        'icon': 'success',
     }).then(() => {
         limpiar();
     })
@@ -25,7 +25,7 @@ const obtener_datos = () => {
 
 const validar = () => {
     let error = false;
-    let campos_requeridos = document.querySelectorAll(":required");
+    let campos_requeridos = document.querySelectorAll(':required');
 
     campos_requeridos.forEach(campo => {
         if (campo.value == '') {
@@ -41,9 +41,9 @@ const validar = () => {
         obtener_datos();
     } else {
         Swal.fire({
-            'title': `No se ha podido registrar el proveedor`,
-            'icon': `error`,
-            'text': `Revise que se hayan ingresado los datos correctos`,
+            'title': 'No se ha podido registrar el proveedor',
+            'icon': 'error',
+            'text': 'Revise los campos resaltados',
         });
     }
 };
