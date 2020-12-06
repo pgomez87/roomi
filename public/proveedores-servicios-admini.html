@@ -144,27 +144,18 @@
             </div>
             <div class="agregar">
                 <div class="select-container">
-                    <select id="sltProveedor">
-                        <option value="">--Seleccione proveedor--</option>
-                          <option value="AYA">AYA</option>
-                          <option value="ICE">ICE</option>
-                          <option value="Tigo">Tigo</option>
-                          <option value="Telecable">Telecable</option>
-                          <option value="Cabletica">Cabletica</option>
-                          <option value="Movistar">Movistar</option>
-                      </select>
-                    <select id="sltServicio">
-                        <option value="">--Seleccione servicio--</option>
+                    <input type="text" placeholder="Nombre del Proveedor" id="txt-nombre" required>
+                    <select id="slt-servicio" required>
+                          <option value="">Seleccione servicio</option>
                           <option value="Agua">Agua</option>
                           <option value="Electricidad">Electricidad</option>
                           <option value="Teléfono">Teléfono</option>
                           <option value="Internet">Internet</option>
                           <option value="Cable">Cable</option>
-                          <option value="Jardineria">Jardineria</option>
                       </select>
                 </div>
                 <div class="add">
-                    <button type="button" id="btn-enviar">+ Agregar</button>
+                    <button type="button" id="btn-agregar">Agregar</button>
                 </div>
             </div>
         </section>
@@ -203,10 +194,10 @@
             <h2>Copyright: © 2020</h2>
         </div>
     </footer>
-
-    <script src="js/burguer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="js/registro-controlador.js"></script>
+    <script src="js/proveedores-servicio.js"></script>
+    <script src="js/proveedores-controlador.js"></script>
 </body>
 <script src="https://kit.fontawesome.com/3316d2199d.js" crossorigin="anonymous"></script>
 

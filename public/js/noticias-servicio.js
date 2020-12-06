@@ -37,6 +37,6 @@ const listarNoticias = async() => {
         listaNoticias = response.data.listaNoticias;
         return listaNoticias;
     }).catch((response) => {
-
+        console.log('error')
     });
 };

@@ -2,9 +2,12 @@
 
 let btnNoticias = document.querySelector('#agregar-noticias');
 
-const abrirForm = () => {
+const pruebas = () => {
     location.replace('formulario-noticias.html');
 }
 
 
-btnNoticias.addEventListener('click', abrirForm);
+
+
+
+btnNoticias.addEventListener('click', pruebas);

@@ -11,7 +11,7 @@ router.post('/registrar-noticia', (req, res) => {
         imagen: req.body.imagen
     });
 
-    nuevaNoticia.save((err, roomi_bd) => {
+    nuevaNoticia.save((err, noticias_bd) => {
         if (err) {
             res.json({
                 msj: 'La factura no se pudo registrar',
@@ -20,7 +20,7 @@ router.post('/registrar-noticia', (req, res) => {
         } else {
             res.json({
                 msj: 'La factura fue registrada',
-                roomy_bd
+                noticias_bd
             });
         }
     });

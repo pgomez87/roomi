@@ -160,7 +160,7 @@ button {
 }
 
 #formulario-noticias {
-    height: 500px;
+    height: 600px;
     width: 500px;
     margin: 0 auto;
     margin-top: 100px;
@@ -199,4 +199,19 @@ textarea {
 
 #imgNoticias {
     border: none !important;
+}
+
+#fotoNoticias {
+    height: 100px;
+    width: 100px;
+}
+
+#btnFoto {
+    margin-bottom: 10px;
+}
+
+.cajaPrueba {
+    height: 150px;
+    width: 150px;
+    background-color: gold;
 }
