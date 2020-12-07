@@ -32,19 +32,17 @@ const registrarFacturas = async(nombre, fecha, tipo, proveedor, porcentaje, acti
 
 
 const listarFacturas = async() => {
-    const listaFacturas = [];
+    let listaFacturas = [];
     await axios({
         method: 'get',
         url: 'http://localhost:3000/api/listar-facturas',
         responseType: 'json'
     }).then((response) => {
-        listaFacturas = response.data.listaFacturas;
-        return listaFacturas;
+        listaFacturas = response.data.lista_facturas;
     }).catch((response) => {
 
     });
-
-
+    return listaFacturas;
 };
 
 
