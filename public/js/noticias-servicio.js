@@ -15,6 +15,8 @@ const registrarNoticias = async(titulo, texto, imagen) => {
             'title': 'Se ha registrado la noticia',
             'icon': 'success',
             'text': ''
+        }).then(function() {
+            window.location.href = "noticias-coordinador.html"
         })
     }).catch((response) => {
         Swal.fire({
@@ -28,15 +30,15 @@ const registrarNoticias = async(titulo, texto, imagen) => {
 
 
 const listarNoticias = async() => {
-    const listaNoticias = [];
+    let listaNoticias = [];
     await axios({
         method: 'get',
         url: 'http://localhost:3000/api/listar-noticias',
         responseType: 'json'
     }).then((response) => {
-        listaNoticias = response.data.listaNoticias;
-        return listaNoticias;
+        listaNoticias = response.data.lista_noticias;
     }).catch((response) => {
         console.log('error')
     });
+    return listaNoticias;
 };
