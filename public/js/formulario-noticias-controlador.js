@@ -10,6 +10,9 @@ const obtenerDatos = () => {
     registrarNoticias(tituloNoticia, textoNoticia, imagenNoticia);
     console.log(tituloNoticia, textoNoticia, imagenNoticia);
 
+
+    // window.location.href = "noticias-coordinador.html";
+    // location.replace('noticias-coordinador.html');
 }
 
 

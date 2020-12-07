@@ -3,7 +3,7 @@
 let btnNoticias = document.querySelector('#agregar-noticias');
 
 const pruebas = () => {
-    location.replace('formulario-noticias.html');
+    window.location.href = "formulario-noticias.html";
 }
 
 
