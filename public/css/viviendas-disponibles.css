@@ -17,7 +17,7 @@ h1 {
     float: left;
 }
 
-.contenedor-viviendas button{
+.contenedor-viviendas button {
     margin: 3% 0;
 }
 
@@ -44,12 +44,13 @@ button {
     margin-bottom: 1%;
 }
 
-iframe {
+
+/* iframe {
     margin-left: 2.5%;
     width: 53%;
     float: left;
     height: 65vh;
-}
+} */
 
 .anuncio {
     width: 16%;
@@ -67,4 +68,19 @@ iframe {
     position: absolute;
     bottom: 0;
     margin-left: 75%;
+}
+
+.mapouter {
+    text-align: right;
+    height: 500px;
+    width: 800px;
+    float: left;
+    margin-left: 5%;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none!important;
+    height: 500px;
+    width: 800px;
 }
