@@ -420,12 +420,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="sos-boton">
-                    <div class="sos-icon">
-                        <i class="fas fa-exclamation-circle"></i>
+
+                <button class="sos-boton" id="myBtn">
+                        <div class="sos-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p>SOS</p>
+                </button>
+
+                <div id="myModal" class="modal">
+
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="msj-sos">
+                            <p>¿Está seguro que desea comunicarse con su contacto de emergencia?</p>
+                        </div>
+                        <button type="button">Si</button>
+                        <button class="cancelar" type="button">Cancelar</button>
                     </div>
-                    <p>SOS</p>
+
                 </div>
+
+
         </section>
     </main>
 
@@ -463,7 +479,7 @@
         </div>
     </footer>
 
-    <script src="js/burguer.js"></script>
+    <script src="js/btn-sos.js"></script>
 </body>
 
 </html>
