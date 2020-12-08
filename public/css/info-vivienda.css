@@ -1,0 +1,111 @@
+main {
+    padding: 2%;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+
+.imagenes-container {
+    width: 60%;
+    float: left;
+    overflow: hidden;
+}
+
+.main-image {
+    width: 90%;
+    height: 40vh;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.small-images {
+    margin: 2%;
+    text-align: center;
+}
+
+.small-images img {
+    width: 15%;
+    height: 12vh;
+    object-fit: cover;
+}
+
+.info {
+    width: 40%;
+    padding: 2%;
+    display: inline-block;
+}
+
+.info h2 {
+    border: solid 2px #136F63;
+    padding: 4% 3%;
+    border-radius: 3px;
+}
+
+.info div {
+    border: solid 2px #136F63;
+    border-radius: 3px;
+}
+
+.info p {
+    margin: 5% 3%;
+}
+
+button {
+    float: right;
+    margin-top: 4%;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    width: 150px;
+    background-color: #52D1DC;
+}
+
+.descripcion-container {
+    width: 75%;
+    float: left;
+}
+
+.desc-general,
+.calificacione-comentarios {
+    border: solid 2px #136F63;
+    margin: 1.5%;
+    padding: 0.5% 1%;
+    border-radius: 4px;
+}
+
+.descripcion-container h3 {
+    font-weight: 600;
+    margin: 1% 0;
+}
+
+.desc-general p {
+    margin: 1% 0;
+}
+
+.comentario {
+    margin: 2% 0;
+}
+
+.comentario h4 {
+    font-weight: 600;
+}
+
+.comentario p {
+    margin: 0.5% 0;
+}
+
+.anuncio {
+    width: 25%;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    padding: 1% 0;
+}
+
+.anuncio img {
+    width: 75%;
+}
+
+.sos-boton {
+   margin: 5% 12% 0 0;
+}

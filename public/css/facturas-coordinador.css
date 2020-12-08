@@ -1,0 +1,157 @@
+.container-facturas {
+    width: 100%;
+    height: 1000px;
+    /* background: red; */
+    float: left;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 15px;
+    margin-left: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 10px;
+    margin-left: 20px;
+}
+
+.container-info-facturas {
+    width: 90%;
+    height: 500px;
+    /* background-color: blue; */
+    float: left;
+}
+
+.container-form-facturas {
+    width: 90%;
+    height: 500px;
+    /* background-color: green; */
+    float: left;
+}
+
+.container-publicidad {
+    width: 10%;
+    height: 1000px;
+    /* background-color: gold; */
+    float: right;
+}
+
+.facturas-pagadas {
+    width: 50%;
+    height: 500px;
+    /* background-color: hotpink; */
+    float: left;
+}
+
+.facturas-pendientes {
+    width: 50%;
+    height: 500px;
+    /* background-color: indianred; */
+    float: left;
+}
+
+.agregar-factura {
+    width: 50%;
+    height: 500px;
+    /* background-color: grey; */
+    float: left;
+}
+
+.asignar-factura {
+    width: 50%;
+    height: 500px;
+    /* background-color: lightgrey; */
+    float: left;
+}
+
+.sos-boton {
+    margin: 10%;
+    margin-top: 37.7vh;
+}
+
+.publicidad {
+    height: 100%;
+    width: 100%;
+    float: left;
+}
+
+button {
+    background: none;
+    outline: none;
+    border: solid 1px white;
+    border-radius: 35px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 65.8%;
+    margin-bottom: 1%;
+    background-color: #52d1dc;
+    color: #252323;
+}
+
+button:active {
+    background-color: white;
+    border: solid 1px #52d1dc;
+}
+
+
+/*table css*/
+
+table {
+    margin-left: 20px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+td,
+th {
+    border: 1px solid #252323;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #bbbbbf;
+}
+
+tr:hover {
+    background-color: #52d1dc;
+    cursor: pointer;
+}
+
+th {
+    background-color: #252323;
+    color: #52d1dc;
+    font-weight: bold;
+}
+
+.creacion-facturas {
+    margin-top: 50px;
+}
+
+.creacion-facturas select,
+input {
+    display: block;
+    margin: 20px 20px 20px 20%;
+    width: 300px;
+    height: 40px;
+    line-height: 50px;
+    overflow: visible;
+    outline: none;
+}
+
+form button {
+    margin-left: 20%;
+}
+
+.checkbox-pequeno {
+    height: auto;
+    width: auto;
+    padding: auto;
+    margin: auto;
+}
