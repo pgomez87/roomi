@@ -21,7 +21,7 @@ router.post('/registrar-usuario', (req, res) => {
         //   - admin
     });
 
-    nuevo_usuario.save((err, usuario_bd) => {
+    nuevo_usuario.save((err, roomi_bd) => {
         if (err) {
             res.json({
                 msj: 'No se pudo registrar el usuario',
@@ -30,7 +30,7 @@ router.post('/registrar-usuario', (req, res) => {
         } else {
             res.json({
                 msj: 'El usuario se registro correctamente',
-                usuario_bd
+                roomi_bd
             });
         }
     });
