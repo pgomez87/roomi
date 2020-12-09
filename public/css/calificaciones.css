@@ -107,3 +107,8 @@ button {
     margin-left: 55%;
     margin-top: 40px;
 }
+
+.error{
+    color: red;
+    font-weight: bold;
+}
