@@ -36,6 +36,21 @@ router.post('/registrar-usuario', (req, res) => {
     });
 });
 
+router.get('/listar-usuarios', (req, res) => {
+    Usuario.find((err, lista_usuarios) => {
+        if (err) {
+            res.json({
+                msj: 'No se pudo listar los usuarios',
+                err
+            });
+        } else {
+            res.json({
+                lista_usuarios: lista_usuarios
+            });
+        }
+    });
+});
+
 router.get('/iniciar-sesion', (req, res) => {
     let correo = req.query.correo;
     let contrasena = req.query.contrasena;
