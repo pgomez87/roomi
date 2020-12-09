@@ -27,3 +27,32 @@ const registrar_usuario = async(nombre, apellido, contrasena, correo, telefono, 
         }).then();
     });
 };
+
+let iniciar_sesion = async(correo, contrasena) => {
+    try {
+        const response = await axios({
+            method: 'get',
+            params: { correo: correo, contrasena: contrasena },
+            url: `http://localhost:3000/api/iniciar-sesion`,
+            responseType: 'json'
+        });
+        if (response.data.estado == true) {
+            Swal.fire({
+                'icon': 'success',
+                'title': 'Bienvenido',
+                'text': 'Ha iniciado sesión correctamente'
+            }).then(() => {
+                localStorage.setItem('tipo_usuario', response.data.tipo);
+                window.location.href = 'pagina_principal.html'
+            });
+        } else {
+            Swal.fire({
+                'icon': 'error',
+                'title': 'No ha podido iniciar sesión',
+                'text': 'Usuario o contraseña incorrectos'
+            })
+        }
+    } catch (error) {
+        console.log(error);
+    }
+};
