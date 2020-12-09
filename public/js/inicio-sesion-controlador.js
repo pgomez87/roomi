@@ -41,16 +41,8 @@ function obtenerDatos() {
     console.log(`el username es ${nombre}`);
     console.log(`el password es ${contrasena}`);
 
-    Swal.fire({
-        'title': 'Datos verificados',
-        'icon': 'success',
-        'text': 'Ingresando a perfil',
-        showConfirmButton: false,
-        timer: 1200
-    }).then(() => {
-        detectar_usuario(); // Esta linea fue agragada y su funcion respectiva tambien
-        limpiar();
-    });
+    //detectar_usuario(); // Esta linea fue agragada y su funcion respectiva tambien
+    iniciar_sesion(nombre, contrasena);
 }
 
 const validar = () => {

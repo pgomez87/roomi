@@ -50,10 +50,6 @@ router.get('/iniciar-sesion', (req, res) => {
                 res.json({
                     tipo_usuario: usuario.tipo_usuario
                 });
-            } else {
-                res.json({
-                    estado: false
-                });
             }
 
         }
