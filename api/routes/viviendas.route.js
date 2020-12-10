@@ -6,20 +6,20 @@ const Vivienda = require('../models/registrar-viviendas.model');
 
 router.post('/registrar-vivienda', (req, res) => {
     let nueva_vivienda = new Vivienda({
-        nombre: nombre,
-        costo: costo,
-        capacidad: capacidad,
-        direccion: direccion,
-        descripcion: descripcion,
-        foto: foto,
-        habitaciones: habitaciones,
-        bannos: bannos,
-        cocina: cocina,
-        pilas: pilas,
-        comedor: comedor,
-        sala: sala,
-        jardin: jarding,
-        garaje: garaje
+        nombre: nombre.req.body.nombre,
+        costo: costo.req.body.costo,
+        capacidad: capacidad.req.body.capacidad,
+        direccion: direccion.req.body.direccion,
+        descripcion: descripcion.req.body.descripcion,
+        foto: foto.req.body.foto,
+        habitaciones: habitaciones.req.body.habitaciones,
+        bannos: bannos.req.body.bannos,
+        cocina: cocina.req.body.cocina,
+        pilas: pilas.req.body.pilas,
+        comedor: comedor.req.body.comedor,
+        sala: sala.req.body.sala,
+        jardin: jardin.req.body.jardin,
+        garaje: garaje.req.body.garaje
     });
 
     nueva_vivienda.save((err, roomi_bd) => {
@@ -48,7 +48,7 @@ router.get('/listar-viviendas', (req, res) => {
             res.json({
                 msj: 'Se listaron las viviendas correctamente',
                 lista_viviendas
-            })
+            });
         }
     });
 });
