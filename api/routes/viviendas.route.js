@@ -35,7 +35,7 @@ router.post('/registrar-vivienda', (req, res) => {
             });
         }
     });
-})
+});
 
 router.get('/listar-viviendas', (req, res) => {
     Vivienda.find((err, lista_viviendas) => {
@@ -50,5 +50,7 @@ router.get('/listar-viviendas', (req, res) => {
                 lista_viviendas
             })
         }
-    })
-})
+    });
+});
+
+module.exports = router;
