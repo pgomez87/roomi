@@ -28,15 +28,17 @@ const obtener_datos = () => {
     let telefono = input_telefono.value;
     let cedula = input_cedula.value;
     let direccion = input_direccion.value;
+    let tipo = 'regular';
 
-    registrar_usuario(nombre, apellido, contrasena, correo, telefono, cedula, direccion);
+    registrar_usuario(nombre, apellido, contrasena, correo, telefono, cedula, direccion, tipo);
+    console.log(nombre, apellido, contrasena, correo, telefono, cedula, direccion, tipo);
 
     Swal.fire({
         'title': 'Excelente!',
         'icon': 'success',
         'text': 'Su registro fue exitoso.'
     }).then(() => {
-        limpiar_espacios();
+        // limpiar_espacios();
     });
 };
 

@@ -1,6 +1,6 @@
 'use strict';
 
-const registrar_usuario = async(nombre, apellido, contrasena, correo, telefono, cedula, direccion) => {
+const registrar_usuario = async(nombre, apellido, contrasena, correo, telefono, cedula, direccion, tipo) => {
     await axios({
         method: 'post',
         url: 'http://localhost:3000/api/registrar-usuario',
@@ -12,16 +12,17 @@ const registrar_usuario = async(nombre, apellido, contrasena, correo, telefono, 
             correo: correo,
             telefono: telefono,
             cedula: cedula,
-            direccion: direccion
+            direccion: direccion,
+            tipo: tipo
         }
     }).then((response) => {
         Swal.fire({
             'title': 'Se ha registrado exitosamente',
             'icon': 'success'
-        }).then(limpiar_espacios);
+        })
     }).catch((error) => {
         Swal.fire({
-            'title': response.msj,
+            'title': 'nope',
             'text': response.err,
             'icon': 'error'
         }).then();

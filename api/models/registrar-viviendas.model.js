@@ -16,7 +16,7 @@ const schemaViviendas = new mongoose.Schema({
     pilas: { type: String, required: false, unique: false },
     comedor: { type: String, required: false, unique: false },
     jardin: { type: String, required: false, unique: false },
-    garaje: { type: String, required: false, unique: false },
+    garaje: { type: String, required: false, unique: false }
 });
 
 module.exports = mongoose.model('Vivienda', schemaViviendas, 'viviendas');
