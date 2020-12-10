@@ -22,7 +22,7 @@ router.post('/registrar-vivienda', (req, res) => {
         garaje: req.body.garaje
     });
 
-    nueva_vivienda.save((err, roomi_bd) => {
+    nueva_vivienda.save((err, viviendas_bd) => {
         if (err) {
             res.json({
                 msj: 'La vivienda no se pudo registrar',
@@ -31,7 +31,7 @@ router.post('/registrar-vivienda', (req, res) => {
         } else {
             res.json({
                 msj: 'La vivienda se registro satisfactoriamente',
-                roomi_bd
+                viviendas_bd
             });
         }
     });
