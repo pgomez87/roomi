@@ -13,7 +13,7 @@ router.post('/registrar-usuario', (req, res) => {
         telefono: req.body.telefono,
         cedula: req.body.cedula,
         direccion: req.body.direccion,
-        tipo_usuario: 'regular'
+        tipo_usuario: req.body.tipo
 
         // 3 tipos de usuario
         //   - regular
