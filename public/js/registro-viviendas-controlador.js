@@ -49,7 +49,7 @@ const obtener_datos = () => {
     let jardin = input_jardin;
     let garaje = input_garaje;
 
-    registrar_vivienda(nombre, costo, capacidad, descripcion, direccion, imagen, habitaciones, bannos, cocina, pilas, comedor, sala, jardin, garaje);
+    registrar_vivienda(nombre, costo, capacidad, descripcion, direccion, imagen, habitaciones, bannos, cocina, pilas, comedor, sala, jardin, garaje)
 
     Swal.fire({
         'title': `Su solicitud ha sido enviada`,

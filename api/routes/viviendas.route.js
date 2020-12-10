@@ -6,20 +6,20 @@ const Vivienda = require('../models/registrar-viviendas.model');
 
 router.post('/registrar-vivienda', (req, res) => {
     let nueva_vivienda = new Vivienda({
-        nombre: nombre.req.body.nombre,
-        costo: costo.req.body.costo,
-        capacidad: capacidad.req.body.capacidad,
-        direccion: direccion.req.body.direccion,
-        descripcion: descripcion.req.body.descripcion,
-        foto: foto.req.body.foto,
-        habitaciones: habitaciones.req.body.habitaciones,
-        bannos: bannos.req.body.bannos,
-        cocina: cocina.req.body.cocina,
-        pilas: pilas.req.body.pilas,
-        comedor: comedor.req.body.comedor,
-        sala: sala.req.body.sala,
-        jardin: jardin.req.body.jardin,
-        garaje: garaje.req.body.garaje
+        nombre: req.body.nombre,
+        costo: req.body.costo,
+        capacidad: req.body.capacidad,
+        direccion: req.body.direccion,
+        descripcion: req.body.descripcion,
+        foto: req.body.foto,
+        habitaciones: req.body.habitaciones,
+        bannos: req.body.bannos,
+        cocina: req.body.cocina,
+        pilas: req.body.pilas,
+        comedor: req.body.comedor,
+        sala: req.body.sala,
+        jardin: req.body.jardin,
+        garaje: req.body.garaje
     });
 
     nueva_vivienda.save((err, roomi_bd) => {
