@@ -7,6 +7,14 @@ const input_capacidad = document.querySelector('#txt-capacidad');
 const input_direccion = document.querySelector('#txt-direccion');
 const input_descripcion = document.querySelector('#txt-descripcion');
 const input_imagen = document.querySelector('#file-imagen');
+const input_habitaciones = document.querySelector('#slt-habitaciones');
+const input_bannos = document.querySelector('#slt-bannos');
+const input_cocina = document.querySelector('#checkbox-cocina');
+const input_pilas = document.querySelector('#checkbox-pilas');
+const input_comedor = document.querySelector('#checkbox-comedor');
+const input_sala = document.querySelector('#checkbox-sala');
+const input_jardin = document.querySelector('#checkbox-jardin');
+const input_garaje = document.querySelector('#checkbox-garaje');
 
 const limpiar = () => {
     input_nombre.value = '';
@@ -15,6 +23,14 @@ const limpiar = () => {
     input_descripcion.value = '';
     input_direccion.value = '';
     input_imagen.value = '';
+    input_habitaciones.value = '';
+    input_bannos.value = '';
+    input_cocina.value = '';
+    input_pilas.value = '';
+    input_comedor.value = '';
+    input_sala.value = '';
+    input_jardin.value = '';
+    input_garaje.value = '';
 }
 
 const obtener_datos = () => {
@@ -24,8 +40,16 @@ const obtener_datos = () => {
     let descripcion = input_descripcion.value;
     let direccion = input_direccion.value;
     let imagen = input_imagen;
+    let habitaciones = input_habitaciones;
+    let bannos = input_bannos;
+    let cocina = input_cocina;
+    let pilas = input_pilas;
+    let comedor = input_comedor;
+    let sala = input_sala;
+    let jardin = input_jardin;
+    let garaje = input_garaje;
 
-    console.log(`El nombre es ${nombre}, el costo de ${costo}, la capacidad ${capacidad} personas, la dirección: "${direccion}", la descripción: "${descripcion}" y la imagen ${imagen}.`)
+    registrar_vivienda(nombre, costo, capacidad, descripcion, direccion, imagen, habitaciones, bannos, cocina, pilas, comedor, sala, jardin, garaje);
 
     Swal.fire({
         'title': `Su solicitud ha sido enviada`,
