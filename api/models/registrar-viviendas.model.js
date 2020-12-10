@@ -11,4 +11,4 @@ const schemaViviendas = new mongoose.Schema({
     activa: { type: String, required: true, unique: false }
 });
 
-module.exports = mongoose.model('Vivienda', schemaFacturas, 'viviendas');
+module.exports = mongoose.model('Vivienda', schemaViviendas, 'viviendas');
