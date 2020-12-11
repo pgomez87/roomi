@@ -30,7 +30,7 @@ const listar_proveedores = async() => {
     let lista_proveedores = [];
     await axios({
         method: 'get',
-        url: 'http://localhost:3000/api/lista-proveedores',
+        url: 'http://localhost:3000/api/listar-proveedores',
         responseType: 'json'
     }).then((response) => {
         lista_proveedores = response.data.lista_proveedores;
