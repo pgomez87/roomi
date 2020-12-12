@@ -8,4 +8,4 @@ const schema_publicidad = new mongoose.Schema({
     imagen: { type: String, required: false, unique: false }
 });
 
-module.exports = mongoose.model('anuncio', schema_publicidad, 'anuncios');
+module.exports = mongoose.model('publicidad', schema_publicidad, 'publicidades');
