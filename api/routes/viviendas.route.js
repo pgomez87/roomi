@@ -11,7 +11,7 @@ router.post('/registrar-vivienda', (req, res) => {
         capacidad: req.body.capacidad,
         direccion: req.body.direccion,
         descripcion: req.body.descripcion,
-        foto: req.body.foto,
+        imagen: req.body.imagen,
         habitaciones: req.body.habitaciones,
         bannos: req.body.bannos,
         cocina: req.body.cocina,
