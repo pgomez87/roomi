@@ -2,7 +2,7 @@
 
 const select_usuarios = document.querySelector('#txt-usuarios');
 const select_abuso = document.querySelector('#txt-abuso');
-const select_pruebas = document.querySelector('#img-pruebas');
+const select_pruebas = document.querySelector('#btnFoto');
 const select_comentarios = document.querySelector('#txt-comentario');
 const boton_enviar = document.querySelector('#btn-enviar');
 
