@@ -8,7 +8,7 @@ const schemaViviendas = new mongoose.Schema({
     capacidad: { type: String, required: true, unique: false },
     direccion: { type: String, required: true, unique: false },
     descripcion: { type: String, required: true, unique: false },
-    imagen: { type: String, required: true, unique: false },
+    imagen: { type: String, required: false, unique: false },
     habitaciones: { type: String, required: true, unique: false },
     bannos: { type: String, required: true, unique: false },
     cocina: { type: String, required: false, unique: false },

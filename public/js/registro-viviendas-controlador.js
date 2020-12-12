@@ -39,15 +39,15 @@ const obtener_datos = () => {
     let capacidad = input_capacidad.value;
     let descripcion = input_descripcion.value;
     let direccion = input_direccion.value;
-    let imagen = input_imagen.src;
-    let habitaciones = input_habitaciones;
-    let bannos = input_bannos;
-    let cocina = input_cocina;
-    let pilas = input_pilas;
-    let comedor = input_comedor;
-    let sala = input_sala;
-    let jardin = input_jardin;
-    let garaje = input_garaje;
+    let imagen = input_imagen.value;
+    let habitaciones = input_habitaciones.value;
+    let bannos = input_bannos.value;
+    let cocina = input_cocina.value;
+    let pilas = input_pilas.value;
+    let comedor = input_comedor.value;
+    let sala = input_sala.value;
+    let jardin = input_jardin.value;
+    let garaje = input_garaje.value;
 
     registrar_vivienda(nombre, costo, capacidad, descripcion, direccion, imagen, habitaciones, bannos, cocina, pilas, comedor, sala, jardin, garaje)
 
