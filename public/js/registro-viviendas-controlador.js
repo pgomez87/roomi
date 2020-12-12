@@ -39,7 +39,7 @@ const obtener_datos = () => {
     let capacidad = input_capacidad.value;
     let descripcion = input_descripcion.value;
     let direccion = input_direccion.value;
-    let imagen = input_imagen;
+    let imagen = input_imagen.src;
     let habitaciones = input_habitaciones;
     let bannos = input_bannos;
     let cocina = input_cocina;
@@ -67,7 +67,7 @@ const validar = () => {
     let regex_capacidad = /^[0-9]/;
     let regex_direccion = /^[a-zA-Z0-9 ]+$/;
     let regex_descripcion = /^[a-zA-Z0-9 ]+$/;
-    let regex_imagen = /.*\.(jpe?g|png)$/igm;
+    //let regex_imagen = /.*\.(jpe?g|png)$/igm;
     let campos_requeridos = document.querySelectorAll(":required");
 
     campos_requeridos.forEach(campo => {
@@ -114,12 +114,12 @@ const validar = () => {
         input_descripcion.classList.remove(`error-input`);
     }
 
-    if (!regex_imagen.test(input_imagen.value)) {
-        error = true;
-        input_imagen.classList.add(`error-input`);
-    } else {
-        input_imagen.classList.remove(`error-input`);
-    }
+    //if (!regex_imagen.test(input_imagen.value)) {
+    //    error = true;
+    //    input_imagen.classList.add(`error-input`);
+    //} else {
+    //    input_imagen.classList.remove(`error-input`);
+    //}
 
     if (error == false) {
         obtener_datos();
