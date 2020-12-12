@@ -42,7 +42,7 @@ const listar_viviendas = async() => {
     let lista_viviendas = [];
     await axios({
         method: 'get',
-        url: 'http://localhost:3000/api/lista-viviendas',
+        url: 'http://localhost:3000/api/listar-viviendas',
         responseType: 'json'
     }).then((response) => {
         lista_viviendas = response.data.lista_viviendas;

@@ -147,4 +147,6 @@ input_imagen.addEventListener('click', () => {
     widgetCloudinary.open();
 }, false);
 
+
+
 btn_enviar.addEventListener('click', validar);
