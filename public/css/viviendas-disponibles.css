@@ -84,3 +84,18 @@ button {
     height: 500px;
     width: 800px;
 }
+
+.btn-ver-vivienda {
+    display: block;
+}
+
+.caja-casas {
+    border: solid 2px #136F63;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 15px;
+}
+
+.caja-casas img {
+    margin-left: 15px;
+}

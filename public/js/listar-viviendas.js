@@ -9,41 +9,52 @@ const mostrarViviendas = async() => {
     let a = 0;
 
     viviendasDisp.forEach((vivienda) => {
-        for (i; i < viviendasDisp.length; i++) {
-            console.log('tucan')
-        }
-        // console.log(i);
 
         let div1 = document.createElement('div');
         div1.className = 'casa-individual';
         div1.id = vivienda._id;
-        idVivienda = vivienda._id;
+        div1.classList.add('caja-casas')
         div1.innerHTML = `<h2>${vivienda.nombre}</h2>
             <p>${vivienda.descripcion}</p>
-            <img src="${vivienda.imagen}">
-            <button type="button"  class="btn-ver-vivienda" id="btn-ver-vivienda">Ver mas informacion</button>`;
-        localStorage.setItem('objetoPrueba', JSON.stringify(idVivienda));
+            <img src="${vivienda.imagen}"> `;
+
+        let botonVivienda = document.createElement('button');
+        botonVivienda.type = 'button';
+        botonVivienda.classList.add('btn-ver-vivienda');
+        botonVivienda.innerText = 'Ver más información';
+        botonVivienda.addEventListener('click', () => {
+            localStorage.setItem('viviendaSeleccionada', vivienda._id);
+            console.log(vivienda._id);
+        });
+        div1.appendChild(botonVivienda);
+
         contViviendas.appendChild(div1);
+
     });
 
+    { /* <button type="button"  class="btn-ver-vivienda" id="btn-ver-vivienda">Ver mas informacion</button> */ }
 
 
-    const prueba = () => {
-        console.log('shiiiiiiiiiiiiiit');
-    }
 
-    for (a; a < i; a++) {
-        let btnID = document.querySelectorAll(`#btn-ver-vivienda`);
-        btnID[a].addEventListener('click', prueba);
-        if (a === viviendasDisp[a]) {
-            console.log(`esto es ${a}, y esto es ${i}`);
-        } else {
-            console.log('shit');
-        }
-        // console.log(a);
-    }
 };
 
+mostrarViviendas();
+
+//pruebas
+
+// for (i; i < viviendasDisp.length; i++) {
+//     console.log('tucan');
+//     localStorage.setItem('objetosPrueba', vivienda._id);
+// }
+
+
+
+// let blargh = localStorage.getItem('objetoPrueba');
+
+// if (localStorage.getItem('objetoPrueba')) {
+//     console.log('objetoPrueba');
+//     console.log(blargh);    
+// }
 
 
 
@@ -76,7 +87,7 @@ const mostrarViviendas = async() => {
 // }
 
 
-mostrarViviendas();
+
 // infoViviendaIndividual();
 
 
