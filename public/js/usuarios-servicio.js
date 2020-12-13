@@ -44,7 +44,8 @@ let iniciar_sesion = async(correo, contrasena) => {
                 'text': 'Ha iniciado sesión correctamente'
             }).then(() => {
                 localStorage.setItem('tipo_usuario', response.data.tipo);
-                window.location.href = 'pagina_principal.html'
+                localStorage.setItem('correo_usuario', response.data.correo);
+                window.location.href = 'dashboard-usuario.html'
             });
         } else {
             Swal.fire({

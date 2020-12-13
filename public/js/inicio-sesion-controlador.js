@@ -77,7 +77,6 @@ const validar = () => {
         textoContrasena.classList.remove('error-input');
     }
 
-
     if (error == false) {
         obtenerDatos();
     } else {
