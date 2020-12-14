@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/chat.css" />
+    <title>ChatCord App</title>
+</head>
+
+<body>
+    <div class="join-container">
+        <header class="join-header">
+            <h1>
+                </i> Roomi</h1>
+        </header>
+        <main class="join-main">
+            <form action="chat.html">
+                <div class="form-control">
+                    <label for="username">Usuarios</label>
+                    <input type="text" name="username" id="username" placeholder="Nombre usuario..." required />
+                </div>
+                <div class="form-control">
+                    <label for="room">Chat</label>
+                    <select name="room" id="room">
+							<option value="Compañeros de vivienda">Compañeros de vivienda</option>
+						</select>
+                </div>
+                <button type="submit" class="btn">Unirse Chat</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js" integrity="sha512-BHtomM5XDcUy7tDNcrcX1Eh0RogdWiMdXl3wJcKB3PFekXb3l5aDzymaTher61u6vEZySnoC/SAj2Y/p918Y3w==" crossorigin="anonymous"></script>
+    <script src="http://127.0.0.1:3000/socket.io/socket.io.js"></script>
+</body>
+
+</html>
