@@ -7,31 +7,93 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/chat.css" />
+    <link rel="stylesheet" href="css/general.css">
     <title>ChatCord App</title>
 </head>
 
 <body>
-    <div class="join-container">
-        <header class="join-header">
-            <h1>
-                </i> Roomi</h1>
-        </header>
-        <main class="join-main">
-            <form action="chat.html">
-                <div class="form-control">
-                    <label for="username">Usuarios</label>
-                    <input type="text" name="username" id="username" placeholder="Nombre usuario..." required />
+
+    <header>
+        <div class="container-header">
+
+            <div class="logo-header">
+                <a href="landing-page.html"><img src="images/Logo_1500x600.png"></a>
+            </div>
+
+
+            <div class="nav-header">
+                <nav>
+                    <a href="dashboard-usuario.html">Inicio</a>
+                    <a href="viviendas-disponibles-usuario.html">Viviendas</a>
+                    <a href="proveedores-servicios-usuarios.html">Proveedores</a>
+                    <a href="noticias-usuario.html">Noticias</a>
+                    <a href="companeros-usuario.html">Compañeros</a>
+                    <a href="perfil-usuario.html">Mi perfil</a>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="join-container">
+            <header class="join-header">
+                <h1>
+                    </i> Chat</h1>
+            </header>
+            <main class="join-main">
+                <form action="chat.html">
+                    <div class="form-control">
+                        <label for="username">Usuarios</label>
+                        <input type="text" name="username" id="username" placeholder="Nombre usuario..." required />
+                    </div>
+                    <div class="form-control">
+                        <label for="room">Chat</label>
+                        <select name="room" id="room">
+                                <option value="Compañeros de vivienda">Compañeros de vivienda</option>
+                            </select>
+                    </div>
+                    <button type="submit" class="btn">Unirse Chat</button>
+                </form>
+            </main>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer-final">
+            <div class="foot-3D">
+                <a href="landing-equipo.html"><img src="images/3D-logo.png" alt="logotid"></a>
+            </div>
+
+            <div class="iconos-sociales">
+                <div class="texto-social">
+                    <p>
+                        Medios Sociales
+                    </p>
                 </div>
-                <div class="form-control">
-                    <label for="room">Chat</label>
-                    <select name="room" id="room">
-							<option value="Compañeros de vivienda">Compañeros de vivienda</option>
-						</select>
+                <div class="imagenes-sociales">
+                    <a target="blank" href="https://www.facebook.com"><i  class="fab fa-facebook fa-2x hvr-grow-rotate"></i></a>
+                    <a target="blank" href="https://web.whatsapp.com"><i class="fab fa-whatsapp fa-2x hvr-grow-rotate"></i></a>
+                    <a target="blank" href="https://www.waze.com"><i class="fab fa-waze fa-2x hvr-grow-rotate"></i></a>
                 </div>
-                <button type="submit" class="btn">Unirse Chat</button>
-            </form>
-        </main>
-    </div>
+            </div>
+            <div class="foot-roomi">
+                <a href="landing-page.html">
+                    <div class="texto-roomi">
+                        <p>
+                            Sobre Nosotros
+                        </p>
+                    </div>
+                    <img src="images/roomie-logo.png" alt="logotir">
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <h2>Copyright: © 2020</h2>
+        </div>
+    </footer>
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js" integrity="sha512-BHtomM5XDcUy7tDNcrcX1Eh0RogdWiMdXl3wJcKB3PFekXb3l5aDzymaTher61u6vEZySnoC/SAj2Y/p918Y3w==" crossorigin="anonymous"></script>
     <script src="http://127.0.0.1:3000/socket.io/socket.io.js"></script>

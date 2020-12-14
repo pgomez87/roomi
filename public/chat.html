@@ -6,36 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/general.css">
     <title>ChatCord App</title>
 </head>
 
 <body>
-    <div class="chat-container">
-        <header class="chat-header">
-            <h1>
-                </i> Roomi</h1>
-            <a href="chat-index.html" class="btn">Salir</a>
-        </header>
-        <main class="chat-main">
-            <div class="chat-sidebar">
-                <h3><i class="fas fa-comments"></i> Chat</h3>
-                <h2 id="room-name"></h2>
-                <h3><i class="fas fa-users"></i> Users</h3>
-                <ul id="users">
-                </ul>
-            </div>
-            <div class="chat-messages">
+    <header>
+        <div class="container-header">
 
+            <div class="logo-header">
+                <a href="landing-page.html"><img src="images/Logo_1500x600.png"></a>
             </div>
-        </main>
-        <div class="chat-form-container">
-            <form id="chat-form">
-                <input id="msg" type="text" placeholder="Escriba su mensaje..." required autocomplete="off" />
-                <button class="btn"><i class="fas fa-paper-plane"></i> Enviar</button>
-            </form>
+
+
+            <div class="nav-header">
+                <nav>
+                    <a href="dashboard-usuario.html">Inicio</a>
+                    <a href="viviendas-disponibles-usuario.html">Viviendas</a>
+                    <a href="proveedores-servicios-usuarios.html">Proveedores</a>
+                    <a href="noticias-usuario.html">Noticias</a>
+                    <a href="companeros-usuario.html">Compañeros</a>
+                    <a href="perfil-usuario.html">Mi perfil</a>
+                </nav>
+            </div>
+
         </div>
-    </div>
+    </header>
 
+    <main>
+        <div class="chat-container">
+            <header class="chat-header">
+                <h1>
+                    </i> Roomi</h1>
+                <a href="chat-index.html" class="btn">Salir</a>
+            </header>
+            <main class="chat-main">
+                <div class="chat-sidebar">
+                    <h3><i class="fas fa-comments"></i> Chat</h3>
+                    <h2 id="room-name"></h2>
+                    <h3><i class="fas fa-users"></i> Compañeros</h3>
+                    <ul id="users">
+                    </ul>
+                </div>
+                <div class="chat-messages">
+
+                </div>
+            </main>
+            <div class="chat-form-container">
+                <form id="chat-form">
+                    <input id="msg" type="text" placeholder="Escriba su mensaje..." required autocomplete="off" />
+                    <button class="btn"><i class="fas fa-paper-plane"></i> Enviar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-final">
+            <div class="foot-3D">
+                <a href="landing-equipo.html"><img src="images/3D-logo.png" alt="logotid"></a>
+            </div>
+
+            <div class="iconos-sociales">
+                <div class="texto-social">
+                    <p>
+                        Medios Sociales
+                    </p>
+                </div>
+                <div class="imagenes-sociales">
+                    <a target="blank" href="https://www.facebook.com"><i  class="fab fa-facebook fa-2x hvr-grow-rotate"></i></a>
+                    <a target="blank" href="https://web.whatsapp.com"><i class="fab fa-whatsapp fa-2x hvr-grow-rotate"></i></a>
+                    <a target="blank" href="https://www.waze.com"><i class="fab fa-waze fa-2x hvr-grow-rotate"></i></a>
+                </div>
+            </div>
+            <div class="foot-roomi">
+                <a href="landing-page.html">
+                    <div class="texto-roomi">
+                        <p>
+                            Sobre Nosotros
+                        </p>
+                    </div>
+                    <img src="images/roomie-logo.png" alt="logotir">
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <h2>Copyright: © 2020</h2>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/btn-sos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js" integrity="sha512-BHtomM5XDcUy7tDNcrcX1Eh0RogdWiMdXl3wJcKB3PFekXb3l5aDzymaTher61u6vEZySnoC/SAj2Y/p918Y3w==" crossorigin="anonymous"></script>
     <script src="http://127.0.0.1:3000/socket.io/socket.io.js"></script>
     <script src="js/chat.js"></script>
