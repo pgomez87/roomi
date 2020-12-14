@@ -38,14 +38,9 @@ let iniciar_sesion = async(correo, contrasena) => {
             responseType: 'json'
         });
         if (response.data.estado == true) {
-            Swal.fire({
-                'icon': 'success',
-                'text': 'Ha iniciado sesión correctamente'
-            }).then(() => {
-                localStorage.setItem('tipo_usuario', response.data.tipo);
-                localStorage.setItem('correo_usuario', response.data.correo);
-                window.location.href = 'dashboard-usuario.html'
-            });
+            localStorage.setItem('tipo_usuario', response.data.tipo);
+            localStorage.setItem('correo_usuario', response.data.correo);
+            window.location.href = 'dashboard-usuario.html'
         } else {
             Swal.fire({
                 'icon': 'error',
