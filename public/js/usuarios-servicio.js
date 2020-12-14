@@ -40,7 +40,6 @@ let iniciar_sesion = async(correo, contrasena) => {
         if (response.data.estado == true) {
             Swal.fire({
                 'icon': 'success',
-                'title': 'Bienvenido',
                 'text': 'Ha iniciado sesión correctamente'
             }).then(() => {
                 localStorage.setItem('tipo_usuario', response.data.tipo);
