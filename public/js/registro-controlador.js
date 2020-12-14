@@ -10,15 +10,14 @@ const input_cedula = document.querySelector('#txt-cedula');
 const input_direccion = document.querySelector('#txt-direccion');
 
 
-const limpiar = () => {
-    input_nombre.value = '';
-    input_apellido.value = '';
-    input_contrasena.value = '';
-    input_correo.value = '';
-    input_telefono.value = '';
-    input_cedula.value = '';
-    input_direccion.value = '';
-}
+const limpiar_espacios = () => {
+    let lista_espacios = document.querySelectorAll('[required]');
+
+    lista_espacios.forEach(element => {
+        element.value = '';
+    });
+};
+
 
 const obtener_datos = () => {
 
@@ -29,21 +28,17 @@ const obtener_datos = () => {
     let telefono = input_telefono.value;
     let cedula = input_cedula.value;
     let direccion = input_direccion.value;
+    let tipo = 'regular';
 
-    console.log(nombre);
-    console.log(apellido);
-    console.log(contrasena);
-    console.log(correo);
-    console.log(telefono);
-    console.log(cedula);
-    console.log(direccion);
+    registrar_usuario(nombre, apellido, contrasena, correo, telefono, cedula, direccion, tipo);
+    console.log(nombre, apellido, contrasena, correo, telefono, cedula, direccion, tipo);
 
     Swal.fire({
         'title': 'Excelente!',
         'icon': 'success',
         'text': 'Su registro fue exitoso.'
     }).then(() => {
-        limpiar();
+        // limpiar_espacios();
     });
 };
 
@@ -53,7 +48,7 @@ const validar = () => {
     let regex_nombre = /^[a-zA-Z ]+$/;
     let regex_telefono = /^[a-zA-Z0-9]+$/;
     let regex_correo = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    let regex_direccion = /^[a-zA-Z0-9]+$/;
+    let regex_direccion = /^[a-zA-Z0-9\s]+$/;
     let regex_contrasena = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
     let campos_requeridos = document.querySelectorAll(':required');
 
@@ -103,21 +98,14 @@ const validar = () => {
 
     if (error == false) {
         obtener_datos();
-
     } else {
         Swal.fire({
             'title': 'Debe revisar sus datos. ',
             'text': 'Su formulario no fue enviado.',
             'icon': 'warning'
         });
-
     };
-
 };
-
-
-
-
 
 
 

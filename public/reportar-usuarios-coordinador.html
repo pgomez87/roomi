@@ -41,17 +41,17 @@
                     <h1>Reporte de Abusos</h1>
                     <div class="abusuario">
                         <label for="txt-usuarios">Usuario a reportar:</label>
-                        <select name="zona" id="txt-usuarios" value=" " required>
+                        <select name="zona" id="txt-usuarios" value="" required>
                             <option value="blanco" style="display: none">Seleccionar</option>
-                            <option value="usuario-jack">Jonas</option>
-                            <option value="usuario-sally">Martha</option>
-                            <option value="usuario-zero">Agatha</option>
-                            <option value="usuario-oogie">Isaac</option>
+                            <option value="Jonas">Jonas</option>
+                            <option value="Martha">Martha</option>
+                            <option value="Agatha">Agatha</option>
+                            <option value="Isaac">Isaac</option>
                         </select>
                     </div>
                     <div class="reportipo">
                         <label for="txt-abuso">Tipo de abuso:</label>
-                        <select name="zona2" id="txt-abuso" value=" " required>
+                        <select name="zona2" id="txt-abuso" value="" required>
                             <option value="blanco" style="display: none">Seleccionar</option>
                             <option value="Físico">Físico</option>
                             <option value="Psicológico">Psicológico</option>
@@ -60,8 +60,8 @@
                         </select>
                     </div>
                     <div class="adjuntapruebas">
-                        <label for="img-pruebas">Pruebas:</label>
-                        <input id=img-pruebas type="file" name="imagen1">
+                        <label for="btnFoto">Pruebas:</label>
+                        <input id="btnFoto" type="button" name="imagen1" value="Seleccione un archivo">
                     </div>
                     <div class="repormentario">
                         <label for="txt-comentario">Comentario:</label>
@@ -116,9 +116,11 @@
             <h2>Copyright: © 2020</h2>
         </div>
     </footer>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="js/servicio-abusos.js"></script>
+    <script src="js/servicio-imagenes.js"></script>
     <script src="js/reportar-usuarios-controlador.js"></script>
 </body>
 

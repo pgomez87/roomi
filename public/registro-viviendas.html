@@ -49,7 +49,7 @@
                     <textarea placeholder="Descripción" id="txt-descripcion" required></textarea>
                 </div>
                 <div>
-                    <input type="file" id="file-imagen">
+                    <input id="file-imagen" type="button" name="imagen" value="Seleccione una imagen" required>
                 </div>
                 <div id="config-secciones-vivienda">
                     <div>
@@ -73,45 +73,28 @@
                         </select>
                     </div>
                     <div>
-                        <select id="slt-cocina" required>
-                        <option value="">Cocina</option>
-                        <option value="1">1</option>
-                        </select>
+                        <label for="checkbox-cocina">Cocina</label>
+                        <input type="checkbox" id="checkbox-cocina" required>
                     </div>
                     <div>
-                        <select id="slt-pilas" required>
-                        <option value="">Cuarto de Pilas</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        </select>
+                        <label for="checkbox-pilas">Cuarto de Pilas</label>
+                        <input type="checkbox" id="checkbox-pilas" required>
                     </div>
                     <div>
-                        <select id="slt-comedor" required>
-                        <option value="">Comedor</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        </select>
+                        <label for="checkbox-comedor">Comedor</label>
+                        <input type="checkbox" id="checkbox-comedor" required>
                     </div>
                     <div>
-                        <select id="slt-sala" required>
-                        <option value="">Sala</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        </select>
+                        <label for="checkbox-sala">Sala</label>
+                        <input type="checkbox" id="checkbox-sala" required>
                     </div>
                     <div>
-                        <select id="slt-jardin" required>
-                        <option value="">Jardin</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        </select>
+                        <label for="checkbox-jardin">Jardín</label>
+                        <input type="checkbox" id="checkbox-jardin" required>
                     </div>
                     <div>
-                        <select id="slt-garaje" required>
-                        <option value="">Garaje</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        </select>
+                        <label for="checkbox-garaje">Garaje</label>
+                        <input type="checkbox" id="checkbox-garaje" required>
                     </div>
                 </div>
                 <div>
@@ -153,9 +136,12 @@
             <h2>Copyright: © 2020</h2>
         </div>
     </footer>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/viviendas-servicio.js"></script>
     <script src="js/registro-viviendas-controlador.js"></script>
+    <script src="js/listar-viviendas.js"></script>
 </body>
 
 </html>

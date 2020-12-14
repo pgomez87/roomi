@@ -1,16 +1,16 @@
 'use strict';
 
 const express = require('express');
-const router = express.Router();
 const Proveedor = require('../models/proveedores.model');
+const router = express.Router();
 
 router.post('/registrar-proveedor', (req, res) => {
-    let nuevoProveedor = new Proveedor({
+    let nuevo_proveedor = new Proveedor({
         nombre: req.body.nombre,
         servicio: req.body.servicio,
     });
 
-    nuevoProveedor.save((err, roomi_bd) => {
+    nuevo_proveedor.save((err, proveedores_bd) => {
         if (err) {
             res.json({
                 msj: 'El proveedor no se pudo registrar',
@@ -19,7 +19,7 @@ router.post('/registrar-proveedor', (req, res) => {
         } else {
             res.json({
                 msj: 'El proveedor se registró con éxito',
-                roomi_bd
+                proveedores_bd
             });
         }
     });

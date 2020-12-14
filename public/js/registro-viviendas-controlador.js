@@ -7,6 +7,25 @@ const input_capacidad = document.querySelector('#txt-capacidad');
 const input_direccion = document.querySelector('#txt-direccion');
 const input_descripcion = document.querySelector('#txt-descripcion');
 const input_imagen = document.querySelector('#file-imagen');
+const input_habitaciones = document.querySelector('#slt-habitaciones');
+const input_bannos = document.querySelector('#slt-bannos');
+const input_cocina = document.querySelector('#checkbox-cocina');
+const input_pilas = document.querySelector('#checkbox-pilas');
+const input_comedor = document.querySelector('#checkbox-comedor');
+const input_sala = document.querySelector('#checkbox-sala');
+const input_jardin = document.querySelector('#checkbox-jardin');
+const input_garaje = document.querySelector('#checkbox-garaje');
+
+let widgetCloudinary = cloudinary.createUploadWidget({
+    cloudName: 'imagenes3d',
+    uploadPreset: 'preset_3d'
+
+}, (err, result) => {
+    if (!err && result && result.event === 'success') {
+        console.log('Imagen subida con éxito', result.info);
+        input_imagen.src = result.info.secure_url;
+    }
+});
 
 const limpiar = () => {
     input_nombre.value = '';
@@ -14,7 +33,15 @@ const limpiar = () => {
     input_capacidad.value = '';
     input_descripcion.value = '';
     input_direccion.value = '';
-    input_imagen.value = '';
+    input_imagen.src = '';
+    input_habitaciones.value = '';
+    input_bannos.value = '';
+    input_cocina.value = '';
+    input_pilas.value = '';
+    input_comedor.value = '';
+    input_sala.value = '';
+    input_jardin.value = '';
+    input_garaje.value = '';
 }
 
 const obtener_datos = () => {
@@ -23,9 +50,17 @@ const obtener_datos = () => {
     let capacidad = input_capacidad.value;
     let descripcion = input_descripcion.value;
     let direccion = input_direccion.value;
-    let imagen = input_imagen;
+    let imagen = input_imagen.src;
+    let habitaciones = input_habitaciones.value;
+    let bannos = input_bannos.value;
+    let cocina = input_cocina.value;
+    let pilas = input_pilas.value;
+    let comedor = input_comedor.value;
+    let sala = input_sala.value;
+    let jardin = input_jardin.value;
+    let garaje = input_garaje.value;
 
-    console.log(`El nombre es ${nombre}, el costo de ${costo}, la capacidad ${capacidad} personas, la dirección: "${direccion}", la descripción: "${descripcion}" y la imagen ${imagen}.`)
+    registrar_vivienda(nombre, costo, capacidad, descripcion, direccion, imagen, habitaciones, bannos, cocina, pilas, comedor, sala, jardin, garaje)
 
     Swal.fire({
         'title': `Su solicitud ha sido enviada`,
@@ -38,12 +73,12 @@ const obtener_datos = () => {
 
 const validar = () => {
     let error = false;
-    let regex_nombre = /^[a-zA-Z ]+$/;
+    //let regex_nombre = /^[a-zA-Z ]+$/;
     let regex_costo = /^[0-9]+$/;
     let regex_capacidad = /^[0-9]/;
-    let regex_direccion = /^[a-zA-Z0-9 ]+$/;
-    let regex_descripcion = /^[a-zA-Z0-9 ]+$/;
-    let regex_imagen = /.*\.(jpe?g|png)$/igm;
+    //let regex_direccion = /^[a-zA-Z0-9 ]+$/;
+    //let regex_descripcion = /^[a-zA-Z0-9 ]+$/;
+    //let regex_imagen = /.*\.(jpe?g|png)$/igm;
     let campos_requeridos = document.querySelectorAll(":required");
 
     campos_requeridos.forEach(campo => {
@@ -55,12 +90,12 @@ const validar = () => {
         }
     });
 
-    if (!regex_nombre.test(input_nombre.value)) {
-        error = true;
-        input_nombre.classList.add(`error-input`);
-    } else {
-        input_nombre.classList.remove(`error-input`);
-    }
+    //if (!regex_nombre.test(input_nombre.value)) {
+    //    error = true;
+    //    input_nombre.classList.add(`error-input`);
+    //} else {
+    //    input_nombre.classList.remove(`error-input`);
+    //}
 
     if (!regex_costo.test(input_costo.value)) {
         error = true;
@@ -76,26 +111,26 @@ const validar = () => {
         input_capacidad.classList.remove(`error-input`);
     }
 
-    if (!regex_direccion.test(input_direccion.value)) {
-        error = true;
-        input_direccion.classList.add(`error-input`);
-    } else {
-        input_direccion.classList.remove(`error-input`);
-    }
+    //if (!regex_direccion.test(input_direccion.value)) {
+    //    error = true;
+    //    input_direccion.classList.add(`error-input`);
+    //} else {
+    //    input_direccion.classList.remove(`error-input`);
+    //}
 
-    if (!regex_descripcion.test(input_descripcion.value)) {
-        error = true;
-        input_descripcion.classList.add(`error-input`);
-    } else {
-        input_descripcion.classList.remove(`error-input`);
-    }
+    //if (!regex_descripcion.test(input_descripcion.value)) {
+    //    error = true;
+    //    input_descripcion.classList.add(`error-input`);
+    //} else {
+    //    input_descripcion.classList.remove(`error-input`);
+    //}
 
-    if (!regex_imagen.test(input_imagen.value)) {
-        error = true;
-        input_imagen.classList.add(`error-input`);
-    } else {
-        input_imagen.classList.remove(`error-input`);
-    }
+    //if (!regex_imagen.test(input_imagen.value)) {
+    //    error = true;
+    //    input_imagen.classList.add(`error-input`);
+    //} else {
+    //    input_imagen.classList.remove(`error-input`);
+    //}
 
     if (error == false) {
         obtener_datos();
@@ -107,5 +142,11 @@ const validar = () => {
         });
     }
 };
+
+input_imagen.addEventListener('click', () => {
+    widgetCloudinary.open();
+}, false);
+
+
 
 btn_enviar.addEventListener('click', validar);

@@ -137,30 +137,15 @@
                         </div>
                         <div id="info-proveedores">
                             <table id="informacion-proveedores">
-                                <tr>
-                                    <th>Tipo</th>
-                                    <th>Proveedores</th>
-                                </tr>
-                                <tr>
-                                    <td>Electricidad</td>
-                                    <td>Fuerza y Luz, ICE</td>
-                                </tr>
-                                <tr>
-                                    <td>Telefonía</td>
-                                    <td>Kölbi, Movistar, Claro, Telecable</td>
-                                </tr>
-                                <tr>
-                                    <td>Internet</td>
-                                    <td>Kölbi, CableTica, Tigo, Telecable, Claro</td>
-                                </tr>
-                                <tr>
-                                    <td>Cable</td>
-                                    <td>Kölbi, CableTica, Tigo, Telecable, Claro, Sky</td>
-                                </tr>
-                                <tr>
-                                    <td>Agua</td>
-                                    <td>Acueductos y Alcantarillados</td>
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>Tipo</th>
+                                        <th>Proveedores</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
                             </table>
                         </div>
                         <a href="proveedores-servicios-admini.html"><button id="ver-mas-proveedores" class="botones-dashboard" type="button">Ver más</button></a>
@@ -381,6 +366,8 @@
         </section>
 
 
+
+
     </main>
 
     <footer>
@@ -416,7 +403,15 @@
             <h2>Copyright: © 2020</h2>
         </div>
     </footer>
+
+    <!-- scripts de terceros -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- js propio -->
+    <script src="js/proveedores-servicio.js"></script>
     <script src="js/dashboard-admin.js"></script>
+
 </body>
 
 </html>
