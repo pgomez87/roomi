@@ -22,14 +22,15 @@ const mostrarViviendas = async() => {
         botonVivienda.type = 'button';
         botonVivienda.classList.add('btn-ver-vivienda');
         botonVivienda.innerText = 'Ver más información';
-        botonVivienda.addEventListener('click', () => {
-            localStorage.setItem('viviendaSeleccionada', vivienda._id);
-            console.log(vivienda._id);
-        });
+
         div1.appendChild(botonVivienda);
 
         contViviendas.appendChild(div1);
-
+        botonVivienda.addEventListener('click', () => {
+            localStorage.setItem('viviendaSeleccionada', vivienda._id);
+            console.log(vivienda._id);
+            window.location.href = 'info-vivienda-usuario.html';
+        });
     });
 
     { /* <button type="button"  class="btn-ver-vivienda" id="btn-ver-vivienda">Ver mas informacion</button> */ }
