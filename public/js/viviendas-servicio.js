@@ -52,3 +52,19 @@ const listar_viviendas = async() => {
 
     return lista_viviendas
 }
+
+const buscarVivienda = async() => {
+    let vivienda;
+
+    await axios({
+        method: 'get',
+        params: { _id: localStorage.getItem('viviendaSeleccionada') },
+        url: 'http://localhost:3000/api/buscar-vivienda-id',
+        responseType: 'json'
+    }).then((response) => {
+        vivienda = response.data.vivienda
+    }).catch((response) => {
+
+    });
+    return vivienda;
+}

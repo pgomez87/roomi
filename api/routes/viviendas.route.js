@@ -53,4 +53,24 @@ router.get('/listar-viviendas', (req, res) => {
     });
 });
 
+
+router.get('/buscar-vivienda-id', (req, res) => {
+    let _id = req.query._id;
+    Vivienda.findOne({ _id: _id }).populate('viviendas').
+    exec((err, vivienda) => {
+        if (err) {
+            res.json({
+                msj: 'No se pudo listar la vivienda',
+                err
+            });
+        } else {
+            res.json({
+                msj: 'La vivienda se listó correctamente',
+                vivienda: vivienda
+            });
+        }
+    })
+
+});
+
 module.exports = router;
