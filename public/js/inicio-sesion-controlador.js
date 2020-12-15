@@ -94,6 +94,8 @@ const validar = () => {
     }
     /*Yoss hizo esto*/
 const mostrar_modal_recuperar = async() => {
+    let lista_usuarios = await listar_usuarios();
+
     const { value: formValues } = await Swal.fire({
         title: 'Ingrese su correo electrónico para recuperar la contraseña',
         html: `<div>
@@ -108,6 +110,16 @@ const mostrar_modal_recuperar = async() => {
         }
     });
 
+    lista_usuarios.forEach((usuario) => {
+        if (formValues[0] != usuario.correo) {
+            Swal.fire({
+                'icon': 'error',
+                'title': 'Error',
+                'text': 'Algo está mal'
+            })
+        }
+    });
+
     if (formValues) {
         const { value: accept } = await Swal.fire({
             icon: 'warning',
@@ -117,7 +129,7 @@ const mostrar_modal_recuperar = async() => {
         })
         if (accept) {
             // Servicio
-            reestablecer_contrasenna(formValues[0]);
+            reestablecer_contrasena(formValues[0]);
         }
     };
 };

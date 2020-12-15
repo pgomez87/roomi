@@ -50,7 +50,7 @@ router.get('/listar-usuarios', (req, res) => {
         }
     });
 });
-
+//Yossy hizo esto
 router.get('/iniciar-sesion', (req, res) => {
     let correo = req.query.correo;
     let contrasena = req.query.contrasena;
@@ -75,6 +75,63 @@ router.get('/iniciar-sesion', (req, res) => {
 
         }
     });
+});
+
+router.put('/reestablecer-contrasena', (req, res) => {
+    //Debe generar la contraseña aleatoriamente
+    let contrasenna_temporal = 'ZZZ123';
+    Usuario.updateOne({ correo: req.body.correo }, { $set: { contrasenna: contrasenna_temporal, estado: 'sin contraseña' } }, (err, info) => {
+        if (err) {
+            res.json({
+                msj: 'No se pudo recuperar la contraseña',
+                err
+            });
+        } else {
+            //Enviar correo electrónico
+            res.json({
+                msj: 'Contraseña temporal agregada correctamente',
+                info
+            });
+        }
+    });
+});
+
+router.put('/modificar-contrasena', (req, res) => {
+
+    Usuario.findOne({ correo: req.body.correo }, (err, usuario) => {
+        if (err) {
+            res.json({
+                msj: 'No se encontró el usuario',
+                err
+            });
+        } else {
+            if (usuario.contrasenna == req.body.temporal) {
+                Usuario.updateOne({ correo: req.body.correo }, { $set: { contrasenna: req.body.contrasenna, estado: 'activo' } }, (err, info) => {
+                    if (err) {
+                        res.json({
+                            msj: 'No se pudo modificar la contraseña',
+                            err
+                        });
+                    } else {
+                        //Enviar correo electrónico
+                        res.json({
+                            msj: 'Contraseña modificada correctamente',
+                            info
+                        });
+                    }
+                });
+            } else {
+                res.json({
+                    msj: 'La contraseña temporal es inválida',
+                    err,
+                    estado: 'temporal inválida'
+                });
+            }
+
+        }
+    });
+
+
 });
 
 module.exports = router;

@@ -29,6 +29,21 @@ const registrar_usuario = async(nombre, apellido, contrasena, correo, telefono, 
     });
 };
 
+const listar_usuarios = async() => {
+    let lista_usuarios = [];
+    await axios({
+        method: 'get',
+        url: 'http://localhost:3000/api/listar-usuarios',
+        responseType: 'json'
+    }).then((response) => {
+        lista_usuarios = response.data.lista_usuarios;
+    }).catch((response) => {
+
+    });
+
+    return lista_usuarios;
+};
+
 let iniciar_sesion = async(correo, contrasena) => {
     try {
         const response = await axios({
@@ -51,4 +66,66 @@ let iniciar_sesion = async(correo, contrasena) => {
     } catch (error) {
         console.log(error);
     }
+};
+
+const modificar_contrasenna = async(temporal, contrasenna) => {
+    await axios({
+        method: 'put',
+        url: 'http://localhost:3000/api/modificar-contrasena',
+        responseType: 'json',
+        data: {
+            correo: sessionStorage.getItem('correo_usuario'),
+            temporal: temporal,
+            contrasena: contrasena
+        }
+    }).then((response) => {
+        if (response.data.estado == 'temporal inválida') {
+            Swal.fire({
+                'title': 'La contraseña temporal es inválida',
+                'icon': 'error',
+                'text': response.msj
+            });
+        } else {
+            Swal.fire({
+                'title': 'La contraseña ha sido actualizada correctamente',
+                'icon': 'success',
+                'text': response.msj
+            }).then(() => {
+                window.location.href = 'inicio.html';
+            });
+        }
+    }).catch((response) => {
+        Swal.fire({
+            'title': response.msj,
+            'icon': 'error',
+            'text': response.err
+        })
+    });
+
+};
+
+const reestablecer_contrasena = async(correo) => {
+    await axios({
+        method: 'put',
+        url: 'http://localhost:3000/api/reestablecer-contrasena',
+        responseType: 'json',
+        data: {
+            correo: correo
+        }
+    }).then((response) => {
+        Swal.fire({
+            'title': 'La contraseña ha sido reestablecida correctamente',
+            'icon': 'success',
+            'text': 'Por favor revise su bandeja de entrada'
+        }).then(() => {
+            window.location.href = 'inicio.html';
+        });
+    }).catch((response) => {
+        Swal.fire({
+            'title': response.msj,
+            'icon': 'error',
+            'text': response.err
+        })
+    });
+
 };

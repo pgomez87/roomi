@@ -73,17 +73,15 @@
     border: solid 2px white;
 }
 
-.form-inicio-sesion a {
-    margin: 20px;
-    height: 40px;
-    width: 400px;
-    font-size: 15px;
-    text-decoration: none;
-    color: #52d1dc;
-}
-
-.form-inicio-sesion a:hover {
-    color: white;
+#btn-olvido-contrasenna {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    width: auto;
+    font-size: 16px;
+    font-weight: normal;
 }
 
 .error-input {
