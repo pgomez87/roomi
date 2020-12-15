@@ -33,11 +33,15 @@ main {
 }
 
 .boton-imagen button {
-    border-radius: 10px;
-    height: 40px;
-    width: 150px;
-    border: none;
+    border-radius: 20px;
+    font-size: 13px;
     background-color: #52D1DC;
+    font-weight: bold;
+    color: #232525;
+    padding: 8px;
+    margin: auto;
+    border-color: #52D1DC;
+    outline: none;
 }
 
 .imagen-perfil table {
@@ -67,11 +71,11 @@ main {
 .boton-editar {
     float: right;
     width: 25%;
+    border-radius: 20px;
 }
 
 .boton-editar button {
     float: right;
-    margin: 0 1%;
 }
 
 .info-perfil table {
@@ -84,11 +88,15 @@ main {
 }
 
 .info-perfil button {
-    border-radius: 10px;
-    height: 40px;
-    width: 125px;
-    border: none;
+    border-radius: 20px;
+    font-size: 13px;
     background-color: #52D1DC;
+    font-weight: bold;
+    color: #232525;
+    padding: 8px;
+    border-color: #52D1DC;
+    outline: none;
+    width: 125px;
 }
 
 .sobre-mi {
