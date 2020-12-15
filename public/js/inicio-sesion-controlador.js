@@ -51,50 +51,52 @@ function obtenerDatos() {
 }
 
 const validar = () => {
-        let error = false;
-        let regexEmail = /^[a-zA-Z0-9]+@{1}[a-zA-Z]+(.com|.net.org.ac.cr)$/;
-        let regexContrasena = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
-        let camposRequeridos = document.querySelectorAll(':required');
+    let error = false;
+    let regexEmail = /^[a-zA-Z0-9]+@{1}[a-zA-Z]+(.com|.net.org.ac.cr)$/;
+    let regexContrasena = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+    let camposRequeridos = document.querySelectorAll(':required');
 
-        camposRequeridos.forEach(campo => {
-            if (campo.value == '') {
-                error = true;
-                campo.classList.add('error-input');
-            } else {
-                error = false;
-                campo.classList.remove('error-input');
-            }
-        });
-
-        if (!regexEmail.test(textoEmail.value)) {
+    camposRequeridos.forEach(campo => {
+        if (campo.value == '') {
             error = true;
-            textoEmail.classList.add('error-input');
+            campo.classList.add('error-input');
         } else {
             error = false;
-            textoEmail.classList.remove('error-input');
+            campo.classList.remove('error-input');
         }
+    });
 
-        if (!regexContrasena.test(textoContrasena.value)) {
-            error = true;
-            textoContrasena.classList.add('error-input');
-        } else {
-            error = false;
-            textoContrasena.classList.remove('error-input');
-        }
-
-        if (error == false) {
-            obtenerDatos();
-        } else {
-            Swal.fire({
-                'title': 'No se pudo iniciar sesión',
-                'icon': 'warning',
-                'text': 'Por favor revise los campos resaltados'
-            });
-        }
+    if (!regexEmail.test(textoEmail.value)) {
+        error = true;
+        textoEmail.classList.add('error-input');
+    } else {
+        error = false;
+        textoEmail.classList.remove('error-input');
     }
-    /*Yoss hizo esto*/
+
+    if (!regexContrasena.test(textoContrasena.value)) {
+        error = true;
+        textoContrasena.classList.add('error-input');
+    } else {
+        error = false;
+        textoContrasena.classList.remove('error-input');
+    }
+
+    if (error == false) {
+        obtenerDatos();
+    } else {
+        Swal.fire({
+            'title': 'No se pudo iniciar sesión',
+            'icon': 'warning',
+            'text': 'Por favor revise los campos resaltados'
+        });
+    }
+};
+/*Yoss hizo esto*/
 const mostrar_modal_recuperar = async() => {
     let lista_usuarios = await listar_usuarios();
+    let error = true;
+    console.log(`linea 99 ${error}`);
 
     const { value: formValues } = await Swal.fire({
         title: 'Ingrese su correo electrónico para recuperar la contraseña',
@@ -111,12 +113,12 @@ const mostrar_modal_recuperar = async() => {
     });
 
     lista_usuarios.forEach((usuario) => {
-        if (!formValues || formValues[0] != usuario.correo) {
-            window.location.href = 'inicio-sesion.html';
-        } //no tocar
+        if (formValues[0] == usuario.correo) {
+            error = false;
+        }
     });
 
-    if (formValues) {
+    if (formValues && !error) {
         const { value: accept } = await Swal.fire({
             icon: 'warning',
             text: '¿Está seguro que desea reestablecer la contraseña?',
@@ -127,6 +129,12 @@ const mostrar_modal_recuperar = async() => {
             // Servicio
             reestablecer_contrasena(formValues[0]);
         }
+    } else {
+        Swal.fire({
+            'title': 'El correo ingresado no es valido.',
+            'icon': 'error',
+            'text': 'Por favor intentelo de nuevo.'
+        });
     };
 };
 

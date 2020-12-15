@@ -118,7 +118,7 @@ const reestablecer_contrasena = async(correo) => {
             'icon': 'success',
             'text': 'Por favor revise su bandeja de entrada'
         }).then(() => {
-            window.location.href = 'recuperacion-contrasenna.html';
+            window.location.href = 'recuperacion-contrasena.html';
         });
     }).catch((response) => {
         Swal.fire({

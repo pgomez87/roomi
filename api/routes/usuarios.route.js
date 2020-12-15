@@ -79,8 +79,8 @@ router.get('/iniciar-sesion', (req, res) => {
 
 router.put('/reestablecer-contrasena', (req, res) => {
     //Debe generar la contraseña aleatoriamente
-    let contrasenna_temporal = 'ZZZ123';
-    Usuario.updateOne({ correo: req.body.correo }, { $set: { contrasenna: contrasenna_temporal, estado: 'sin contraseña' } }, (err, info) => {
+    let contrasena_temporal = 'ZZZ123';
+    Usuario.updateOne({ correo: req.body.correo }, { $set: { contrasena: contrasena_temporal, estado: 'sin contraseña' } }, (err, info) => {
         if (err) {
             res.json({
                 msj: 'No se pudo recuperar la contraseña',
