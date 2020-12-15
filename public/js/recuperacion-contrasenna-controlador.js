@@ -1,26 +1,26 @@
 'use strict';
 
 const boton_confirmar = document.querySelector('#btn-enviar');
-const input_txtcorreo = document.querySelector('#txt-correo');
+const input_temporasenna = document.querySelector('#pass-temporal');
 const input_nuevasenna = document.querySelector('#pass-nueva');
 const input_verificasenna = document.querySelector('#pass-verifica');
 const input_checkbox = document.querySelector('#robot-select');
 const caja_recaptcha = document.querySelector('#recaptcha-box');
 
 const limpiar = () => {
-    input_txtcorreo.value = '';
     input_nuevasenna.value = '';
     input_verificasenna.value = '';
+    input_temporasenna.value = '';
 };
 
 
 const obtener_datos = () => {
 
-    let txtcorreo = input_txtcorreo.value;
+    let temporasenna = input_temporasenna;
     let nuevasenna = input_nuevasenna.value;
     let verificasenna = input_verificasenna.value;
 
-    console.log('El correo es: ', txtcorreo);
+    console.log('La contraseña temporal es: ', temporasenna);
     console.log('La nueva contraseña es: ', nuevasenna);
     console.log('La contraseña de verificación es: ', verificasenna);
 
@@ -50,12 +50,12 @@ const validar = () => {
         }
     });
 
-    if (!regex_correo.test(input_txtcorreo.value)) {
+    /*if (!regex_correo.test(input_txtcorreo.value)) {
         error = true;
         input_txtcorreo.classList.add('error-input');
     } else {
         input_txtcorreo.classList.remove('error-input');
-    }
+    }*/
 
     if (!regex_contrasenna.test(input_nuevasenna.value)) {
         error = true;
@@ -69,6 +69,12 @@ const validar = () => {
         input_verificasenna.classList.add('error-input');
     } else {
         input_verificasenna.classList.remove('error-input');
+    }
+    if (!regex_.test(input_verificasenna.value)) {
+        error = true;
+        input_temporasenna.classList.add('error-input');
+    } else {
+        input_temporasenna.classList.remove('error-input');
     }
 
     if (input_checkbox.checked) {
