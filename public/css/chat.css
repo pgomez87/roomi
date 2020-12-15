@@ -26,7 +26,16 @@ a {
     text-decoration: none;
 }
 
+main {
+    background-image: url("../images/chat-back.jpg");
+    background-size: cover;
+    min-height: 325px;
+    opacity: 0.99;
+    overflow: hidden;
+}
+
 .btn {
+    color: black;
     text-decoration: none;
     cursor: pointer;
     padding: 5px 15px;
@@ -44,10 +53,28 @@ a {
     background-color: #bbbbbf;
 }
 
+.btn2 {
+    color: black;
+    cursor: pointer;
+    margin-top: 20%;
+    border-color: #52D1DC;
+    font-size: 17px;
+    border-radius: 20px;
+    background-color: #52D1DC;
+    height: 40px;
+    width: 150px;
+}
+
+.btn2:hover {
+    color: #fff;
+    background-color: #252323;
+}
+
 
 /* Chat Page */
 
 .chat-container {
+    border-radius: 5px;
     max-width: 1100px;
     background: #fff;
     margin: 30px auto;
@@ -93,6 +120,7 @@ a {
 }
 
 .chat-messages {
+    background-color: rgba(255, 255, 255, 0.844);
     padding: 30px;
     max-height: 500px;
     overflow-y: scroll;
@@ -122,6 +150,11 @@ a {
     background-color: var(--dark-color-a);
 }
 
+.chat-form-container input {
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
 .chat-form-container form {
     display: flex;
 }
@@ -144,9 +177,11 @@ a {
 
 .join-container label {
     color: black;
+    text-align: left;
 }
 
 .join-header {
+    color: white;
     text-align: center;
     padding: 20px;
     background: var(--dark-color-a);
@@ -157,6 +192,7 @@ a {
 .join-main {
     padding: 30px 40px;
     background: var(--dark-color-b);
+    text-align: center;
 }
 
 .join-main p {
@@ -189,6 +225,26 @@ a {
 .join-main .btn {
     margin-top: 20px;
     width: 100%;
+}
+
+.footer-chat {
+    background-color: var(--dark-color-a);
+    height: 70px;
+    text-align: center;
+    width: 400px;
+}
+
+.footer-chat .btn2 {
+    text-align: center;
+    margin-top: 15px;
+    width: 150px;
+}
+
+.footer-chat .btn:hover {
+    background-color: var(--dark-color-a) !important;
+    color: #fff !important;
+    margin-top: 15px;
+    width: 150px;
 }
 
 @media (max-width: 700px) {

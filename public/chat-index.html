@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/chat.css" />
     <link rel="stylesheet" href="css/general.css">
-    <title>ChatCord App</title>
+    <title>Roomi</title>
 </head>
 
 <body>
@@ -23,12 +23,12 @@
 
             <div class="nav-header">
                 <nav>
-                    <a href="dashboard-usuario.html">Inicio</a>
-                    <a href="viviendas-disponibles-usuario.html">Viviendas</a>
-                    <a href="proveedores-servicios-usuarios.html">Proveedores</a>
-                    <a href="noticias-usuario.html">Noticias</a>
-                    <a href="companeros-usuario.html">Compañeros</a>
-                    <a href="perfil-usuario.html">Mi perfil</a>
+                    <a href="dashboard-coordinador.html">Inicio</a>
+                    <a href="viviendas-disponibles-coordinador.html">Viviendas</a>
+                    <a href="proveedores-servicios-coordinador.html">Proveedores</a>
+                    <a href="noticias-coordinador.html">Noticias</a>
+                    <a href="companeros-coordinador.html">Compañeros</a>
+                    <a href="perfil-coordinador.html">Mi perfil</a>
                 </nav>
             </div>
 
@@ -44,7 +44,7 @@
             <main class="join-main">
                 <form action="chat.html">
                     <div class="form-control">
-                        <label for="username">Usuarios</label>
+                        <label for="username">Usuario</label>
                         <input type="text" name="username" id="username" placeholder="Nombre usuario..." required />
                     </div>
                     <div class="form-control">
@@ -52,10 +52,13 @@
                         <select name="room" id="room">
                                 <option value="Compañeros de vivienda">Compañeros de vivienda</option>
                             </select>
+                        <button type="submit" class="btn2">Unirse Chat</button>
                     </div>
-                    <button type="submit" class="btn">Unirse Chat</button>
+
+
                 </form>
             </main>
+
         </div>
 
     </main>
