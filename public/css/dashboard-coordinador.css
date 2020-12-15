@@ -48,10 +48,9 @@ section {
 }
 
 .mini {
-    border: solid 2px #136f63;
     border-radius: 5px;
-    width: 85%;
-    height: 6%;
+    width: 80%;
+    height: 1%;
     margin: 3% auto;
 }
 
@@ -240,6 +239,11 @@ button {
 
 .fa-search {
     color: #000000;
+    opacity: 0;
+}
+
+.search-bar {
+    opacity: 0;
 }
 
 .sos-boton {
