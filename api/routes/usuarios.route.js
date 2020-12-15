@@ -13,7 +13,8 @@ router.post('/registrar-usuario', (req, res) => {
         telefono: req.body.telefono,
         cedula: req.body.cedula,
         direccion: req.body.direccion,
-        tipo_usuario: req.body.tipo
+        tipo_usuario: req.body.tipo,
+        estado: 'pendiente'
 
         // 3 tipos de usuario
         //   - regular
@@ -53,34 +54,34 @@ router.get('/listar-usuarios', (req, res) => {
 //Yossy hizo esto
 router.get('/iniciar-sesion', (req, res) => {
     let correo = req.query.correo;
-    let contrasenna = req.query.contrasenna;
+    let contrasena = req.query.contrasena;
     Usuario.findOne({ correo: correo }, (err, usuario) => {
         if (err) {
             res.json({
                 msj: 'La contraseña o correo electrónico no son válidos',
                 estado: false,
-                cambio_contrasenna: 'no',
+                cambio_contrasena: 'no',
                 err
             });
         } else {
-            if (usuario && usuario.contrasenna == contrasenna) {
+            if (usuario && usuario.contrasena == contrasena && usuario.estado != 'sin contraseña') {
                 res.json({
                     estado: true,
                     tipo: usuario.tipo,
                     nombre: usuario.nombre,
-                    cambio_contrasenna: 'no',
+                    cambio_contrasena: 'no',
                 });
             } else {
                 if (usuario && usuario.estado == 'sin contraseña') {
                     res.json({
-                        cambio_contrasenna: 'si',
+                        cambio_contrasena: 'si',
                         estado: false
                     });
                 } else {
                     res.json({
                         msj: 'La contraseña o correo electrónico no son válidos',
                         estado: false,
-                        cambio_contrasenna: 'no',
+                        cambio_contrasena: 'no',
                         err
                     });
                 }
@@ -119,8 +120,8 @@ router.put('/modificar-contrasena', (req, res) => {
                 err
             });
         } else {
-            if (usuario.contrasenna == req.body.temporal) {
-                Usuario.updateOne({ correo: req.body.correo }, { $set: { contrasenna: req.body.contrasenna, estado: 'activo' } }, (err, info) => {
+            if (usuario.contrasena == req.body.temporal) {
+                Usuario.updateOne({ correo: req.body.correo }, { $set: { contrasena: req.body.contrasena, estado: 'activo' } }, (err, info) => {
                     if (err) {
                         res.json({
                             msj: 'No se pudo modificar la contraseña',

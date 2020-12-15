@@ -44,7 +44,7 @@ const listar_usuarios = async() => {
     return lista_usuarios;
 };
 
-let iniciar_sesion = async(correo, contrasena) => {
+const iniciar_sesion = async(correo, contrasena) => {
     try {
         const response = await axios({
             method: 'get',
@@ -53,22 +53,34 @@ let iniciar_sesion = async(correo, contrasena) => {
             responseType: 'json'
         });
         if (response.data.estado == true) {
-            localStorage.setItem('tipo_usuario', response.data.tipo);
-            localStorage.setItem('correo_usuario', response.data.correo);
-            window.location.href = 'dashboard-usuario.html'
-        } else {
             Swal.fire({
-                'icon': 'error',
-                'title': 'No ha podido iniciar sesión',
-                'text': 'Usuario o contraseña incorrectos'
-            })
+                'icon': 'success',
+                'title': 'Bienvenido',
+                'text': 'Ha iniciado sesión correctamente'
+            }).then(() => {
+                sessionStorage.setItem('tipo_usuario', response.data.tipo);
+                sessionStorage.setItem('nombre_usuario', response.data.nombre);
+                window.location.href = 'dashboard-usuario.html';
+            });
+        } else {
+            if (response.data.cambio_contrasenna == 'si') {
+                sessionStorage.setItem('correo_usuario', correo);
+                window.location.href = 'cambio-contrasena-usuario.html';
+            } else {
+                Swal.fire({
+                    'icon': 'error',
+                    'title': 'No ha podido iniciar sesión',
+                    'text': 'Usuario o contraseña incorrectos'
+                })
+            }
+
         }
     } catch (error) {
         console.log(error);
     }
 };
 
-const modificar_contrasenna = async(temporal, contrasenna) => {
+const modificar_contrasena = async(temporal, contrasena) => {
     await axios({
         method: 'put',
         url: 'http://localhost:3000/api/modificar-contrasena',
@@ -91,7 +103,7 @@ const modificar_contrasenna = async(temporal, contrasenna) => {
                 'icon': 'success',
                 'text': response.msj
             }).then(() => {
-                window.location.href = 'inicio.html';
+                window.location.href = 'inicio-sesion.html';
             });
         }
     }).catch((response) => {
@@ -118,7 +130,7 @@ const reestablecer_contrasena = async(correo) => {
             'icon': 'success',
             'text': 'Por favor revise su bandeja de entrada'
         }).then(() => {
-            window.location.href = 'recuperacion-contrasenna.html';
+            window.location.href = 'inicio-sesion.html';
         });
     }).catch((response) => {
         Swal.fire({
