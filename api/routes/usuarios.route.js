@@ -53,33 +53,47 @@ router.get('/listar-usuarios', (req, res) => {
 //Yossy hizo esto
 router.get('/iniciar-sesion', (req, res) => {
     let correo = req.query.correo;
-    let contrasena = req.query.contrasena;
+    let contrasenna = req.query.contrasenna;
     Usuario.findOne({ correo: correo }, (err, usuario) => {
         if (err) {
             res.json({
                 msj: 'La contraseña o correo electrónico no son válidos',
+                estado: false,
+                cambio_contrasenna: 'no',
                 err
             });
         } else {
-            if (usuario && usuario.contrasena == contrasena) {
+            if (usuario && usuario.contrasenna == contrasenna) {
                 res.json({
                     estado: true,
-                    tipo_usuario: usuario.tipo_usuario,
-                    id: usuario._id
+                    tipo: usuario.tipo,
+                    nombre: usuario.nombre,
+                    cambio_contrasenna: 'no',
                 });
             } else {
-                res.json({
-                    estado: false
-                });
-            }
+                if (usuario && usuario.estado == 'sin contraseña') {
+                    res.json({
+                        cambio_contrasenna: 'si',
+                        estado: false
+                    });
+                } else {
+                    res.json({
+                        msj: 'La contraseña o correo electrónico no son válidos',
+                        estado: false,
+                        cambio_contrasenna: 'no',
+                        err
+                    });
+                }
 
+            }
         }
     });
 });
 
 router.put('/reestablecer-contrasena', (req, res) => {
     //Debe generar la contraseña aleatoriamente
-    let contrasena_temporal = 'ZZZ123';
+
+    let contrasena_temporal = 'Hnnkhg5.';
     Usuario.updateOne({ correo: req.body.correo }, { $set: { contrasena: contrasena_temporal, estado: 'sin contraseña' } }, (err, info) => {
         if (err) {
             res.json({
