@@ -111,13 +111,9 @@ const mostrar_modal_recuperar = async() => {
     });
 
     lista_usuarios.forEach((usuario) => {
-        if (formValues[0] != usuario.correo) {
-            Swal.fire({
-                'icon': 'error',
-                'title': 'Error',
-                'text': 'Algo está mal'
-            })
-        }
+        if (!formValues || formValues[0] != usuario.correo) {
+            window.location.href = 'inicio-sesion.html';
+        } //no tocar
     });
 
     if (formValues) {
