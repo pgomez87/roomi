@@ -40,3 +40,5 @@ router.get('/listar-publicidades', (req, res) => {
         }
     });
 });
+
+module.exports = router;
