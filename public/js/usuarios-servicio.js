@@ -20,6 +20,7 @@ const registrar_usuario = async(nombre, apellido, contrasena, correo, telefono, 
             'title': 'Se ha registrado exitosamente',
             'icon': 'success'
         })
+        window.location.href = 'landing-page.html';
     }).catch((error) => {
         Swal.fire({
             'title': 'nope',
@@ -58,9 +59,14 @@ const iniciar_sesion = async(correo, contrasena) => {
                 'title': 'Bienvenido',
                 'text': 'Ha iniciado sesión correctamente'
             }).then(() => {
-                sessionStorage.setItem('tipo_usuario', response.data.tipo_usuario);
+                sessionStorage.setItem('tipo_usuario', response.data.tipo);
                 sessionStorage.setItem('nombre_usuario', response.data.nombre);
-                window.location.href = 'dashboard-usuario.html';
+                console.log(`${response.data.tipo} - ${response.data.tipo_usuario} - ${response.data.tipo}`);
+                if (sessionStorage.getItem('tipo_usuario') == 'regular') {
+                    window.location.href = 'dashboard-usuario.html';
+                } else if (sessionStorage.getItem('tipo_usuario') == 'coordinador') {
+                    window.location.href = 'dashboard-coordinador.html';
+                }
             });
         } else {
             if (response.data.cambio_contrasena == 'si') {

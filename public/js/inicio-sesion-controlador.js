@@ -32,11 +32,6 @@ const detectar_usuario = () => {
 const limpiar = () => {
     textoEmail.value = '';
     textoContrasena.value = '';
-}
-const obtener_datos = async() => {
-    let correo = document.querySelector('#txt-correo').value;
-    let contrasenna = document.querySelector('#txt-contrasenna').value;
-    iniciar_sesion(correo, contrasenna);
 };
 
 function obtenerDatos() {
@@ -48,7 +43,7 @@ function obtenerDatos() {
 
     //detectar_usuario(); // Esta linea fue agragada y su funcion respectiva tambien
     iniciar_sesion(nombre, contrasena);
-}
+};
 
 const validar = () => {
     let error = false;
