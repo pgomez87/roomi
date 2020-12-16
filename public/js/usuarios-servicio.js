@@ -20,7 +20,7 @@ const registrar_usuario = async(nombre, apellido, contrasena, correo, telefono, 
             'title': 'Se ha registrado exitosamente',
             'icon': 'success'
         })
-        window.location.href = 'landing-page.html';
+        window.location.href = 'inicio-sesion.html';
     }).catch((error) => {
         Swal.fire({
             'title': 'nope',
