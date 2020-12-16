@@ -58,12 +58,12 @@ const iniciar_sesion = async(correo, contrasena) => {
                 'title': 'Bienvenido',
                 'text': 'Ha iniciado sesión correctamente'
             }).then(() => {
-                sessionStorage.setItem('tipo_usuario', response.data.tipo);
+                sessionStorage.setItem('tipo_usuario', response.data.tipo_usuario);
                 sessionStorage.setItem('nombre_usuario', response.data.nombre);
                 window.location.href = 'dashboard-usuario.html';
             });
         } else {
-            if (response.data.cambio_contrasenna == 'si') {
+            if (response.data.cambio_contrasena == 'si') {
                 sessionStorage.setItem('correo_usuario', correo);
                 window.location.href = 'cambio-contrasena-usuario.html';
             } else {

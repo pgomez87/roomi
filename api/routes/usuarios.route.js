@@ -64,7 +64,7 @@ router.get('/iniciar-sesion', (req, res) => {
                 err
             });
         } else {
-            if (usuario && usuario.contrasena == contrasena && usuario.estado != 'sin contraseña') {
+            if (usuario && usuario.contrasena == contrasena) {
                 res.json({
                     estado: true,
                     tipo: usuario.tipo,
