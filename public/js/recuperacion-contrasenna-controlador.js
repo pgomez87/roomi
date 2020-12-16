@@ -25,6 +25,7 @@ const obtener_datos = () => {
     console.log('La contraseña de verificación es: ', verificasenna);
 
 
+
     Swal.fire({
         'title': 'Su contraseña ha sido cambiada',
         'icon': 'success'
@@ -89,4 +90,4 @@ const validar = () => {
 
 };
 
-boton_confirmar.addEventListener('click', validar);
+//boton_confirmar.addEventListener('click', validar);

@@ -47,12 +47,21 @@
     width: 400px;
     font-size: 20px;
     border-radius: 5px;
-    border: solid 2px #136f63;
+    border: solid 2px #bbbbbf;
+    background-color: #252323;
+    color: white;
 }
 
 .form-inicio-sesion input:focus {
     border: solid 2px #52d1dc;
     outline: none;
+}
+
+.form-inicio-sesion h1 {
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    color: white;
 }
 
 .form-inicio-sesion button {
@@ -77,11 +86,16 @@
     background: none;
     border: none;
     margin: 0;
+    margin-left: 20px;
     padding: 0;
     cursor: pointer;
     width: auto;
     font-size: 16px;
     font-weight: normal;
+}
+
+#btn-olvido-contrasenna:hover {
+    color: #52d1dc;
 }
 
 .error-input {
