@@ -66,7 +66,10 @@ const iniciar_sesion = async(correo, contrasena) => {
                     window.location.href = 'dashboard-usuario.html';
                 } else if (sessionStorage.getItem('tipo_usuario') == 'coordinador') {
                     window.location.href = 'dashboard-coordinador.html';
+                } else if (sessionStorage.getItem('tipo_usuario') == 'administrador') {
+                    window.location.href = 'dashboard-admin.html';
                 }
+
             });
         } else {
             if (response.data.cambio_contrasena == 'si') {
