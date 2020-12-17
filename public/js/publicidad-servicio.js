@@ -14,7 +14,7 @@ const registrar_publicidad = async(titulo, descripcion, imagen) => {
             titulo: titulo,
             descripcion: descripcion,
             imagen: imagen,
-            fecha: new Date()
+            fecha: `${new Date().getDate()}/${new Date().getMonth()}/${new Date().getFullYear()}`
         }
     }).then((response) => {
         Swal.fire({

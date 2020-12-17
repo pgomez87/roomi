@@ -15,7 +15,7 @@ const mostrar_publicidad = async() => {
         let titulo = table_row.insertCell();
         titulo.innerText = publicidad.titulo;
         let fecha = table_row.insertCell();
-        fecha.innerText = `${publicidad.fecha.getDate()}/${publicidad.fecha.getMonth()}/${publicidad.fecha.getFullYear()}`;
+        fecha.innerText = publicidad.fecha;
 
         table_row.addEventListener('click', () => {
             if (table_row.classList.contains('selected')) {
