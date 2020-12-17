@@ -6,7 +6,7 @@ const tablaPagada = document.querySelector('#tabla-facturas-pagadas tbody');
 const mostrarTablas = async() => {
     const facturas = await listarFacturas();
     tablaPendientes.innerHTML = '';
-    console.log(facturas);
+    // console.log(facturas);
 
     facturas.forEach((factura) => {
         let i = factura.activa;
@@ -31,11 +31,18 @@ const mostrarTablas = async() => {
 
 }
 
+const selectFacturas = document.querySelector('#factura-companero');
+
 const llenarSelects = async() => {
     const usuarios = await listarUsuariosFacturas();
+    selectFacturas.innerHTML = '';
 
     usuarios.forEach((usuario) => {
-        console.log(usuario.nombre);
+        // selectFacturas.innerHTML = `<option value="" selected>--Elegir compañero--</option>`;
+        let option = document.createElement('option');
+        option.value = `${usuario.nombre} ${usuario.apellido}`;
+        option.innerHTML = `${usuario.nombre} ${usuario.apellido}`;
+        selectFacturas.appendChild(option);
     })
 }
 

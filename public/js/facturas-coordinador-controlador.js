@@ -8,7 +8,7 @@ const obtenerDatos = () => {
     let tipo = document.querySelector('#tipo-factura').value;
     let proveedor = document.querySelector('#proveedor-crear-factura').value;
     let porcentaje = document.querySelector('#porcentaje-pagar').value;
-    let usuario = document.querySelector('#tipo-companero').value;
+    let usuario = document.querySelector('#factura-companero').value;
     let activa = 'activa';
 
     console.log(nombre, fecha, tipo, proveedor, porcentaje, usuario, activa);
