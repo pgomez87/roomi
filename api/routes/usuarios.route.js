@@ -14,7 +14,8 @@ router.post('/registrar-usuario', (req, res) => {
         cedula: req.body.cedula,
         direccion: req.body.direccion,
         tipo_usuario: req.body.tipo,
-        estado: 'pendiente'
+        estado: 'pendiente',
+        cambio_contrasena: 'no'
 
         // 3 tipos de usuario
         //   - regular

@@ -53,7 +53,9 @@ const iniciar_sesion = async(correo, contrasena) => {
             url: `http://localhost:3000/api/iniciar-sesion`,
             responseType: 'json'
         });
+        console.log(`${response.data.cambio_contrasena}`);
         if (response.data.estado == true) {
+            console.log(`${response.data.cambio_contrasena}`);
             Swal.fire({
                 'icon': 'success',
                 'title': 'Bienvenido',
@@ -61,7 +63,6 @@ const iniciar_sesion = async(correo, contrasena) => {
             }).then(() => {
                 sessionStorage.setItem('tipo_usuario', response.data.tipo);
                 sessionStorage.setItem('nombre_usuario', response.data.nombre);
-                console.log(`${response.data.tipo} - ${response.data.tipo_usuario} - ${response.data.tipo}`);
                 if (sessionStorage.getItem('tipo_usuario') == 'regular') {
                     window.location.href = 'dashboard-usuario.html';
                 } else if (sessionStorage.getItem('tipo_usuario') == 'coordinador') {
@@ -72,6 +73,7 @@ const iniciar_sesion = async(correo, contrasena) => {
 
             });
         } else {
+            console.log(`${response.data.estado} -- ${response.data.cambio_contrasena}`);
             if (response.data.cambio_contrasena == 'si') {
                 sessionStorage.setItem('correo_usuario', correo);
                 window.location.href = 'cambio-contrasena-usuario.html';
