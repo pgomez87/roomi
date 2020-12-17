@@ -1,14 +1,20 @@
 'use strict';
 
+let random_id = () => {
+    return '_' + Math.random().toString(36).substr(2, 9);
+};
+
 const registrar_publicidad = async(titulo, descripcion, imagen) => {
     await axios({
         method: 'post',
         url: 'http://localhost:3000/api/registrar-publicidad',
         responseType: 'json',
-        data {
+        data: {
+            id: random_id(),
             titulo: titulo,
             descripcion: descripcion,
-            imagen: imagen
+            imagen: imagen,
+            fecha: new Date()
         }
     }).then((response) => {
         Swal.fire({
@@ -22,4 +28,17 @@ const registrar_publicidad = async(titulo, descripcion, imagen) => {
             'icon': 'error'
         }).then();
     });
+};
+
+const listar_publicidad = async() => {
+    let lista_publicidades = [];
+    await axios({
+        method: 'get',
+        url: 'http://localhost:3000/api/listar-publicidades',
+        responseType: 'json'
+    }).then((response) => {
+        lista_publicidades = response.data.lista_publicidades;
+    }).catch((response) => {});
+
+    return lista_publicidades;
 };
