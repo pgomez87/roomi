@@ -56,7 +56,7 @@ const validar = () => {
     }
 
     //Validación contraseña igual a la confirmación
-    if (input_nuevasenna.value == input_verificasenna.value && error == false) {
+    if (input_nuevasenna.value[0] == input_verificasenna.value[0]) {
         // Servicio
         modificar_contrasena(input_temporasenna.value, input_nuevasenna.value);
     } else {
