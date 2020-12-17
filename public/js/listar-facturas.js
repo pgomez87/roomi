@@ -33,7 +33,7 @@ const mostrarTablas = async() => {
 
 const selectFacturas = document.querySelector('#factura-companero');
 
-const llenarSelects = async() => {
+const llenarSelectsUsuario = async() => {
     const usuarios = await listarUsuariosFacturas();
     selectFacturas.innerHTML = '<option value="" selected>--Elegir compañero--</option>';
 
@@ -45,7 +45,35 @@ const llenarSelects = async() => {
         option.innerHTML = `${usuario.nombre} ${usuario.apellido}`;
         selectFacturas.appendChild(option);
     })
+
+}
+
+const selectServicio = document.querySelector('#tipo-factura');
+const selectProveedor = document.querySelector('#proveedor-crear-factura');
+
+const llenarSelectsProveedores = async() => {
+    const proveedores = await listarProveedoresFacturas();
+
+    proveedores.forEach((proveedor) => {
+        switch (selectServicio.value) {
+            case 'agua':
+                if (selectServicio.value.toLowerCase() === proveedor.servicio.toLowerCase()) {
+                    console.log(proveedor.nombre);
+                }
+                break;
+            case 'electricidad':
+                if (selectServicio.value.toLowerCase() === proveedor.servicio.toLowerCase()) {
+                    console.log(proveedor.nombre);
+                }
+                break;
+            default:
+                console.log('nope');
+                break;
+        }
+    })
 }
 
 mostrarTablas();
-llenarSelects();
+llenarSelectsUsuario();
+// llenarSelectsProveedores();
+selectServicio.addEventListener('change', llenarSelectsProveedores);

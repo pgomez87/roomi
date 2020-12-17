@@ -93,9 +93,9 @@ const validar = () => {
 
 
 
-const mensajePrueba = () => {
-    console.log(fechaConvertida);
-}
+// const mensajePrueba = () => {
+//     console.log(fechaConvertida);
+// }
 
 btnRegistrarFactura.addEventListener('click', validar);
 
@@ -103,7 +103,7 @@ btnRegistrarFactura.addEventListener('click', validar);
 
 
 
-//codigo medio obsoleto.
+//codigo medio (super) obsoleto.
 
 
 // const validar = () => {
