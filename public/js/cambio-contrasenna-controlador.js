@@ -30,7 +30,6 @@ const obtener_datos = () => {
     }).then(() => {
         limpiar();
     });
-
 };
 
 const validar = () => {

@@ -5,12 +5,12 @@ const input_temporasenna = document.querySelector('#pass-temporal');
 const input_nuevasenna = document.querySelector('#pass-nueva');
 const input_verificasenna = document.querySelector('#pass-verifica');
 const input_checkbox = document.querySelector('#robot-select');
-const caja_recaptcha = document.querySelector('#recaptcha-box');
 
 const limpiar = () => {
+    input_temporasenna.value = '';
     input_nuevasenna.value = '';
     input_verificasenna.value = '';
-    input_temporasenna.value = '';
+
 };
 
 
@@ -77,7 +77,6 @@ const validar = () => {
         error = true;
         caja_recaptcha.classList.add('error-input');
     }
-
     if (error == false) {
         obtener_datos();
     } else {
@@ -89,5 +88,3 @@ const validar = () => {
     }
 
 };
-
-//boton_confirmar.addEventListener('click', validar);
