@@ -12,22 +12,7 @@ const textoContrasena = document.querySelector('#txt-contrasena');
 
 //validar edad, entre 1 y 99 años: ^[0-9]{1,2}+$ 
 
-const detectar_usuario = () => {
-    switch (textoEmail.value) {
-        case 'user@roomi.com':
-            window.location.href = 'dashboard-usuario.html';
-            break;
-        case 'admin@roomi.com':
-            window.location.href = 'dashboard-admin.html';
-            break;
-        case 'coordinador@roomi.com':
-            window.location.href = 'dashboard-coordinador.html';
-            break;
-        default:
-            window.location.href = "dashboard-coordinador.html";
-            break;
-    }
-};
+
 
 const limpiar = () => {
     textoEmail.value = '';
