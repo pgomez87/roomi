@@ -51,7 +51,7 @@ section {
     border: solid 2px #136f63;
     border-radius: 5px;
     width: 85%;
-    height: 6%;
+    height: 1%;
     margin: 3% auto;
 }
 
@@ -236,10 +236,6 @@ button {
     margin: auto;
     border-color: #52D1DC;
     outline: none;
-}
-
-.fa-search {
-    color: #000000;
 }
 
 .sos-boton {

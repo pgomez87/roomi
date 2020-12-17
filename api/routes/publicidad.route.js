@@ -6,9 +6,11 @@ const Publicidad = require('../models/publicidad.model')
 
 router.post('/registrar-publicidad', (req, res) => {
     let nueva_publicidad = new Publicidad({
+        id: req.body.id,
         titulo: req.body.titulo,
         texto: req.body.texto,
-        imagen: req.body.imagen
+        imagen: req.body.imagen,
+        fecha: req.body.fecha
     });
 
     nueva_publicidad.save((err, roomi_bd) => {
@@ -40,3 +42,5 @@ router.get('/listar-publicidades', (req, res) => {
         }
     });
 });
+
+module.exports = router;

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/viviendas-disponibles.css">
-    <title>Viviendas disponibles</title>
+    <link rel="stylesheet" href="css/cambio-contrasena.css">
+    <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+    <title>Roomi</title>
 </head>
 
 <body>
@@ -30,46 +30,48 @@
                     <a href="perfil-usuario.html">Mi perfil</a>
                 </nav>
             </div>
+
         </div>
     </header>
 
     <main>
+        <section class="cambiosenna">
+            <div class="cam-form">
+                <form action="cambioform">
+                    <h1>Cambio de Contraseña</h1>
 
-        <h1>Viviendas disponibles</h1>
-
-        <div class="btn-registrar-viv">
-            <a href="registro-viviendas.html"><button type="button">Registrar nueva vivienda </button></a>
-        </div>
-
-        <div class="contenedor-viviendas">
-            <h2>Casa verdelli</h2>
-            <p>Ubicada en escazu tiene 4 cuartos 2 baños garaje para un carro.</p>
-            <img src="images/fran-hogan-BDRzsymkZho-unsplash.jpg">
-            <img src="images/hutomo-abrianto-9mPl0Zo7_gQ-unsplash.jpg">
-            <img src="images/jason-briscoe-AQl-J19ocWE-unsplash.jpg">
-            <a href="info-vivienda-usuario.html"><button type="button">Ver mas informacion</button></a>
-
-            <h2>Casa cali</h2>
-            <p>ubicada cerca del hospital la california, tiene 2 pisos, 3 cuartos y 2 baños.</p>
-            <img src="images/naomi-hebert-MP0bgaS_d1c-unsplash.jpg">
-            <img src="images/neonbrand-OMNq7DtLTMQ-unsplash.jpg">
-            <img src="images/victor-rodriguez-nAhTWSNK7zM-unsplash.jpg">
-            <a href="info-vivienda-usuario.html"><button type="button">Ver mas informacion</button></a>
-        </div>
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d36149.99215256431!2d-84.0775406875039!3d9.93278666257084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scr!4v1604528546829!5m2!1ses!2scr" width="600" height="450" frameborder="0"
-            style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
-        <div class="anuncio">
-            <img src="images/anuncio-agua.jpg">
-
-            <div class="sos-boton">
-                <div class="sos-icon">
-                    <i class="fas fa-exclamation-circle"></i>
-                </div>
-                <p>SOS</p>
+                    <div class="cajasenna">
+                        <label for="pass-anterior"></label>
+                        <input type="password" placeholder="Ingrese su contraseña anterior" id="pass-anterior" required>
+                    </div>
+                    <div class="cajasenna">
+                        <label class="nuevasenna" for="pass-nueva"></label>
+                        <input type="password" placeholder="Ingrese su nueva contraseña" id="pass-nueva" required>
+                    </div>
+                    <div class="cajasenna">
+                        <label for="pass-verifica"></label>
+                        <input type="password" placeholder="Ingrese la contraseña de nuevo" id="pass-verifica" required>
+                    </div>
+                    <div class="robotsenna" id="recaptcha-box">
+                        <div>
+                            <input type="checkbox" id="robot-select">
+                        </div>
+                        <div>
+                            <p>
+                                I'm not a robot
+                            </p>
+                        </div>
+                        <div class="recaptcha">
+                            <a href=""><img src="images/recaptcha.png" alt="recap"></a>
+                        </div>
+                    </div>
+                    <p>La contraseña debe tener mínimo ocho digitos y al menos una letra mayúscula, una minúscula y un carácter</p>
+                    <div>
+                        <button type="button" id="btn-enviar">Confirmar</button>
+                    </div>
+                </form>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>
@@ -105,7 +107,8 @@
             <h2>Copyright: © 2020</h2>
         </div>
     </footer>
-    <script src="https://kit.fontawesome.com/16599b263d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/cambio-contrasenna-controlador.js"></script>
 </body>
 
 </html>

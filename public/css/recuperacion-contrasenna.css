@@ -1,7 +1,7 @@
-    main{
+    main {
         height: 73.5vh;
     }
-
+    
     body {
         overflow: hidden;
     }
@@ -139,4 +139,16 @@
     
     button:hover {
         background-color: #bbbbbf;
+    }
+    
+    button {
+        border-radius: 20px;
+        font-size: 15px;
+        background-color: #52D1DC;
+        font-weight: bold;
+        cursor: pointer;
+        color: #232525;
+        padding: 10px;
+        border-color: #52D1DC;
+        outline: none;
     }

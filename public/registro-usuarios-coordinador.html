@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/recuperacion-contrasenna.css">
+    <link rel="stylesheet" href="css/registro.css">
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
     <title>Roomi</title>
 </head>
@@ -42,40 +43,50 @@
     </header>
 
     <main>
-        <section class="recuperasenna">
-            <div class="rec-form">
-                <form action="recuperaform">
-                    <h1>Recuperación de Contraseña</h1>
-                    <div class="cajasenna">
-                        <label for="temporasenna"></label>
-                        <input type="password" placeholder="Ingrese su contraseña temporal" id="pass-temporal" required>
-                    </div>
-                    <div class="cajasenna">
-                        <label class="nuevasenna" for="pass-nueva"></label>
-                        <input type="password" placeholder="Ingrese su nueva contraseña" id="pass-nueva" required>
-                    </div>
-                    <div class="cajasenna">
-                        <label for="pass-verifica"></label>
-                        <input type="password" placeholder="Ingrese la contraseña de nuevo" id="pass-verifica" required>
-                    </div>
-                    <div class="robotsenna" id="recaptcha-box">
+
+        <section class="sct-registro">
+            <div class="reg-form">
+                <div class="side-form">
+                    <form>
+                        <h1>Registro de usuario coordinador</h1>
+
                         <div>
-                            <input type="checkbox" id="robot-select">
+                            <label for="txt-nombre"></label>
+                            <input type="text" placeholder="Nombre" id="txt-nombre" required>
                         </div>
                         <div>
-                            <p>
-                                I'm not a robot
-                            </p>
+                            <label for="txt-apellido"></label>
+                            <input type="text" placeholder="Apellido" id="txt-apellido" required>
                         </div>
-                        <div class="recaptcha">
-                            <a href=""><img src="images/recaptcha.png" alt="recap"></a>
+                        <div>
+                            <label for="txt-contrasena"></label>
+                            <input type="password" placeholder="Contraseña" id="txt-contrasena" required>
                         </div>
-                    </div>
-                    <p>La contraseña debe tener mínimo ocho digitos y al menos una letra mayúscula, una minúscula y un carácter</p>
-                    <div>
-                        <button type="button" id="btn-enviar">Confirmar</button>
-                    </div>
-                </form>
+                        <div>
+                            <label for="txt-correo"></label>
+                            <input type="email" placeholder="E-mail" id="txt-correo" required>
+                        </div>
+                        <div>
+                            <label for="txt-telefono"></label>
+                            <input type="tel" placeholder="Teléfono" id="txt-telefono" required>
+                        </div>
+                        <div>
+                            <label for="txt-cedula"></label>
+                            <input type="text" placeholder="Cédula" id="txt-cedula" required>
+                        </div>
+                        <div class="textarea-container">
+                            <div>
+                                <label for="txt-direccion" class="text area-label"></label>
+                                <textarea name="" placeholder="Dirección" id="txt-direccion" required></textarea>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button type="button" id="btn-registrarse">Registrarse</button>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </section>
     </main>
@@ -113,12 +124,11 @@
             <h2>Copyright: © 2020</h2>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="js/usuarios-servicio.js"></script>
-    <script src="js/modificar-contrasenna.js"></script>
-
-
+    <script src="js/registro-controlador-coordinador.js"></script>
 </body>
 
 </html>

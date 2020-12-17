@@ -11,6 +11,7 @@ router.post('/registrar-factura', (req, res) => {
         tipo: req.body.tipo,
         proveedor: req.body.proveedor,
         porcentaje: req.body.porcentaje,
+        usuario: req.body.usuario,
         activa: req.body.activa
     });
 

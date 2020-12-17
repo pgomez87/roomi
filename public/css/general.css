@@ -38,7 +38,6 @@ header {
 .nav-header {
     width: 85%;
     height: 70px;
-    float: left;
 }
 
 .logo-header img {
@@ -54,18 +53,6 @@ header {
 
 header nav p {
     color: #fff;
-}
-
-.der-nav {
-    float: right;
-}
-
-.btns-nav {
-    display: inline-block;
-}
-
-.consulta {
-    display: inline-block;
 }
 
 

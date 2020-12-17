@@ -9,7 +9,9 @@ const schema_usuario = new mongoose.Schema({
     telefono: { type: String, required: true, unique: false },
     cedula: { type: String, required: true, unique: true },
     direccion: { type: String, required: true, unique: false },
-    tipo_usuario: { type: String, required: true, unique: false }
+    tipo_usuario: { type: String, required: true, unique: false },
+    estado: { type: String, required: true, unique: false },
+    cambio_contrasena: { type: String, required: false, unique: false }
 
     // 3 tipos de usuario
     //   - regular

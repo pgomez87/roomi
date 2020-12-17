@@ -8,10 +8,12 @@ const obtenerDatos = () => {
     let tipo = document.querySelector('#tipo-factura').value;
     let proveedor = document.querySelector('#proveedor-crear-factura').value;
     let porcentaje = document.querySelector('#porcentaje-pagar').value;
+    let usuario = document.querySelector('#factura-companero').value;
     let activa = 'activa';
 
-    console.log(nombre, fecha, tipo, proveedor, porcentaje, activa);
-    registrarFacturas(nombre, fecha, tipo, proveedor, porcentaje, activa);
+    console.log(nombre, fecha, tipo, proveedor, porcentaje, usuario, activa);
+    registrarFacturas(nombre, fecha, tipo, proveedor, porcentaje, usuario, activa);
+    // location.reload();
 }
 
 
@@ -91,9 +93,9 @@ const validar = () => {
 
 
 
-const mensajePrueba = () => {
-    console.log(fechaConvertida);
-}
+// const mensajePrueba = () => {
+//     console.log(fechaConvertida);
+// }
 
 btnRegistrarFactura.addEventListener('click', validar);
 
@@ -101,7 +103,7 @@ btnRegistrarFactura.addEventListener('click', validar);
 
 
 
-//codigo medio obsoleto.
+//codigo medio (super) obsoleto.
 
 
 // const validar = () => {

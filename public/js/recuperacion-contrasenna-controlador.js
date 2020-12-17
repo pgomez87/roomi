@@ -24,10 +24,11 @@ const obtener_datos = () => {
     console.log('La nueva contraseña es: ', nuevasenna);
     console.log('La contraseña de verificación es: ', verificasenna);
 
+
+
     Swal.fire({
         'title': 'Su contraseña ha sido cambiada',
-        'icon': 'success',
-        'text': 'Nos pondremos en contacto con usted lo antes posible'
+        'icon': 'success'
     }).then(() => {
         limpiar();
     });
@@ -36,7 +37,6 @@ const obtener_datos = () => {
 
 const validar = () => {
     let error = false;
-    let regex_correo = /^[a-zA-Z0-9.]+@{1}[a-zA-Z]+(.com|.net|.org|.ac.cr)$/
     let regex_contrasenna = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
     let campos_requeridos = document.querySelectorAll(':required');
 
@@ -50,12 +50,12 @@ const validar = () => {
         }
     });
 
-    /*if (!regex_correo.test(input_txtcorreo.value)) {
+    if (!regex_contrasenna.test(input_temporasenna.value)) {
         error = true;
-        input_txtcorreo.classList.add('error-input');
+        input_temporasenna.classList.add('error-input');
     } else {
-        input_txtcorreo.classList.remove('error-input');
-    }*/
+        input_temporasenna.classList.remove('error-input');
+    }
 
     if (!regex_contrasenna.test(input_nuevasenna.value)) {
         error = true;
@@ -70,12 +70,6 @@ const validar = () => {
     } else {
         input_verificasenna.classList.remove('error-input');
     }
-    if (!regex_.test(input_verificasenna.value)) {
-        error = true;
-        input_temporasenna.classList.add('error-input');
-    } else {
-        input_temporasenna.classList.remove('error-input');
-    }
 
     if (input_checkbox.checked) {
         caja_recaptcha.classList.remove('error-input');
@@ -86,15 +80,14 @@ const validar = () => {
 
     if (error == false) {
         obtener_datos();
-        window.open("inicio-sesion.html", "_self")
     } else {
         Swal.fire({
             'title': 'No se pudo cambiar su contraseña',
             'icon': 'warning',
-            'text': 'Por favor revise los datos que se le solicitan'
+            'text': 'La contraseña debe tener mínimo ocho digitos y debe contener al menos una letra mayúscula, una minúscula y un carácter'
         });
     }
 
 };
 
-boton_confirmar.addEventListener('click', validar);
+//boton_confirmar.addEventListener('click', validar);

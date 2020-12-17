@@ -20,14 +20,14 @@ h1{
     font-size: 16pt;
     color: #fff;
 }
-.titulo-input, .descripcion-input{
+#titulo-input, #descripcion-input{
     margin: 2% 0;
     width: 100%;
     height: 30px;
     border-radius: 10px;
     border: solid 2px #136F63;
 }
-.descripcion-input{
+#descripcion-input{
     min-height: 45vh;
     max-height: 45vh;
     min-width: 100%;
