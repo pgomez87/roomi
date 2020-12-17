@@ -68,13 +68,13 @@ router.get('/iniciar-sesion', (req, res) => {
         } else {
             if (usuario && usuario.contrasena == contrasena) {
                 res.json({
-                    estado: true,
+                    estado: usuario.estado,
                     tipo: usuario.tipo_usuario,
                     nombre: usuario.nombre,
-                    cambio_contrasena: 'no',
+                    cambio_contrasena: usuario.cambio_contrasena,
                 });
             } else {
-                if (usuario && usuario.estado == 'sin contraseña') {
+                if (usuario && usuario.estado == 'sin contrasena') {
                     res.json({
                         cambio_contrasena: 'si',
                         estado: false
@@ -96,8 +96,8 @@ router.get('/iniciar-sesion', (req, res) => {
 router.put('/reestablecer-contrasena', (req, res) => {
     //Debe generar la contraseña aleatoriamente
 
-    let contrasena_temporal = 'Hnnkhg5.';
-    Usuario.updateOne({ correo: req.body.correo }, { $set: { contrasena: contrasena_temporal, estado: 'sin contraseña' } }, (err, info) => {
+    let contrasena_temporal = crear_contrasena(8);
+    Usuario.updateOne({ correo: req.body.correo }, { $set: { contrasena: contrasena_temporal, estado: 'sin contrasena', cambio_contrasena: 'si' } }, (err, info) => {
         if (err) {
             res.json({
                 msj: 'No se pudo recuperar la contraseña',
@@ -152,3 +152,28 @@ router.put('/modificar-contrasena', (req, res) => {
 });
 
 module.exports = router;
+
+function crear_contrasena(tamano) {
+    var contrasena_temp = '';
+    var letras_mayus = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var letras_minus = 'abcdefghijklmnopqrstuvwxyz';
+    var numeros = '0123456789';
+    var chars_especiales = '.,!?¿¡';
+    var cantidad_opciones = letras_mayus.length;
+    for (var i = 0; i < tamano / 4; i++) {
+        contrasena_temp += letras_mayus.charAt(Math.floor(Math.random() * cantidad_opciones));
+    }
+    cantidad_opciones = letras_minus.length;
+    for (var i = 0; i < tamano / 4; i++) {
+        contrasena_temp += letras_minus.charAt(Math.floor(Math.random() * cantidad_opciones));
+    }
+    cantidad_opciones = numeros.length;
+    for (var i = 0; i < tamano / 4; i++) {
+        contrasena_temp += numeros.charAt(Math.floor(Math.random() * cantidad_opciones));
+    }
+    cantidad_opciones = chars_especiales.length;
+    for (var i = 0; i < tamano / 4; i++) {
+        contrasena_temp += chars_especiales.charAt(Math.floor(Math.random() * cantidad_opciones));
+    }
+    return contrasena_temp;
+};

@@ -53,9 +53,9 @@ const iniciar_sesion = async(correo, contrasena) => {
             url: `http://localhost:3000/api/iniciar-sesion`,
             responseType: 'json'
         });
-        console.log(`${response.data.cambio_contrasena}`);
+        console.log(`${response.data_id} -- ${response.data.cambio_contrasena} -- ${correo} -- ${response.data.estado} -- servicio`);
         if (response.data.estado == true) {
-            console.log(`${response.data.cambio_contrasena}`);
+            console.log(`${response.data.cambio_contrasena} servicio dentro del if`);
             Swal.fire({
                 'icon': 'success',
                 'title': 'Bienvenido',
@@ -74,9 +74,9 @@ const iniciar_sesion = async(correo, contrasena) => {
             });
         } else {
             console.log(`${response.data.estado} -- ${response.data.cambio_contrasena}`);
-            if (response.data.cambio_contrasena == 'si') {
+            if (response.data.estado == 'sin contrasena') {
                 sessionStorage.setItem('correo_usuario', correo);
-                window.location.href = 'cambio-contrasena-usuario.html';
+                window.location.href = 'recuperacion-contrasenna.html';
             } else {
                 Swal.fire({
                     'icon': 'error',
