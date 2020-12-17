@@ -39,4 +39,30 @@ const listar_proveedores = async() => {
     });
 
     return lista_proveedores
-}
+
+};
+
+const eliminar_proveedores = async(_id) => {
+    await axios({
+        method: 'delete',
+        url: '',
+        responseType: 'json',
+        data: {
+            _id: _id
+        }
+    }).then((response) => {
+        Swal.fire({
+            'title': 'El proveedor ha sido eliminado',
+            'icon': 'success',
+            'text': response.msj
+        }).then(() => {
+            mostrar_proveedores();
+        });
+    }).catch((response) => {
+        Swal.fire({
+            'title': response.msj,
+            'icon': 'error',
+            'text': response.err
+        })
+    });
+};
