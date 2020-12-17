@@ -58,7 +58,7 @@ const listarUsuariosFacturas = async() => {
     return listaUsuarios;
 }
 
-const listar_proveedores = async() => {
+const listarProveedoresFacturas = async() => {
     let listaProveedores = [];
     await axios({
         method: 'get',
