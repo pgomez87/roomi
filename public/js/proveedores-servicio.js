@@ -45,7 +45,7 @@ const listar_proveedores = async() => {
 const eliminar_proveedores = async(_id) => {
     await axios({
         method: 'delete',
-        url: '',
+        url: 'http://localhost:3000/api/eliminar-proveedores',
         responseType: 'json',
         data: {
             _id: _id
