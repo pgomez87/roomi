@@ -18,6 +18,8 @@ const mostrarTablas = async() => {
             fila.insertCell().innerHTML = factura.proveedor;
             fila.insertCell().innerHTML = factura.porcentaje;
             fila.insertCell().innerHTML = `<td><input type="checkbox" class="checkbox-pequeno" id="${factura._id}"></td>`;
+            fila.insertCell().innerHTML = factura.usuario;
+            // console.log(factura.usuario);
         } else {
             let fila = tablaPagada.insertRow();
             fila.insertCell().innerHTML = factura.fecha.substring(0, 10);
@@ -29,4 +31,13 @@ const mostrarTablas = async() => {
 
 }
 
+const llenarSelects = async() => {
+    const usuarios = await listarUsuariosFacturas();
+
+    usuarios.forEach((usuario) => {
+        console.log(usuario.nombre);
+    })
+}
+
 mostrarTablas();
+llenarSelects();
