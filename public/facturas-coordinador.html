@@ -48,7 +48,7 @@
                             <tr>
                                 <th>Fecha</th>
                                 <th>Recibo</th>
-                                <th>Usuario asignado</th>
+                                <th>Tipo de factura</th>
                                 <th>Proveedor</th>
                             </tr>
                         </thead>
@@ -66,10 +66,11 @@
                             <tr>
                                 <th>Fecha</th>
                                 <th>Recibo</th>
-                                <th>Usuario asignado</th>
+                                <th>Tipo de factura</th>
                                 <th>Proveedor</th>
                                 <th>Porcentaje</th>
                                 <th>Pagada</th>
+                                <th>Compañero</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -125,32 +126,29 @@
                             <option value="75">75%</option>
                             <option value="100">100%</option>
                         </select>
+                        <select name="companeros" id="factura-companero" required>
+                            <!-- <option value="" selected>--Elegir compañero--</option>
+                            <option value="prueba">Prueba</option> -->
+                        
+                        </select>
                         <button type="button" id="btn-crear-factura">Agregar</button>
                     </form>
 
                 </div>
-                <div class="asignar-factura">
+                <!-- <div class="asignar-factura">
                     <h2>Asignar Facturas</h2>
                     <form class="creacion-facturas">
                         <select name="companeros" id="tipo-companero">
                             <option value="" selected>--Elegir compañero--</option>
-                            <option value="companero1">Jonas Nielsen</option>
-                            <option value="companero2">Martha Nielsen</option>
-                            <option value="companero3">Ana Hernand</option>
-                            <option value="companero4">Agatha Cordero</option>
-                            <option value="companero5">Isaac Paez</option>
-                            <option value="companero6">Jennifer Valencio</option>
+                        
                         </select>
                         <select name="factura-asignada" id="elegir-factura">
                             <option value="" selected>--Elegir factura para asignar--</option>
-                            <option value="factura-id123">Factura para cable</option>
-                            <option value="factura-id124">Factura Mensualidad</option>
-                            <option value="factura-id2223">Factura por plato roto</option>
-                            <option value="factura-id1236">Factura 12/10/22</option>
+                           
                         </select>
                         <button type="button" id="btn-asignar-factura">Asignar</button>
                     </form>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -197,6 +195,7 @@
 
     <!-- js propio -->
     <script src="js/facturas-coordinador-controlador.js"></script>
+    <script src="js/usuarios-servicio.js"></script>
     <script src="js/facturas-servicio.js"></script>
     <script src="js/listar-facturas.js"></script>
 
