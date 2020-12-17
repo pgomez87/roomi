@@ -1,17 +1,36 @@
 'use strict';
 
 const btn_aceptar = document.querySelector('#btn-enviar');
+const input_checkbox = document.querySelector('#robot-select');
+const caja_recaptcha = document.querySelector('#recaptcha-box');
 const input_temporasenna = document.querySelector('#pass-temporal');
 const input_nuevasenna = document.querySelector('#pass-nueva');
 const input_verificasenna = document.querySelector('#pass-verifica');
-const input_checkbox = document.querySelector('#robot-select');
-const caja_recaptcha = document.querySelector('#recaptcha-box');
 
 const limpiar = () => {
     input_temporasenna.value = '';
     input_nuevasenna.value = '';
     input_verificasenna.value = '';
 };
+
+const obtener_datos = async() => {
+
+    let temporasenna = input_temporasenna;
+    let nuevasenna = input_nuevasenna.value;
+    let verificasenna = input_verificasenna.value;
+
+    console.log('La contraseña temporal es: ', temporasenna);
+    console.log('La nueva contraseña es: ', nuevasenna);
+    console.log('La contraseña de verificación es: ', verificasenna);
+
+    Swal.fire({
+        'title': 'Su contraseña ha sido cambiada',
+        'icon': 'success'
+    }).then(() => {
+        limpiar();
+    });
+};
+
 
 const validar = () => {
     let error = false;
@@ -56,12 +75,12 @@ const validar = () => {
     }
 
     //Validación contraseña igual a la confirmación
-    if (input_nuevasenna.value == input_verificasenna.value && error == false) {
+    if (input_requeridos[1].value == input_requeridos[2].value) {
         // Servicio
-        modificar_contrasena(input_temporasenna.value, input_nuevasenna.value);
+        modificar_contrasena(input_requeridos[0].value, input_requeridos[1].value);
     } else {
-        input_nuevasenna.classList.add('error-input');
-        input_verificasenna.classList.add('error-input');
+        input_requeridos[1].classList.add('error-input');
+        input_requeridos[2].classList.add('error-input');
         Swal.fire({
             'title': 'No se pudo cambiar su contraseña',
             'icon': 'warning',
