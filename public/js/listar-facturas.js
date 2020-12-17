@@ -35,9 +35,10 @@ const selectFacturas = document.querySelector('#factura-companero');
 
 const llenarSelects = async() => {
     const usuarios = await listarUsuariosFacturas();
-    selectFacturas.innerHTML = '';
+    selectFacturas.innerHTML = '<option value="" selected>--Elegir compañero--</option>';
 
     usuarios.forEach((usuario) => {
+
         // selectFacturas.innerHTML = `<option value="" selected>--Elegir compañero--</option>`;
         let option = document.createElement('option');
         option.value = `${usuario.nombre} ${usuario.apellido}`;

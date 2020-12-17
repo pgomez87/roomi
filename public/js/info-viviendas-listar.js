@@ -87,10 +87,6 @@ const mostrarViviendaIndividual = async() => {
     containerInfo.appendChild(div2);
     containerDescripcion.appendChild(div3);
 
-
-
-
-
 }
 
 mostrarViviendaIndividual();
