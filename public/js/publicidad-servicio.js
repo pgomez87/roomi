@@ -42,3 +42,28 @@ const listar_publicidad = async() => {
 
     return lista_publicidades;
 };
+
+const eliminar_publicidad = async(id) => {
+    await axios({
+        method: 'delete',
+        url: 'http://localhost:3000/api/eliminar-publicidad',
+        responseType: 'json',
+        data: {
+            id: id
+        }
+    }).then((response) => {
+        Swal.fire({
+            'title': 'La publicidad ha sido eliminada',
+            'icon': 'success',
+            'text': response.msj
+        }).then(() => {
+            
+        });
+    }).catch((response) => {
+        Swal.fire({
+            'title': response.msj,
+            'icon': 'error',
+            'text': response.err
+        });
+    });
+};

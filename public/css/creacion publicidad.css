@@ -33,3 +33,7 @@ h1{
     min-width: 100%;
     max-width: 100%;
 }
+
+.error{
+    border: solid 2px red !important;
+}

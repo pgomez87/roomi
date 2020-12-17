@@ -30,12 +30,17 @@ const mostrar_publicidad = async() => {
     });
 };
 
-boton_eliminar_publicidad.addEventListener('click', () => {
-    let lista_eliminar = document.querySelectorAll('.selected');
+mostrar_publicidad();
 
-    lista_eliminar.forEach(table_row => {
-        table_row.remove();
+boton_eliminar_publicidad.addEventListener('click', () => {
+
+    lista_publicidades_id.forEach(id => {
+        eliminar_publicidad(id)
+        let indice = lista_publicidades_id.indexOf(id);
+        lista_publicidades_id.splice(indice, 1);
     });
+
+    mostrar_publicidad();
 });
 
 
