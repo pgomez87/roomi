@@ -52,6 +52,7 @@ router.get('/listar-usuarios', (req, res) => {
         }
     });
 });
+
 //Yossy hizo esto
 router.get('/iniciar-sesion', (req, res) => {
     let correo = req.query.correo;

@@ -8,6 +8,7 @@ const schemaFacturas = new mongoose.Schema({
     tipo: { type: String, required: true, unique: false },
     proveedor: { type: String, required: true, unique: false },
     porcentaje: { type: String, required: true, unique: false },
+    usuario: { type: String, required: true, unique: false },
     activa: { type: String, required: true, unique: false }
 });
 
