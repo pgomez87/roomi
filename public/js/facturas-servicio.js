@@ -58,6 +58,22 @@ const listarUsuariosFacturas = async() => {
     return listaUsuarios;
 }
 
+const listar_proveedores = async() => {
+    let listaProveedores = [];
+    await axios({
+        method: 'get',
+        url: 'http://localhost:3000/api/listar-proveedores',
+        responseType: 'json'
+    }).then((response) => {
+        listaProveedores = response.data.lista_proveedores;
+    }).catch((response) => {
+
+    });
+
+    return listaProveedores
+}
+
+
 
 //otro codigo que en realidad es exactamente el mismo pero tampoco funciona 
 
