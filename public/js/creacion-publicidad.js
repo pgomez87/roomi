@@ -11,7 +11,6 @@ let widgetCloudinary = cloudinary.createUploadWidget({
 
 }, (err, result) => {
     if (!err && result && result.event === 'success') {
-        console.log('Imagen subida con éxito', result.info);
         imagen.src = result.info.secure_url;
     }
 });

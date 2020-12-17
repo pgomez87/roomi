@@ -2,7 +2,7 @@
 
 const tabla_publicidad = document.querySelector('#tbody-publicidad');
 const boton_eliminar_publicidad = document.querySelector('#eliminar-publicidad');
-const lista_publicidades_id = [];
+let lista_publicidades_id = [];
 
 
 const mostrar_publicidad = async() => {
@@ -26,6 +26,7 @@ const mostrar_publicidad = async() => {
                 table_row.classList.add('selected');
                 lista_publicidades_id.push(publicidad.id)
             }
+            console.log(lista_publicidades_id);
         });
     });
 };
@@ -36,9 +37,8 @@ boton_eliminar_publicidad.addEventListener('click', () => {
 
     lista_publicidades_id.forEach(id => {
         eliminar_publicidad(id)
-        let indice = lista_publicidades_id.indexOf(id);
-        lista_publicidades_id.splice(indice, 1);
     });
+    lista_publicidades_id = [];
 
     mostrar_publicidad();
 });

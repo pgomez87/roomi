@@ -12,7 +12,7 @@ const registrar_publicidad = async(titulo, descripcion, imagen) => {
         data: {
             id: random_id(),
             titulo: titulo,
-            descripcion: descripcion,
+            texto: descripcion,
             imagen: imagen,
             fecha: `${new Date().getDate()}/${new Date().getMonth()}/${new Date().getFullYear()}`
         }
