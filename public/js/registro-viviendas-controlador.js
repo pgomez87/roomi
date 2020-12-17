@@ -36,12 +36,12 @@ const limpiar = () => {
     input_imagen.src = '';
     input_habitaciones.value = '';
     input_bannos.value = '';
-    input_cocina.value = '';
-    input_pilas.value = '';
-    input_comedor.value = '';
-    input_sala.value = '';
-    input_jardin.value = '';
-    input_garaje.value = '';
+    input_cocina.checked = '';
+    input_pilas.checked = '';
+    input_comedor.checked = '';
+    input_sala.checked = '';
+    input_jardin.checked = '';
+    input_garaje.checked = '';
 }
 
 const obtener_datos = () => {
@@ -53,12 +53,12 @@ const obtener_datos = () => {
     let imagen = input_imagen.src;
     let habitaciones = input_habitaciones.value;
     let bannos = input_bannos.value;
-    let cocina = input_cocina.value;
-    let pilas = input_pilas.value;
-    let comedor = input_comedor.value;
-    let sala = input_sala.value;
-    let jardin = input_jardin.value;
-    let garaje = input_garaje.value;
+    let cocina = input_cocina.checked;
+    let pilas = input_pilas.checked;
+    let comedor = input_comedor.checked;
+    let sala = input_sala.checked;
+    let jardin = input_jardin.checked;
+    let garaje = input_garaje.checked;
 
     registrar_vivienda(nombre, costo, capacidad, descripcion, direccion, imagen, habitaciones, bannos, cocina, pilas, comedor, sala, jardin, garaje)
 
