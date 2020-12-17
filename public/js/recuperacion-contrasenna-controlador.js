@@ -88,3 +88,5 @@ const validar = () => {
     }
 
 };
+
+boton_confirmar.addEventListener('click', validar);
