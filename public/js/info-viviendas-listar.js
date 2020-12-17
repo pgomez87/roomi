@@ -27,42 +27,42 @@ const mostrarViviendaIndividual = async() => {
 
     let div3 = document.createElement('div');
     let cocina = () => {
-        if (viviendaIndividual.cocina === 'on') {
+        if (viviendaIndividual.cocina === 'true') {
             return '<p>Cocina: Sí</p>'
         } else {
             return '<p>Cocina: No</p>'
         }
     };
     let pilas = () => {
-        if (viviendaIndividual.pilas === 'on') {
+        if (viviendaIndividual.pilas === 'true') {
             return '<p>Cuarto de pilas: Sí</p>'
         } else {
             return '<p>Cuarto de pilas: No</p>'
         }
     };
     let comedor = () => {
-        if (viviendaIndividual.comedor === 'on') {
+        if (viviendaIndividual.comedor === 'true') {
             return '<p>Comedor: Sí</p>'
         } else {
             return '<p>Comedor: No</p>'
         }
     };
     let sala = () => {
-        if (viviendaIndividual.sala === 'on') {
+        if (viviendaIndividual.sala === 'true') {
             return '<p>Sala: Sí</p>'
         } else {
             return '<p>Sala: No</p>'
         }
     };
     let jardin = () => {
-        if (viviendaIndividual.jardin === 'on') {
+        if (viviendaIndividual.jardin === 'true') {
             return '<p>Jardín: Sí</p>'
         } else {
             return '<p>Jardín: No</p>'
         }
     };
     let garaje = () => {
-        if (viviendaIndividual.garaje === 'on') {
+        if (viviendaIndividual.garaje === 'true') {
             return '<p>Garaje: Sí</p>'
         } else {
             return '<p>Garaje: No</p>'
