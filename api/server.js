@@ -116,4 +116,5 @@ app.use('/api', require('./routes/noticias.route'));
 app.use('/api', require('./routes/proveedores.route'));
 app.use('/api', require('./routes/viviendas.route'));
 app.use('/api', require('./routes/usuarios.route'));
+app.use('/api', require('./routes/compras.route'));
 // app.use('/api', require('./routes/publicidad.route'));

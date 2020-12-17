@@ -1,35 +1,29 @@
 'use strict';
 
 const btn_enviar = document.querySelector('#btn-enviar');
-const input_producto = document.querySelector('#txt-producto');
-const input_categoria = document.querySelector('#txt-categoria');
-const input_cantidad = document.querySelector('#txt-cantidad');
+
+const txt_producto = document.querySelector('#txt-producto');
+const slt_categoria = document.querySelector('#slt-categorias');
+const txt_cantidad = document.querySelector('#txt-cantidad');
 
 const limpiar = () => {
-    input_producto.value = '';
-    input_categoria.value = '';
-    input_cantidad.value = '';
+    txt_producto.value = '';
+    slt_categoria.value = '';
+    txt_cantidad.value = '';
 }
 
 const obtener_datos = () => {
-    let producto = input_producto.value;
-    let categoria = input_categoria.value;
-    let cantidad = input_cantidad.value;
+    let producto = txt_producto.value;
+    let categoria = slt_categoria.value;
+    let cantidad = txt_cantidad.value;
 
-    console.log(`El producto es ${producto}, la categoria es ${categoria} y la cantidad ${cantidad}.`)
-
-    Swal.fire({
-        'title': `El artículo ha sido registrado`,
-        'icon': `success`,
-    }).then(() => {
-        limpiar();
-    })
+    registrar_compra(producto, categoria, cantidad)
+    console.log(producto, categoria, cantidad)
 };
 
 const validar = () => {
     let error = false;
     let regex_producto = /^[a-zA-Z0-9 ]+$/;
-    let regex_categoria = /^[a-zA-Z ]+$/;
     let regex_cantidad = /^[1-9]{1}[0-9]{0,2}$/;
     let campos_requeridos = document.querySelectorAll(":required");
 
@@ -42,25 +36,18 @@ const validar = () => {
         }
     });
 
-    if (!regex_producto.test(input_producto.value)) {
+    if (!regex_producto.test(txt_producto.value)) {
         error = true;
-        input_producto.classList.add(`error-input`);
+        txt_producto.classList.add(`error-input`);
     } else {
-        input_producto.classList.remove(`error-input`);
+        txt_producto.classList.remove(`error-input`);
     }
 
-    if (!regex_categoria.test(input_categoria.value)) {
+    if (!regex_cantidad.test(txt_cantidad.value)) {
         error = true;
-        input_categoria.classList.add(`error-input`);
+        txt_cantidad.classList.add(`error-input`);
     } else {
-        input_categoria.classList.remove(`error-input`);
-    }
-
-    if (!regex_cantidad.test(input_cantidad.value)) {
-        error = true;
-        input_cantidad.classList.add(`error-input`);
-    } else {
-        input_cantidad.classList.remove(`error-input`);
+        txt_cantidad.classList.remove(`error-input`);
     }
 
     if (error == false) {
