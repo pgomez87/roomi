@@ -36,7 +36,7 @@ const mostrar_proveedores = async() => {
                 Swal.fire({
                     icon: 'warning',
                     text: 'Esta seguro que desea eliminar el proveedor?',
-                    showCancekButton: true,
+                    showCancelButton: true,
                     confirmButtonText: 'Si'
                 }).then((result) => {
                     if (result.isConfirmed) {
@@ -59,7 +59,7 @@ const mostrar_proveedores = async() => {
                 Swal.fire({
                     icon: 'warning',
                     text: 'Esta seguro que desea eliminar el proveedor?',
-                    showCancekButton: true,
+                    showCancelButton: true,
                     confirmButtonText: 'Si'
                 }).then((result) => {
                     if (result.isConfirmed) {
@@ -82,7 +82,7 @@ const mostrar_proveedores = async() => {
                 Swal.fire({
                     icon: 'warning',
                     text: 'Esta seguro que desea eliminar el proveedor?',
-                    showCancekButton: true,
+                    showCancelButton: true,
                     confirmButtonText: 'Si'
                 }).then((result) => {
                     if (result.isConfirmed) {
@@ -105,7 +105,7 @@ const mostrar_proveedores = async() => {
                 Swal.fire({
                     icon: 'warning',
                     text: 'Esta seguro que desea eliminar el proveedor?',
-                    showCancekButton: true,
+                    showCancelButton: true,
                     confirmButtonText: 'Si'
                 }).then((result) => {
                     if (result.isConfirmed) {
@@ -128,7 +128,7 @@ const mostrar_proveedores = async() => {
                 Swal.fire({
                     icon: 'warning',
                     text: 'Esta seguro que desea eliminar el proveedor?',
-                    showCancekButton: true,
+                    showCancelButton: true,
                     confirmButtonText: 'Si'
                 }).then((result) => {
                     if (result.isConfirmed) {
