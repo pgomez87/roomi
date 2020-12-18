@@ -112,60 +112,18 @@
                             </div>
                             <div class="texto">
                                 <table id="informacion-facturas">
-                                    <tr>
-                                        <th>Fecha</th>
-                                        <th>Recibo</th>
+                                    <table id="informacion-facturas">
+                                        <thead>
+                                            <th>Fecha</th>
+                                            <th>Recibo</th>
+                                            <th>Usuario Asignado</th>
+                                            <th>Estado</th>
+                                        </thead>
 
-                                        <th>Estado</th>
-                                    </tr>
-                                    <tr>
-                                        <td>1/11/2020</td>
-                                        <td>Luz</td>
+                                        <tbody>
 
-                                        <td>Atrasada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1/10/2020</td>
-                                        <td>Agua</td>
-
-                                        <td>Atrasada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7/11/2020</td>
-                                        <td>Cable</td>
-
-                                        <td>Cancelada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7/11/2020</td>
-                                        <td>Internet</td>
-
-                                        <td>Cancelada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7/11/2020</td>
-                                        <td>Netflix</td>
-
-                                        <td>Cancelada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7/11/2020</td>
-                                        <td>Alquiler de la cochera</td>
-
-                                        <td>Cancelada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7/11/2020</td>
-                                        <td>Alquiler mensual</td>
-
-                                        <td>Cancelada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7/11/2020</td>
-                                        <td>Seguridad</td>
-
-                                        <td>Cancelada</td>
-                                    </tr>
+                                        </tbody>
+                                    </table>
                                 </table>
                             </div>
                             <div class="botones">
@@ -284,7 +242,7 @@
                                 <input type="search">
                             </div>
                             <div class="texto">
-                                <table id="informacion-facturas">
+                                <table id="informacion-compras">
                                     <tr>
                                         <th>Producto</th>
 
@@ -367,79 +325,45 @@
                             <div class="texto">
                                 <div id="info-noticias">
                                     <table id="lista-usuarios">
-                                        <tr>
-                                            <th>Fecha</th>
-                                            <th>Anuncio</th>
-                                            <th>Usuario</th>
-                                        </tr>
-                                        <tr>
-                                            <td>11/11/2020</td>
+                                        <thead>
+                                            <tr>
+                                                <th>Título</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
 
-                                            <td>Busco Compañero de apartamento</td>
-                                            <td>Carlos Villalobos</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/11/2020</td>
-
-                                            <td>Se Alquila Apartamento</td>
-                                            <td>Julio Baltodano</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/11/2020</td>
-
-                                            <td>Mascota Perdida</td>
-                                            <td>Jonas Nielsen</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/11/2020</td>
-
-                                            <td>Cédula perdida</td>
-                                            <td>Agatha Cordero</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/11/2020</td>
-                                            <td>Vendo televisor</td>
-                                            <td>Carlos Zamora</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/11/2020</td>
-                                            <td>Compro televisor</td>
-                                            <td>Ana Salazar</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11/10/2020</td>
-                                            <td>Compro refrigeradora de 2 puertas</td>
-                                            <td>Karla Guzman</td>
-                                        </tr>
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
                             <div class="botones">
-                                <a href="noticias-usuario.html"><button class="boton" type="button">Ver más</button></a>
+                                <a href="noticias-coordinador.html"><button class="boton" type="button">Ver más</button></a>
                             </div>
                         </div>
+
                     </div>
                 </div>
+            </div>
 
-                <button class="sos-boton" id="myBtn">
+            <button class="sos-boton" id="myBtn">
                         <div class="sos-icon">
                             <i class="fas fa-exclamation-circle"></i>
                         </div>
                         <p>SOS</p>
                 </button>
 
-                <div id="myModal" class="modal">
+            <div id="myModal" class="modal">
 
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <div class="msj-sos">
-                            <p>¿Está seguro que desea comunicarse con su contacto de emergencia?</p>
-                        </div>
-                        <button class="si" type="button">Si</button>
-                        <button class="cancelar" type="button">Cancelar</button>
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="msj-sos">
+                        <p>¿Está seguro que desea comunicarse con su contacto de emergencia?</p>
                     </div>
-
+                    <button class="si" type="button">Si</button>
+                    <button class="cancelar" type="button">Cancelar</button>
                 </div>
+
+            </div>
 
 
         </section>
@@ -478,8 +402,15 @@
             <h2>Copyright: © 2020</h2>
         </div>
     </footer>
+
+    <!-- scripts the terceros -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- scripts propios -->
     <script src="js/btn-sos.js"></script>
+    <script src="js/noticias-servicio.js"></script>
+    <script src="js/facturas-servicio.js"></script>
+    <script src="js/dashboard-usuario.js"></script>
 </body>
 
 </html>
