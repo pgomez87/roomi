@@ -17,7 +17,18 @@ const mostrarTablas = async() => {
             fila.insertCell().innerHTML = factura.tipo;
             fila.insertCell().innerHTML = factura.proveedor;
             fila.insertCell().innerHTML = factura.porcentaje;
-            fila.insertCell().innerHTML = `<td><input type="checkbox" class="checkbox-pequeno" id="${factura._id}"></td>`;
+            // fila.insertCell().innerHTML = `<td><input type="checkbox" class="checkbox-pequeno" id="checkbox"></td>`;
+            let celdaEditar = fila.insertCell();
+            let checkboxEditar = document.createElement('input');
+            checkboxEditar.type = 'checkbox';
+            checkboxEditar.classList.add('checkbox-pequeno');
+            celdaEditar.appendChild(checkboxEditar);
+
+            celdaEditar.addEventListener('change', () => {
+                cambiarFactura(factura._id);
+                // console.log(factura._id);
+            })
+
             fila.insertCell().innerHTML = factura.usuario;
             // console.log(factura.usuario);
         } else {
@@ -27,7 +38,9 @@ const mostrarTablas = async() => {
             fila.insertCell().innerHTML = factura.tipo;
             fila.insertCell().innerHTML = factura.proveedor;
         }
+
     });
+
 
 }
 
@@ -108,12 +121,19 @@ const llenarSelectsProveedores = async() => {
                 console.log('nope');
                 break;
         }
-    })
+    });
 }
 
-const modificarFactura = () => {
-    alert('what');
-}
+
+
+
+
+
+
+
+// const botonModificar = document.querySelector('#aplicarFacturaPagada');
+
+
 
 
 
@@ -121,3 +141,29 @@ mostrarTablas();
 llenarSelectsUsuario();
 // llenarSelectsProveedores();
 selectServicio.addEventListener('change', llenarSelectsProveedores);
+// botonModificar.addEventListener('click', modificarFactura);
+
+
+
+
+
+
+
+
+
+
+
+
+//blargho blargh blargh
+
+// const facturaModificar = document.querySelector('#tabla-facturas-pendientes');
+// const checkboxes = document.querySelector(':checked');
+// const what = document.querySelectorAll('.checkbox-pequeno');
+// let arreglo = [];
+// arreglo.push(what);
+
+// console.log(arreglo);
+
+// arreglo.forEach(() => {
+//     console.log(arreglo[0]);
+// })

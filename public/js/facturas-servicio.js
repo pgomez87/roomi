@@ -82,10 +82,37 @@ const cambiarFactura = async(_id) => {
             _id: _id
         }
     }).then((response) => {
-        console.log(response)
-    }).then(() => {
-        mostrarTablas();
+        Swal.fire({
+            'title': 'Factura pagada!',
+            'icon': 'success',
+            'text': ''
+        }).then(() => {
+            location.reload();
+        });
     }).catch((response) => {
-        console.log(response);
+        Swal.fire({
+            'title': response.msj,
+            'icon': 'error',
+            'text': response.err
+        });
     });
 };
+
+
+
+
+
+// await axios({
+//     method: 'put',
+//     url: 'http://localhost:3000/api/desactivar-factura',
+//     responseType: 'json',
+//     data: {
+//         _id: _id
+//     }
+// }).then((response) => {
+//     console.log(response)
+// }).then(() => {
+//     mostrarTablas();
+// }).catch((response) => {
+//     console.log(response);
+// });
