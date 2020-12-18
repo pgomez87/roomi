@@ -2,18 +2,18 @@
 
 const btn_enviar = document.querySelector('#btn-enviar');
 
-const txt_producto = document.querySelector('#txt-producto');
+const slt_producto = document.querySelector('#slt-productos');
 const slt_categoria = document.querySelector('#slt-categorias');
 const txt_cantidad = document.querySelector('#txt-cantidad');
 
 const limpiar = () => {
-    txt_producto.value = '';
+    slt_producto.value = '';
     slt_categoria.value = '';
     txt_cantidad.value = '';
 }
 
 const obtener_datos = () => {
-    let producto = txt_producto.value;
+    let producto = slt_producto.value;
     let categoria = slt_categoria.value;
     let cantidad = txt_cantidad.value;
 
@@ -36,11 +36,11 @@ const validar = () => {
         }
     });
 
-    if (!regex_producto.test(txt_producto.value)) {
+    if (!regex_producto.test(slt_producto.value)) {
         error = true;
-        txt_producto.classList.add(`error-input`);
+        slt_producto.classList.add(`error-input`);
     } else {
-        txt_producto.classList.remove(`error-input`);
+        slt_producto.classList.remove(`error-input`);
     }
 
     if (!regex_cantidad.test(txt_cantidad.value)) {

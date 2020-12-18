@@ -1,0 +1,127 @@
+<!Doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/compras-coordinador.css">
+    <title>Roomi - Nueva compra</title>
+    <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/16599b263d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container-header">
+            <div class="logo-header">
+                <a href="landing-page.html"><img src="images/Logo_1500x600.png"></a>
+            </div>
+            <div class="nav-header">
+                <nav>
+                    <a href="dashboard-coordinador.html">Inicio</a>
+                    <a href="viviendas-disponibles-coordinador.html">Viviendas</a>
+                    <a href="proveedores-servicios-coordinador.html">Proveedores</a>
+                    <a href="noticias-coordinador.html">Noticias</a>
+                    <a href="companeros-coordinador.html">Compañeros</a>
+                    <a href="perfil-coordinador.html">Mi perfil</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="sct-compras">
+            <a href="compras-coordinador.html"><button type="button" class="hvr-grow">Listas de Compras</button></a>
+
+
+            <div class="container-forms">
+                <div class="container-form">
+                    <form class="form-compras">
+                        <h3>Nueva compra</h3>
+                        <div>
+                            <label for="slt-productos">Producto</label>
+                            <select id="slt-productos" required>
+                                <option value="">--Seleccione una opción</option>
+                                <option value="1KG Arroz">1KG Arroz</option>
+                                <option value="1KG Frijoles">1KG Frijoles</option>
+                                <option value="1KG Lentejas">1KG Lentejas</option>
+                                <option value="1KG Jabón en Polvo">1KG Jabón en Polvo</option>
+                                <option value="1L Jabón de Manos">1L Jabón de Manos</option>
+                                <option value="1L Desinfectante">1L Desinfectante</option>
+                                <option value="Olla Arrocera">Olla Arrocera</option>
+                                <option value="Cuchillo">Cuchillo</option>
+                                <option value="Cinta Tapa Goteras">Cinta Tapa Goteras</option>
+
+                            </select>
+                        </div>
+                        <div>
+                            <label for="slt-categorias">Categoría</label>
+                            <select id="slt-categorias" required>
+                                <option value="">--Seleccione una opción</option>
+                                <option value="Comida">Comida</option>
+                                <option value="Limpieza">Limpieza</option>
+                                <option value="Limpieza">Electrodomésticos</option>
+                                <option value="Reparaciones">Reparaciones</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="number" placeholder="Cantidad" id="txt-cantidad" required>
+                        </div>
+                        <div>
+                            <button type="button" id="btn-enviar" class="hvr-grow">Agregar</button>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+
+        </section>
+        <section class="sct-publicidad">
+            <div class="img-publicidad"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-final">
+            <div class="foot-3D">
+                <a href="landing-equipo.html"><img src="images/3D-logo.png" alt="logotid"></a>
+            </div>
+
+            <div class="iconos-sociales">
+                <div class="texto-social">
+                    <p>
+                        Medios Sociales
+                    </p>
+                </div>
+                <div class="imagenes-sociales">
+                    <a target="blank" href="https://www.facebook.com"><i  class="fab fa-facebook fa-2x hvr-grow-rotate"></i></a>
+                    <a target="blank" href="https://web.whatsapp.com"><i class="fab fa-whatsapp fa-2x hvr-grow-rotate"></i></a>
+                    <a target="blank" href="https://www.waze.com"><i class="fab fa-waze fa-2x hvr-grow-rotate"></i></a>
+                </div>
+            </div>
+            <div class="foot-roomi">
+                <a href="landing-page.html">
+                    <div class="texto-roomi">
+                        <p>
+                            Sobre Nosotros
+                        </p>
+                    </div>
+                    <img src="images/roomie-logo.png" alt="logotir">
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <h2>Copyright: © 2020</h2>
+        </div>
+    </footer>
+    <!-- Scripts terceros -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- Scripts propios -->
+    <script src="js/registro-compras.js"></script>
+    <script src="js/servicio-compras.js"></script>
+
+</body>
+
+</html>

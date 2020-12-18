@@ -79,8 +79,6 @@ io.on('connection', socket => {
 
 
 
-
-
 // Se crea la variable db, que almacena la instancia de la base de datos, para ser reutilizada en el "callback".
 let db;
 
@@ -117,4 +115,5 @@ app.use('/api', require('./routes/proveedores.route'));
 app.use('/api', require('./routes/viviendas.route'));
 app.use('/api', require('./routes/usuarios.route'));
 app.use('/api', require('./routes/compras.route'));
+app.use('/api', require('./routes/lista-compras.route'));
 app.use('/api', require('./routes/publicidad.route'));
