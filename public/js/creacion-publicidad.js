@@ -2,31 +2,49 @@
 
 const titulo = document.querySelector('#titulo-input');
 const descripcion = document.querySelector('#descripcion-input');
+const imagen = document.querySelector('#input-imagen')
 const boton_publicar = document.querySelector('#boton-publicar');
 
+let widgetCloudinary = cloudinary.createUploadWidget({
+    cloudName: 'imagenes3d',
+    uploadPreset: 'preset_3d'
+
+}, (err, result) => {
+    if (!err && result && result.event === 'success') {
+        imagen.src = result.info.secure_url;
+    }
+});
+
 const limpiar_espacios = () => {
-    let lista_espacios = document.querySelectorAll('[required]');
+    let lista_espacios = document.querySelectorAll('.input');
 
     lista_espacios.forEach(element => {
         element.value = '';
     });
+
+    imagen.src = '';
 };
 
 const valudar_espacios = () => {
-    let lista_espacios = document.querySelectorAll('[required]');
     let error = false;
 
-    lista_espacios.forEach(element => {
-        if (element.value == '') {
-            error = true;
-            element.classList.add('error-input');
-        } else {
-            element.classList.remove('error-input');
-        }
-    });
+    if (imagen.src == '') {
+        error = true;
+        imagen.classList.add('error');
+    } else {
+        imagen.classList.remove('error');
+    }
+
+    if (titulo.value == '') {
+        error = true;
+        titulo.classList.add('error');
+    } else {
+        titulo.classList.remove('error');
+    }
+
 
     if (error == false) {
-        registrar_publicidad(titulo.value, descripcion.value)
+        registrar_publicidad(titulo.value, descripcion.value, imagen.src);
         Swal.fire({
             'title': 'Se ha registrado la publicidad correctamente',
             'icon': 'success'
@@ -40,5 +58,9 @@ const valudar_espacios = () => {
         });
     };
 };
+
+imagen.addEventListener('click', () => {
+    widgetCloudinary.open();
+}, false);
 
 boton_publicar.addEventListener('click', valudar_espacios);

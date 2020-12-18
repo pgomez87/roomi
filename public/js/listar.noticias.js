@@ -19,7 +19,7 @@ const escribirNoticias = async() => {
 
         let div3 = document.createElement('div');
         div3.classList.add('texto-noticia');
-        div3.innerHTML = `<h2>${noticia.titulo}</h2> <p>${noticia.texto}</p> <button class="boton" type="button" id="btn-info">Información</button>`
+        div3.innerHTML = `<h2>${noticia.titulo}</h2> <p>${noticia.texto}`
             //append los dos childs al div contenedor
         div1.appendChild(div2);
         div1.appendChild(div3);

@@ -2,7 +2,7 @@
 
 const tabla_publicidad = document.querySelector('#tbody-publicidad');
 const boton_eliminar_publicidad = document.querySelector('#eliminar-publicidad');
-const lista_publicidades_id = [];
+let lista_publicidades_id = [];
 
 
 const mostrar_publicidad = async() => {
@@ -15,7 +15,7 @@ const mostrar_publicidad = async() => {
         let titulo = table_row.insertCell();
         titulo.innerText = publicidad.titulo;
         let fecha = table_row.insertCell();
-        fecha.innerText = `${publicidad.fecha.getDate()}/${publicidad.fecha.getMonth()}/${publicidad.fecha.getFullYear()}`;
+        fecha.innerText = publicidad.fecha;
 
         table_row.addEventListener('click', () => {
             if (table_row.classList.contains('selected')) {
@@ -26,16 +26,21 @@ const mostrar_publicidad = async() => {
                 table_row.classList.add('selected');
                 lista_publicidades_id.push(publicidad.id)
             }
+            console.log(lista_publicidades_id);
         });
     });
 };
 
-boton_eliminar_publicidad.addEventListener('click', () => {
-    let lista_eliminar = document.querySelectorAll('.selected');
+mostrar_publicidad();
 
-    lista_eliminar.forEach(table_row => {
-        table_row.remove();
+boton_eliminar_publicidad.addEventListener('click', () => {
+
+    lista_publicidades_id.forEach(id => {
+        eliminar_publicidad(id)
     });
+    lista_publicidades_id = [];
+
+    mostrar_publicidad();
 });
 
 
@@ -56,8 +61,24 @@ const proveedoresDashAdmin = async() => {
 
 }
 
+const tablaNoticiasDash = document.querySelector('#lista-usuarios tbody');
+tablaNoticiasDash.innerHTML = '';
 
 
+const noticiasDashboard = async() => {
+    let noticiasDash = await listarNoticias();
+
+    noticiasDash.forEach((noticia) => {
+        let fila = tablaNoticiasDash.insertRow();
+        fila.insertCell().innerHTML = noticia.titulo;
+
+    });
+
+    // console.log(noticiasDash);
+
+}
+
+noticiasDashboard();
 proveedoresDashAdmin();
 
 

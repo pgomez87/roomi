@@ -41,4 +41,20 @@ router.get('/listar-proveedores', (req, res) => {
     });
 });
 
+router.delete('/eliminar-proveedores', (req, res) => {
+    let _id = req.body._id;
+    Proveedor.findOneAndRemove({ _id: _id }, (err) => {
+        if (err) {
+            res.json({
+                msj: 'No se pudo eliminar el proveedor',
+                err
+            });
+        } else {
+            res.json({
+                msj: 'El proveedor se elimino correctamente',
+            });
+        }
+    });
+});
+
 module.exports = router;

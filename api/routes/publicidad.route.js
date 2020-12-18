@@ -43,4 +43,21 @@ router.get('/listar-publicidades', (req, res) => {
     });
 });
 
+
+router.delete('/eliminar-publicidad', (req, res) => {
+    let id = req.body.id;
+    Publicidad.findOneAndRemove({id: id}, (err) => {
+        if (err) {
+            res.json({
+                msj: 'No se pudo eliminar la publicidad',
+                err
+            });
+        } else {
+            res.json({
+                msj: 'La publicidad se eliminó correctamente'
+            });
+        }
+    });
+});
+
 module.exports = router;

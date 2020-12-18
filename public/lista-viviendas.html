@@ -44,122 +44,17 @@
             <h1>Lista de viviendas</h1>
             <div class="lista-viviendas">
 
-                <table>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Dirección</th>
-                        <th>Residentes</th>
-                        <th>Calificación</th>
-                        <th>Activa</th>
-                    </tr>
-                    <tr>
-                        <td>Apartamentos Ras</td>
-                        <td>64 Clark Lane Trumbull, CT 06611</td>
-                        <td>3</td>
-                        <td>★★★★★</td>
-                        <td>
-                            <input type="checkbox" checked>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Casa de Palo</td>
-                        <td>Del palo de mango de la esquina del AMPM 100 metros al norte</td>
-                        <td>6</td>
-                        <td>★★★★</td>
-                        <td>
-                            <input type="checkbox" checked>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Apartamentos Girona</td>
-                        <td>Apartamento 23, calle 34, La Sabana, San José</td>
-                        <td>2</td>
-                        <td>★</td>
-                        <td>
-                            <input type="checkbox" checked>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Casa la Giralda</td>
-                        <td>2km oeste del Hospital de Grecia, sobre Radial Arnoldo Kopper en Rincón de Arias, Grecia. Antiguo Centro de Negocios Fábrica</td>
-                        <td>3</td>
-                        <td>★★★★★</td>
-                        <td>
-                            <input type="checkbox" checked>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Apartamentos Wilson</td>
-                        <td>Del Hotel Wilson, 80 metros sur lado derecho, barrio El Cambalache</td>
-                        <td>7</td>
-                        <td>★★★★★</td>
-                        <td>
-                            <input type="checkbox" checked>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Casa de Maria</td>
-                        <td>Santa Barbara de Heredia, contiguo al bar La Resta</td>
-                        <td>4</td>
-                        <td>★★★</td>
-                        <td>
-                            <input type="checkbox" checked>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Casa Vimes</td>
-                        <td>Limón, 150 metros norte de la parada de Autotransportes Caribeños, casa Celeste de 2 pisos </td>
-                        <td>2</td>
-                        <td>★★★★</td>
-                        <td>
-                            <input type="checkbox" checked>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Apartamento 45</td>
-                        <td>Avenida 1 contiguo al apartamento que está en avenida 1</td>
-                        <td>5</td>
-                        <td>★★★★</td>
-                        <td>
-                            <input type="checkbox" checked>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Comuna Viva</td>
-                        <td>San Isidro del General, 5 kilómetros al este de la Cruz Roja</td>
-                        <td>10</td>
-                        <td>★★★</td>
-                        <td>
-                            <input type="checkbox" checked>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Casa chill</td>
-                        <td>La Sabana, detrás del ICE, casa numero 56</td>
-                        <td>2</td>
-                        <td>★★★</td>
-                        <td>
-                            <input type="checkbox" checked>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>La ultima casa del universo</td>
-                        <td>San Pedro, 150 metros norte de la UCR, casa blanca 2 pisos, portón café</td>
-                        <td>3</td>
-                        <td>★★★</td>
-                        <td>
-                            <input type="checkbox" checked>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>La casa que prometía</td>
-                        <td>150 metros al sur, 75 al oeste de terra mall, casa verde con portón negro</td>
-                        <td>2</td>
-                        <td>★★★★</td>
-                        <td>
-                            <input type="checkbox" checked>
-                        </td>
-                    </tr>
+                <table id="lista-viviendas-admin">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Dirección</th>
+                            <th>Activa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
 
                 </table>
 
@@ -201,8 +96,127 @@
         </div>
     </footer>
 
+    <!-- scripts de terceros -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
+    <script src="https://kit.fontawesome.com/16599b263d.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="js/controlador-inicio-sesion.js"></script>
+    <!-- scripts propios -->
+
+    <script src="js/viviendas-servicio.js"></script>
+    <script src="js/listar-viviendas-administrador.js"></script>
 </body>
 
 </html>
+
+
+
+<!-- datos viejos -->
+
+<!-- <tr>
+    <td>Apartamentos Ras</td>
+    <td>64 Clark Lane Trumbull, CT 06611</td>
+    <td>3</td>
+    <td>★★★★★</td>
+    <td>
+        <input type="checkbox" checked>
+    </td>
+</tr>
+<tr>
+    <td>Casa de Palo</td>
+    <td>Del palo de mango de la esquina del AMPM 100 metros al norte</td>
+    <td>6</td>
+    <td>★★★★</td>
+    <td>
+        <input type="checkbox" checked>
+    </td>
+</tr>
+<tr>
+    <td>Apartamentos Girona</td>
+    <td>Apartamento 23, calle 34, La Sabana, San José</td>
+    <td>2</td>
+    <td>★</td>
+    <td>
+        <input type="checkbox" checked>
+    </td>
+</tr>
+<tr>
+    <td>Casa la Giralda</td>
+    <td>2km oeste del Hospital de Grecia, sobre Radial Arnoldo Kopper en Rincón de Arias, Grecia. Antiguo Centro de Negocios Fábrica</td>
+    <td>3</td>
+    <td>★★★★★</td>
+    <td>
+        <input type="checkbox" checked>
+    </td>
+</tr>
+<tr>
+    <td>Apartamentos Wilson</td>
+    <td>Del Hotel Wilson, 80 metros sur lado derecho, barrio El Cambalache</td>
+    <td>7</td>
+    <td>★★★★★</td>
+    <td>
+        <input type="checkbox" checked>
+    </td>
+</tr>
+<tr>
+    <td>Casa de Maria</td>
+    <td>Santa Barbara de Heredia, contiguo al bar La Resta</td>
+    <td>4</td>
+    <td>★★★</td>
+    <td>
+        <input type="checkbox" checked>
+    </td>
+</tr>
+<tr>
+    <td>Casa Vimes</td>
+    <td>Limón, 150 metros norte de la parada de Autotransportes Caribeños, casa Celeste de 2 pisos </td>
+    <td>2</td>
+    <td>★★★★</td>
+    <td>
+        <input type="checkbox" checked>
+    </td>
+</tr>
+<tr>
+    <td>Apartamento 45</td>
+    <td>Avenida 1 contiguo al apartamento que está en avenida 1</td>
+    <td>5</td>
+    <td>★★★★</td>
+    <td>
+        <input type="checkbox" checked>
+    </td>
+</tr>
+<tr>
+    <td>Comuna Viva</td>
+    <td>San Isidro del General, 5 kilómetros al este de la Cruz Roja</td>
+    <td>10</td>
+    <td>★★★</td>
+    <td>
+        <input type="checkbox" checked>
+    </td>
+</tr>
+<tr>
+    <td>Casa chill</td>
+    <td>La Sabana, detrás del ICE, casa numero 56</td>
+    <td>2</td>
+    <td>★★★</td>
+    <td>
+        <input type="checkbox" checked>
+    </td>
+</tr>
+<tr>
+    <td>La ultima casa del universo</td>
+    <td>San Pedro, 150 metros norte de la UCR, casa blanca 2 pisos, portón café</td>
+    <td>3</td>
+    <td>★★★</td>
+    <td>
+        <input type="checkbox" checked>
+    </td>
+</tr>
+<tr>
+    <td>La casa que prometía</td>
+    <td>150 metros al sur, 75 al oeste de terra mall, casa verde con portón negro</td>
+    <td>2</td>
+    <td>★★★★</td>
+    <td>
+        <input type="checkbox" checked>
+    </td>
+</tr> -->

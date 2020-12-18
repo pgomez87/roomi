@@ -33,43 +33,10 @@
     </header>
 
     <section class="notisuario">
-        <div class="noticiasfr">
+        <div class="noticiasfr" id="noticiasFr">
             <h1>Noticias</h1>
-            <div class="grid-container">
-                <div class="cajita">
-                    <div class="imagen-noticia">
-                        <img src="images/buscoaparta.jpg">
-                    </div>
-                    <div class="texto-noticia">
-                        <h2>Busco Compañero de Apartamento</h2>
-                        <p>Me interesa encontrar compañero de apartamento responsable.<br> La vivienda se encuentra en Cartago Centro<br> Se acepta una mascota<br>Información al 85686967</p>
-                        <button class="boton" type="button" id="btn-eliminar">Información</button>
-                        <button class="boton" type="button">Eliminar</button>
-                    </div>
-                </div>
-                <div class="cajita">
-                    <div class="imagen-noticia">
-                        <img src="images/buscocompa.jpg">
-                    </div>
-                    <div class="texto-noticia">
-                        <h2>Se Alquila<br> Apartamento</h2>
-                        <p>Se alquila lujoso apartamento para 2 personas ubicado en Escazú.<br> Cuenta con servicios incluidos de agua, luz e internet<br> Se acepta una mascota<br>Información al 84858988</p>
-                        <button class="boton" type="button" id="btn-eliminar">Información</button>
-                        <button class="boton" type="button">Eliminar</button>
-                    </div>
-                </div>
-                <div class="cajita">
-                    <div class="imagen-noticia">
-                        <img src="images/perrito.jpg">
-                    </div>
-                    <div class="texto-noticia">
-                        <h2>Mascota<br> Perdida</h2>
-                        <p>Mi mascota Hachi se encuentra desaparecido desde el viernes a las 11am.<br>Tiene el pelaje gris con café yojos oscuros<br>Si lo encuentra favor llamar al 84858988</p>
-                        <button class="boton" type="button" id="btn-info">Información</button>
-                        <button class="boton" type="button" id="btn-eliminar">Eliminar</button>
-                    </div>
-                </div>
-                <div class="cajita-agregar" id="agregar-noticias">
+            <div class="grid-container" id="gridContainer">
+                <div class="cajita-agregar" id='agregar-noticias'>
                     <div class="plus-icon">
                         <p>Agregar noticia</p>
                         <i class="fas fa-plus"></i>
@@ -77,13 +44,12 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="sos-boton">
-            <div class="sos-icon">
-                <i class="fas fa-exclamation-circle"></i>
+            <div class="sos-boton">
+                <div class="sos-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <p>SOS</p>
             </div>
-            <p>SOS</p>
-        </div>
     </section>
 
     <footer>
@@ -119,10 +85,18 @@
             <h2>Copyright: © 2020</h2>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="js/noticias-coordinador-controlador.js"></script>
+    <!-- scripts de terceros -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://kit.fontawesome.com/16599b263d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- scripts propios -->
+    <script src="js/noticias-servicio.js"></script>
+    <script src="js/listar.noticias.js"></script>
+    <script src="js/noticias-coordinador-controlador.js"></script>
+
+
+
+
 </body>
 
 </html>
