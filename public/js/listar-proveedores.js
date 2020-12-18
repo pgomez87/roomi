@@ -30,6 +30,7 @@ const mostrar_proveedores = async() => {
             let celda_opcion = fila_agua.insertCell();
 
             let boton_eliminar = document.createElement('button');
+            boton_eliminar.classList.add('boton-eliminar')
             boton_eliminar.type = 'button';
             boton_eliminar.innerText = 'Eliminar';
             boton_eliminar.addEventListener('click', () => {
@@ -53,6 +54,7 @@ const mostrar_proveedores = async() => {
             let celda_opcion = fila_electricidad.insertCell();
 
             let boton_eliminar = document.createElement('button');
+            boton_eliminar.classList.add('boton-eliminar')
             boton_eliminar.type = 'button';
             boton_eliminar.innerText = 'Eliminar';
             boton_eliminar.addEventListener('click', () => {
@@ -76,6 +78,7 @@ const mostrar_proveedores = async() => {
             let celda_opcion = fila_telefono.insertCell();
 
             let boton_eliminar = document.createElement('button');
+            boton_eliminar.classList.add('boton-eliminar')
             boton_eliminar.type = 'button';
             boton_eliminar.innerText = 'Eliminar';
             boton_eliminar.addEventListener('click', () => {
@@ -99,6 +102,7 @@ const mostrar_proveedores = async() => {
             let celda_opcion = fila_internet.insertCell();
 
             let boton_eliminar = document.createElement('button');
+            boton_eliminar.classList.add('boton-eliminar')
             boton_eliminar.type = 'button';
             boton_eliminar.innerText = 'Eliminar';
             boton_eliminar.addEventListener('click', () => {
@@ -122,6 +126,7 @@ const mostrar_proveedores = async() => {
             let celda_opcion = fila_cable.insertCell();
 
             let boton_eliminar = document.createElement('button');
+            boton_eliminar.classList.add('boton-eliminar')
             boton_eliminar.type = 'button';
             boton_eliminar.innerText = 'Eliminar';
             boton_eliminar.addEventListener('click', () => {

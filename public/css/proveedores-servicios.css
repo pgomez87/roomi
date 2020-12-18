@@ -105,3 +105,7 @@ table {
     border-collapse: separate;
     border-spacing: 0 0.2em;
 }
+
+.boton-eliminar {
+    margin-left: 1000%;
+}
