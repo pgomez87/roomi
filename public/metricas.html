@@ -10,6 +10,8 @@
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/16599b263d.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <body>
@@ -32,20 +34,46 @@
     <main>
         <section class="sct-metricas-general">
             <div>
-                <h2>Usuarios</h2>
-                <i class='fas fa-users' style='font-size:40px'></i>
-                <h3>150</h3>
-            </div>
-            <div>
-                <h2>Viviendas</h2>
-                <i class="fas fa-home" style='font-size:40px'></i>
-                <h3>50</h3>
-            </div>
-            <div>
-                <h2>Encuestas</h2>
-                <i class="fas fa-poll" style='font-size:40px'></i>
-                <h3>300</h3>
-            </div>
+                <!--Widget Start-->
+                <div class="card-body color1">
+                    <div class="float-left">
+                        <h3>
+                            <span class="currency">₡</span>
+                            <span class="count">200000</span>
+                        </h3>
+                        <p>Monto Total de Compras</p>
+                    </div>
+                    <div class="float-right">
+                        <i class="pe-7s-cart"></i>
+                    </div>
+                </div>
+                <!--Widget End-->
+                <!--Widget Start-->
+                <div class="card-body color2">
+                    <div class="float-left">
+                        <h3>
+                            <span class="count">345</span>
+                        </h3>
+                        <p>Compras Realizadas</p>
+                    </div>
+                    <div class="float-right">
+                        <i class="pe-7s-users"></i>
+                    </div>
+                </div>
+                <!--Widget End-->
+                <!--Widget Start-->
+                <div class="card-body color3">
+                    <div class="float-left">
+                        <h3>
+                            <span class="count">4365</span>
+                        </h3>
+                        <p>Usuarios Registrados</p>
+                    </div>
+                    <div class="float-right">
+                        <i class="pe-7s-browser"></i>
+                    </div>
+                </div>
+                <!--Widget End-->
         </section>
 
         <section class="sct-metricas-tareas">
@@ -129,6 +157,19 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="text/javascript">
+        $('.count').each(function() {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 4000,
+                easing: 'swing',
+                step: function(now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+    </script>
     <script type="text/javascript">
         $(function() {
             $('.bars li .bar').each(function(key, bar) {
