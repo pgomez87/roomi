@@ -5,6 +5,50 @@ const seccion_cartas = document.querySelector('.cards');
 const lista_preguntas = ['Puntualidad al realizar las tareas:','Orden que mantiene en zonas comunes:','Puntualidad al realizar pagos:','Ambiente de convivencia:','¿Como considera la puntualidad al realizar las tareas?']
 const lista_respuestas = ['Pésimo','Mal','Regular','Bien','Excelente']
 
+const verificaciones = () => {
+    const lista_cards = document.querySelectorAll('.card');
+
+    lista_cards.forEach(card => {
+        let card_button = card.querySelector('button');
+        
+        card_button.addEventListener('click', () => {
+            let error = false;
+            let lista_forms = card.querySelectorAll('form');
+
+            lista_forms.forEach(form => {
+                let lista_label = form.querySelectorAll('label');
+
+                if (form.querySelector('input[type=radio]:checked')) {
+                    lista_label.forEach(label => {
+                        label.classList.remove('error');
+                    });
+                } else {
+                    lista_label.forEach(label => {
+                        label.classList.add('error');
+                    });
+                    error = true;
+                }
+            });
+
+            if (error == true) {
+                Swal.fire({
+                    'title': 'No se puede enviar la calificacion',
+                    'icon': 'error',
+                    'text': 'Por favor llene los espacios en rojo'
+                })
+            } else {
+                Swal.fire({
+                    'title': 'Exito',
+                    'icon': 'success',
+                    'text': 'Se ha enviado la calificacion correctamente'
+                })
+                let inputs_lista = document.querySelectorAll('input[type=radio]:checked');
+                inputs_lista.forEach(input => {input.checked = false;});
+            }
+        });  
+    });
+};
+
 const generar_radio_buttons = (html_element) => {
     lista_respuestas.forEach(respuesta => {
 
@@ -15,7 +59,6 @@ const generar_radio_buttons = (html_element) => {
         input_radio.type = 'radio';
         input_radio.value = respuesta;
         input_radio.name = 'rbtPuntualidad';
-        // input_radio.required = true;
 
         html_element.appendChild(label);
         html_element.appendChild(input_radio);
@@ -77,39 +120,8 @@ const mostrar_companeros = async() => {
 
         seccion_cartas.appendChild(card);
     });
+
+    verificaciones();
 };
 
 mostrar_companeros();
-
-
-// const lista_cards = document.querySelectorAll('.card');
-
-// lista_cards.forEach(card => {
-//     let card_button = card.querySelector('button');
-//     let error = false;
-
-//     card_button.addEventListener('click', () => {
-//         let lista_forms = card.querySelectorAll('form');
-
-//         lista_forms.forEach(form => {
-//             let lista_label = form.querySelectorAll('label');
-//             if (form.querySelector('input[type=radio]:checked')) {
-//                 lista_label.forEach(label => {
-//                     label.classList.remove('error');
-//                 });
-//             } else {
-//                 lista_label.forEach(label => {
-//                     label.classList.add('error');
-//                 });
-
-//                 error = true;
-//             }
-//         });
-
-//         if (error == true) {
-//             // swal.fire
-//         } else {
-//             // swal.fire
-//         }
-//     });  
-// });
