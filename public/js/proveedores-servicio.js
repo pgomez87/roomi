@@ -63,6 +63,6 @@ const eliminar_proveedores = async(_id) => {
             'title': response.msj,
             'icon': 'error',
             'text': response.err
-        })
+        });
     });
 };

@@ -13,28 +13,6 @@ const limpiar = () => {
     input_temporasenna.value = '';
 };
 
-
-const obtener_datos = () => {
-
-    let temporasenna = input_temporasenna;
-    let nuevasenna = input_nuevasenna.value;
-    let verificasenna = input_verificasenna.value;
-
-    console.log('La contraseña temporal es: ', temporasenna);
-    console.log('La nueva contraseña es: ', nuevasenna);
-    console.log('La contraseña de verificación es: ', verificasenna);
-
-
-
-    Swal.fire({
-        'title': 'Su contraseña ha sido cambiada',
-        'icon': 'success'
-    }).then(() => {
-        limpiar();
-    });
-
-};
-
 const validar = () => {
     let error = false;
     let regex_contrasenna = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
@@ -77,17 +55,22 @@ const validar = () => {
         error = true;
         caja_recaptcha.classList.add('error-input');
     }
-
-    if (error == false) {
-        obtener_datos();
+    if (input_nuevasenna.value == input_verificasenna.value) {
+        // Servicio
+        modificar_contrasena(input_temporasenna.value, input_nuevasenna.value);
+        console.log(`${input_temporasenna.value} -- ${input_nuevasenna.value}`);
+        limpiar();
     } else {
+        input_nuevasenna.classList.add('error-input');
+        input_verificasenna.classList.add('error-input');
         Swal.fire({
-            'title': 'No se pudo cambiar su contraseña',
-            'icon': 'warning',
-            'text': 'La contraseña debe tener mínimo ocho digitos y debe contener al menos una letra mayúscula, una minúscula y un carácter'
+            title: 'Cuidado',
+            icon: 'warning',
+            text: 'Las contraseñas no coinciden'
         });
-    }
+
+    };
 
 };
 
-//boton_confirmar.addEventListener('click', validar);
+boton_confirmar.addEventListener('click', validar);

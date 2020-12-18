@@ -73,21 +73,19 @@ const listarProveedoresFacturas = async() => {
     return listaProveedores
 }
 
-
-
-//otro codigo que en realidad es exactamente el mismo pero tampoco funciona 
-
-// const listarFacturas = async() => {
-//     let listaFacturas = [];
-//     await axios({
-//         method: 'get',
-//         url: 'http://localhost:3000/api/listar-facturas',
-//         responseType: 'json'
-//     }).then((response) => {
-//         listaFacturas = response.data.listaFacturas;
-//     }).catch((response) => {
-
-//     });
-
-//     return listaFacturas;
-// };
+const cambiarFactura = async(_id) => {
+    await axios({
+        method: 'put',
+        url: 'http://localhost:3000/api/desactivar-factura',
+        responseType: 'json',
+        data: {
+            _id: _id
+        }
+    }).then((response) => {
+        console.log(response)
+    }).then(() => {
+        mostrarTablas();
+    }).catch((response) => {
+        console.log(response);
+    });
+};
