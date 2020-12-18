@@ -53,25 +53,69 @@ const selectProveedor = document.querySelector('#proveedor-crear-factura');
 
 const llenarSelectsProveedores = async() => {
     const proveedores = await listarProveedoresFacturas();
-
+    selectProveedor.innerHTML = '';
     proveedores.forEach((proveedor) => {
+        let optionDos = document.createElement('option');
+
         switch (selectServicio.value) {
             case 'agua':
                 if (selectServicio.value.toLowerCase() === proveedor.servicio.toLowerCase()) {
-                    console.log(proveedor.nombre);
+                    // console.log(proveedor.nombre);
+
+                    optionDos.value = `${proveedor.nombre}`;
+                    optionDos.innerHTML = `${proveedor.nombre}`;
+                    selectProveedor.appendChild(optionDos);
                 }
                 break;
             case 'electricidad':
                 if (selectServicio.value.toLowerCase() === proveedor.servicio.toLowerCase()) {
-                    console.log(proveedor.nombre);
+                    // console.log(proveedor.nombre);
+
+                    optionDos.value = `${proveedor.nombre}`;
+                    optionDos.innerHTML = `${proveedor.nombre}`;
+                    selectProveedor.appendChild(optionDos);
+                }
+                break;
+            case 'internet':
+                if (selectServicio.value.toLowerCase() === proveedor.servicio.toLowerCase()) {
+                    // console.log(proveedor.nombre);
+
+                    optionDos.value = `${proveedor.nombre}`;
+                    optionDos.innerHTML = `${proveedor.nombre}`;
+                    selectProveedor.appendChild(optionDos);
+                }
+                break;
+            case 'telefono':
+                if (selectServicio.value.toLowerCase() === proveedor.servicio.toLowerCase()) {
+                    // console.log(proveedor.nombre);
+
+                    optionDos.value = `${proveedor.nombre}`;
+                    optionDos.innerHTML = `${proveedor.nombre}`;
+                    selectProveedor.appendChild(optionDos);
+                }
+                break;
+            case 'cable':
+                if (selectServicio.value.toLowerCase() === proveedor.servicio.toLowerCase()) {
+                    // console.log(proveedor.nombre);
+
+                    optionDos.value = `${proveedor.nombre}`;
+                    optionDos.innerHTML = `${proveedor.nombre}`;
+                    selectProveedor.appendChild(optionDos);
                 }
                 break;
             default:
+                optionDos.innerHTML = '';
                 console.log('nope');
                 break;
         }
     })
 }
+
+const modificarFactura = () => {
+    alert('what');
+}
+
+
 
 mostrarTablas();
 llenarSelectsUsuario();
