@@ -6,12 +6,27 @@ html {
     font-family: 'Open Sans', sans-serif;
 }
 
+main {
+    background-image: url(../images/metricas-fondo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 55%;
+}
+
+section {
+    background-color: rgba(37, 35, 35, .8);
+}
+
 
 /*Metricas General*/
 
 .sct-metricas-general {
     text-align: center;
-    margin-top: 2%;
+    height: 250px;
+}
+
+.sct-metricas-general div {
+    margin-top: 1%;
 }
 
 
@@ -21,6 +36,7 @@ html {
     float: left;
     width: 50%;
     margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 .sct-metricas-tareas .tareas-porcentajes {
@@ -32,13 +48,13 @@ html {
 
 /*Métricas Facturas*/
 
-.sct-metricas-facturas {
-    margin-bottom: 3%;
-}
+.sct-metricas-facturas {}
 
 .sct-metricas-facturas div {
     float: left;
     width: 50%;
+    margin-bottom: 6%;
+    margin-left: 7%;
 }
 
 .sct-metricas-facturas .facturas-cantidades {
@@ -48,7 +64,7 @@ html {
 .sct-metricas-facturas .facturas-porcentajes {}
 
 
-/*Pie Chart*/
+/*Bar Chart*/
 
 #chart {
     width: 600px;
@@ -124,7 +140,7 @@ html {
 
 .bars .bar:hover {
     background: #17C0EB;
-    box-shadow: 0 0 10px 0 rgba(85, 239, 196, 0.5);
+    box-shadow: 0 0 10px 0 rgba(85, 239, 196, 0.9);
     cursor: pointer;
 }
 
@@ -139,15 +155,15 @@ html {
 /*Widgets*/
 
 .color1 {
-    background: #00C292;
+    background: #17C0EB;
 }
 
 .color2 {
-    background: #03A9F3;
+    background: #17C0EB;
 }
 
 .color3 {
-    background: #FB7146;
+    background: #17C0EB;
 }
 
 .card-body {
@@ -155,8 +171,8 @@ html {
     font-family: "Roboto", sans-serif;
     margin: 10px;
     padding: 20px;
-    width: 250px;
-    height: 90px;
+    width: 400px;
+    height: 140px;
     color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
