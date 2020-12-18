@@ -25,7 +25,7 @@ h2 {
 }
 
 .container-form-facturas {
-    width: 90%;
+    width: 50%;
     height: 500px;
     /* background-color: green; */
     float: left;
@@ -154,4 +154,8 @@ form button {
     width: auto;
     padding: auto;
     margin: auto;
+}
+
+#aplicarFacturaPagada {
+    cursor: pointer !important;
 }

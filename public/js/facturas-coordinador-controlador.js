@@ -13,7 +13,6 @@ const obtenerDatos = () => {
 
     console.log(nombre, fecha, tipo, proveedor, porcentaje, usuario, activa);
     registrarFacturas(nombre, fecha, tipo, proveedor, porcentaje, usuario, activa);
-    // location.reload();
 }
 
 
@@ -88,6 +87,7 @@ const validar = () => {
 
     if (error == false) {
         obtenerDatos();
+        location.reload();
     }
 }
 

@@ -46,6 +46,28 @@ router.get('/listar-facturas', (req, res) => {
     });
 });
 
+
+router.put('/desactivar-factura', (req, res) => {
+    Factura.updateOne({ _id: req.body._id }, { $set: { activa: 'inactiva' } }, (err, info) => {
+        if (err) {
+            res.json({
+                msj: 'no se pudo modificar la factura',
+                err
+            });
+        } else {
+            res.json({
+                msj: 'la factura se modificó correctamente',
+                info
+            });
+        }
+    });
+});
+
+
+
+
+
+
 module.exports = router;
 
 // router.get('/listar-facturas', (req, res) => {
