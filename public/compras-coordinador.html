@@ -31,7 +31,7 @@
     </header>
     <main>
         <section class="sct-compras">
-            <h1>Lista de Compras</h1>
+            <h1>Listas de Compras</h1>
             <form>
                 <div class="tabla">
                     <div class="tabla-cuerpo">
@@ -445,21 +445,54 @@
                     <button type="button" id="btn-guardar" class="hvr-grow">Guardar</button>
                 </div>
             </form>
-            <form class="form-compras">
-                <h3>Ingresar Productos</h3>
-                <div>
-                    <input type="text" placeholder="Producto" id="txt-producto" required>
+
+            <div class="container-forms">
+                <div class="container-form">
+                    <form class="form-compras">
+                        <h3>Ingresar Producto</h3>
+                        <div>
+                            <input type="text" placeholder="Nombre de producto" id="txt-producto" required>
+                        </div>
+                        <div>
+                            <label for="slt-categorias">Categoría</label>
+                            <select id="slt-categorias" required>
+                                <option value="">--Seleccione una opción</option>
+                                <option value="Comida">Comida</option>
+                                <option value="Limpieza">Limpieza</option>
+                                <option value="Limpieza">Electrodomésticos</option>
+                                <option value="Reparaciones">Reparaciones</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="number" placeholder="Cantidad" id="txt-cantidad" required>
+                        </div>
+                        <div>
+                            <button type="button" id="btn-enviar" class="hvr-grow">Ingresar</button>
+                        </div>
+                    </form>
                 </div>
-                <div>
-                    <input type="text" placeholder="Categoría" id="txt-categoria" required>
+
+                <div class="container-form">
+                    <form class="form-compras">
+                        <h3>Ingresar Lista de Compras</h3>
+                        <div>
+                            <input type="text" placeholder="Encargado" id="txt-encargado">
+                        </div>
+
+                        <h3>Asociar Compras</h3>
+                        <div id="div_compras">
+
+                        </div>
+                        <div>
+
+                        </div>
+                        <div>
+                            <button type="button" id="btn-crear" class="hvr-grow">Ingresar</button>
+                        </div>
+                    </form>
                 </div>
-                <div>
-                    <input type="number" placeholder="Cantidad" id="txt-cantidad" required>
-                </div>
-                <div>
-                    <button type="button" id="btn-enviar" class="hvr-grow">Enviar</button>
-                </div>
-            </form>
+            </div>
+
         </section>
         <section class="sct-publicidad">
             <div class="img-publicidad"></div>
@@ -498,8 +531,16 @@
             <h2>Copyright: © 2020</h2>
         </div>
     </footer>
+    <!-- Scripts terceros -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="js/compras-usuario-controlador.js"></script>
+
+    <!-- Scripts propios -->
+    <script src="js/compras-coordinador-controlador.js"></script>
+    <script src="js/servicio-compras.js"></script>
+    <!-- <script src="js/servicio-listacompras.js"></script> -->
+    <script src="js/registrar-listacompras.js"></script>
+
 </body>
 
 </html>
