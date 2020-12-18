@@ -30,6 +30,68 @@ section {
 }
 
 
+/*Widgets*/
+
+.color1 {
+    background: #17C0EB;
+}
+
+.color2 {
+    background: #17C0EB;
+}
+
+.color3 {
+    background: #17C0EB;
+}
+
+.card-body {
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    margin: 10px;
+    padding: 20px;
+    width: 380px;
+    height: 140px;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.card-body h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.currency,
+.count {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.card-body p {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.card-body i {
+    font-size: 95px;
+    opacity: 0.5;
+}
+
+.card-body:hover {
+    background: #17C0EB;
+    box-shadow: 0 0 10px 0 rgba(85, 239, 196, 0.9);
+    cursor: pointer;
+}
+
+
 /*Métricas Tareas*/
 
 .sct-metricas-tareas div {
@@ -149,60 +211,4 @@ section {
     content: attr(data-percentage) '%';
     position: relative;
     bottom: 20px;
-}
-
-
-/*Widgets*/
-
-.color1 {
-    background: #17C0EB;
-}
-
-.color2 {
-    background: #17C0EB;
-}
-
-.color3 {
-    background: #17C0EB;
-}
-
-.card-body {
-    display: inline-block;
-    font-family: "Roboto", sans-serif;
-    margin: 10px;
-    padding: 20px;
-    width: 400px;
-    height: 140px;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.float-left {
-    float: left;
-}
-
-.float-right {
-    float: right;
-}
-
-.card-body h3 {
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-.currency,
-.count {
-    font-size: 30px;
-    font-weight: 500;
-}
-
-.card-body p {
-    font-size: 16px;
-    margin-top: 0;
-}
-
-.card-body i {
-    font-size: 95px;
-    opacity: 0.5;
 }
