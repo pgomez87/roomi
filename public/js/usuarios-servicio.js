@@ -102,6 +102,7 @@ const modificar_contrasena = async(temporal, contrasena) => {
             contrasena: contrasena
         }
     }).then((response) => {
+        console.log(`${temporal} -- ${contrasena}`);
         if (response.data.estado == 'temporal inválida') {
             Swal.fire({
                 'title': 'La contraseña temporal es inválida',
