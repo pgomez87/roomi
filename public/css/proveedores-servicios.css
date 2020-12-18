@@ -100,3 +100,8 @@ button {
     border-color: #52D1DC;
     outline: none;
 }
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 0.2em;
+}
