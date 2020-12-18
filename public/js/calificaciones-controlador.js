@@ -1,10 +1,85 @@
 'use strict';
 
-const lista_companeros = await listar_usuarios();
+const seccion_cartas = document.querySelector('.cards');
 
-lista_companeros.forEach(companero => {
+const lista_preguntas = ['Puntualidad al realizar las tareas:','Orden que mantiene en zonas comunes:','Puntualidad al realizar pagos:','Ambiente de convivencia:','¿Como considera la puntualidad al realizar las tareas?']
+const lista_respuestas = ['Pésimo','Mal','Regular','Bien','Excelente']
 
-})
+const generar_radio_buttons = (html_element) => {
+    lista_respuestas.forEach(respuesta => {
+
+        let label = document.createElement('label');
+        label.innerText = respuesta;
+
+        let input_radio = document.createElement('input');
+        input_radio.type = 'radio';
+        input_radio.value = respuesta;
+        input_radio.name = 'rbtPuntualidad';
+        // input_radio.required = true;
+
+        html_element.appendChild(label);
+        html_element.appendChild(input_radio);
+    });
+};
+
+const mostrar_companeros = async() => {
+    const lista_companeros = await listar_usuarios();
+
+    lista_companeros.forEach(companero => {
+        seccion_cartas.innerHTML = '';
+
+        let card = document.createElement('div');
+        card.classList.add('card');
+
+        let info_container = document.createElement('div');
+        info_container.classList.add('info-u')
+
+        let nombre = document.createElement('h5');
+        nombre.innerText = companero.nombre;
+
+        let tipo_usuario = document.createElement('h5');
+        tipo_usuario.innerText = `Usuario: ${companero.tipo_usuario}`;
+
+
+        info_container.appendChild(nombre);
+        info_container.appendChild(tipo_usuario);
+
+
+        let contenedor_evaluacion = document.createElement('div');
+        contenedor_evaluacion.classList.add('container-eva');
+
+        let evaluacion = document.createElement('h6');
+        evaluacion.innerText = 'Evaluacion';
+
+        contenedor_evaluacion.appendChild(evaluacion);
+
+        lista_preguntas.forEach(pregunta => {
+            let p_pregunta = document.createElement('p');
+            p_pregunta.innerText = pregunta;
+
+            let form = document.createElement('form');
+            form.classList.add('form-eva');
+
+            contenedor_evaluacion.appendChild(p_pregunta);
+            contenedor_evaluacion.appendChild(form);
+            
+            generar_radio_buttons(form);
+        });
+        
+        let boton = document.createElement('button');
+        boton.type = 'button';
+        boton.classList.add('btn-enviar-calif')
+        boton.innerText = 'Enviar calificación';
+
+        card.appendChild(info_container);
+        card.appendChild(contenedor_evaluacion);
+        card.appendChild(boton);
+
+        seccion_cartas.appendChild(card);
+    });
+};
+
+mostrar_companeros();
 
 
 // const lista_cards = document.querySelectorAll('.card');
@@ -14,9 +89,8 @@ lista_companeros.forEach(companero => {
 //     let error = false;
 
 //     card_button.addEventListener('click', () => {
-
 //         let lista_forms = card.querySelectorAll('form');
-    
+
 //         lista_forms.forEach(form => {
 //             let lista_label = form.querySelectorAll('label');
 //             if (form.querySelector('input[type=radio]:checked')) {

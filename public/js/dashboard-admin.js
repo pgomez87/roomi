@@ -61,8 +61,24 @@ const proveedoresDashAdmin = async() => {
 
 }
 
+const tablaNoticiasDash = document.querySelector('#lista-usuarios tbody');
+tablaNoticiasDash.innerHTML = '';
 
 
+const noticiasDashboard = async() => {
+    let noticiasDash = await listarNoticias();
+
+    noticiasDash.forEach((noticia) => {
+        let fila = tablaNoticiasDash.insertRow();
+        fila.insertCell().innerHTML = noticia.titulo;
+
+    });
+
+    // console.log(noticiasDash);
+
+}
+
+noticiasDashboard();
 proveedoresDashAdmin();
 
 

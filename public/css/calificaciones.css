@@ -54,29 +54,16 @@
     font-size: 12px;
 }
 
-.foto-u {
-    display: inline-block;
-    height: 200px;
-    margin-right: 10px;
-    overflow: hidden;
-    width: 160px;
-}
-
-.foto-u img {
-    border-radius: 5px;
-    width: 100%;
-}
-
 .info-u {
     display: inline-block;
-    height: 200px;
+    height: 40px;
     vertical-align: top;
     width: 180px;
 }
 
 .info-u h5 {
     font-weight: bold;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 .info-u p {
