@@ -9,6 +9,7 @@
     <meta charset="utf-8">
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/16599b263d.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -17,7 +18,6 @@
             <div class="logo-header">
                 <a href="landing-page.html"><img src="images/Logo_1500x600.png"></a>
             </div>
-
             <div class="nav-header">
                 <nav>
                     <a href="dashboard-admin.html">Inicio</a>
@@ -25,7 +25,6 @@
                     <a href="lista-viviendas.html">Viviendas</a>
                     <a href="creacion-publicidad.html">Publicidad</a>
                     <a href="metricas.html">Metricas</a>
-
                 </nav>
             </div>
         </div>
@@ -48,14 +47,49 @@
                 <h3>300</h3>
             </div>
         </section>
+
         <section class="sct-metricas-tareas">
             <div class="tareas-porcentajes">
             </div>
-            <div class="tareas-cantidades">
+            <div class="tareas-cantidades" id="chart">
+                <ul class="numbers">
+                    <li><span>100%</span></li>
+                    <li><span>50%</span></li>
+                    <li><span>0%</span></li>
+                </ul>
+                <ul class="bars">
+                    <li>
+                        <div class="bar" data-percentage="50"></div><span>Option 01</span></li>
+                    <li>
+                        <div class="bar" data-percentage="30"></div><span>Option 02</span></li>
+                    <li>
+                        <div class="bar" data-percentage="60"></div><span>Option 03</span></li>
+                    <li>
+                        <div class="bar" data-percentage="100"></div><span>Option 04</span></li>
+                    <li>
+                        <div class="bar" data-percentage="80"></div><span>Option 05</span></li>
+                </ul>
             </div>
         </section>
         <section class="sct-metricas-facturas">
-            <div class="facturas-cantidades">
+            <div class="facturas-cantidades" id="chart">
+                <ul class="numbers">
+                    <li><span>100%</span></li>
+                    <li><span>50%</span></li>
+                    <li><span>0%</span></li>
+                </ul>
+                <ul class="bars">
+                    <li>
+                        <div class="bar" data-percentage="50"></div><span>Option 01</span></li>
+                    <li>
+                        <div class="bar" data-percentage="30"></div><span>Option 02</span></li>
+                    <li>
+                        <div class="bar" data-percentage="60"></div><span>Option 03</span></li>
+                    <li>
+                        <div class="bar" data-percentage="100"></div><span>Option 04</span></li>
+                    <li>
+                        <div class="bar" data-percentage="80"></div><span>Option 05</span></li>
+                </ul>
             </div>
             <div class="facturas-porcentajes">
             </div>
@@ -95,6 +129,16 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.bars li .bar').each(function(key, bar) {
+                var percentage = $(this).data('percentage');
+                $(this).animate({
+                    'height': percentage + '%'
+                }, 1000);
+            });
+        });
+    </script>
     <script src="js/compras-usuario-controlador.js"></script>
 </body>
 
