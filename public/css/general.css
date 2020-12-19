@@ -155,6 +155,12 @@ footer {
     border: solid 2px black;
     padding: 12px;
     color: #fff;
+    cursor: pointer;
+}
+
+.sos-boton:hover {
+    background-color: white;
+    color: #e74c3c;
 }
 
 

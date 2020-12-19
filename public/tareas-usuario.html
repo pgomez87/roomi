@@ -105,12 +105,24 @@
         <div class="anuncio">
             <img src="images/anuncio-parrillada.jpg">
 
-            <div class="sos-boton">
+            <div class="sos-boton" id="myBtn">
                 <div class="sos-icon">
                     <i class="fas fa-exclamation-circle"></i>
                 </div>
                 <p>SOS</p>
             </div>
+        </div>
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="msj-sos">
+                    <p>¿Está seguro que desea comunicarse con su contacto de emergencia?</p>
+                </div>
+                <button class="si" type="button">Si</button>
+                <button class="cancelar" type="button">Cancelar</button>
+            </div>
+
         </div>
 
     </main>
@@ -148,7 +160,12 @@
             <h2>Copyright: © 2020</h2>
         </div>
     </footer>
+
+    <!-- scripts de terceros -->
     <script src="https://kit.fontawesome.com/16599b263d.js" crossorigin="anonymous"></script>
+
+    <!-- scripts propios -->
+    <script src="js/btn-sos.js"></script>
     <!-- <script src="js/cerrar-sesion.js"></script> -->
 </body>
 

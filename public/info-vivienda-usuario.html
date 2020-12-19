@@ -53,11 +53,24 @@
         <div class="anuncio">
             <img src="images/anuncio-papas.jpg">
 
-            <div class="sos-boton">
+            <div class="sos-boton" id="myBtn">
                 <div class="sos-icon">
                     <i class="fas fa-exclamation-circle"></i>
                 </div>
                 <p>SOS</p>
+            </div>
+
+            <div id="myModal" class="modal">
+
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="msj-sos">
+                        <p>¿Está seguro que desea comunicarse con su contacto de emergencia?</p>
+                    </div>
+                    <button class="si" type="button">Si</button>
+                    <button class="cancelar" type="button">Cancelar</button>
+                </div>
+
             </div>
         </div>
     </main>
@@ -101,6 +114,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <!-- scripts propios -->
+    <script src="js/btn-sos.js"></script>
     <script src="js/viviendas-servicio.js"></script>
     <script src="js/info-viviendas-listar.js"></script>
     <!-- <script src="js/cerrar-sesion.js"></script> -->
