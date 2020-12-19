@@ -38,7 +38,7 @@ const obtener_datos = () => {
         'icon': 'success',
         'text': 'Su registro fue exitoso.'
     }).then(() => {
-        // limpiar_espacios();
+        limpiar_espacios();
     });
 };
 
