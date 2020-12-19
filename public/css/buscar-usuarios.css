@@ -1,5 +1,5 @@
 main {
-    height: 73.5vh;
+    height: 81.5vh;
     width: 100%;
     background-image: url(../images/buscar-usuarios-fondo1.jpg);
     min-height: 81.5vh;
@@ -10,7 +10,8 @@ main {
 
 .busqueda {
     background-color: rgba(37, 35, 35, .8);
-    height: 73.5vh;
+    height: 81.5vh;
+    min-height: 81.5vh;
     padding: 50px;
     width: 100%;
 }
