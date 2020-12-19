@@ -15,6 +15,22 @@ const listar_metricas_usuarios = async() => {
     return lista_metricas_usuarios
 };
 
+const listar_usuarios = async() => {
+    let lista_usuarios = [];
+    await axios({
+        method: 'get',
+        url: 'http://localhost:3000/api/listar-usuarios',
+        responseType: 'json'
+    }).then((response) => {
+        lista_usuarios = response.data.lista_usuarios;
+    }).catch((response) => {
+
+    });
+
+    return lista_usuarios;
+};
+
+
 const listar_metricas_viviendas = async() => {
     let lista_metricas_viviendas = [];
     await axios({
