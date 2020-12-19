@@ -1,6 +1,22 @@
 'use strict';
 
 const btnRegistrarFactura = document.querySelector('#btn-crear-factura');
+const div_publicidad = document.querySelector('.publicidad');
+
+const mostrar_publicidad = async() => {
+    let lista_publicidad = await listar_publicidad();
+
+    let indice = Math.floor(Math.random() * lista_publicidad.length);
+
+    let imagen = document.createElement('img');
+    let objeto_publicidad = lista_publicidad[indice];
+    imagen.src = objeto_publicidad.imagen;
+    imagen.classList.add('publicidad-imagen')
+
+    div_publicidad.appendChild(imagen);
+};
+
+mostrar_publicidad();
 
 const obtenerDatos = () => {
     let nombre = document.querySelector('#nombre-factura').value;
@@ -37,7 +53,7 @@ const validar = () => {
     let error = false;
     const fechaHoy = new Date();
     let dia = fechaHoy.getDate();
-
+    
     switch (fechaHoy.getDate()) {
         case 1:
             dia = `0${fechaHoy.getDate()}`;
