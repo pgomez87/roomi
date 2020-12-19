@@ -1,7 +1,7 @@
 'use strict';
 
 const tabla = document.querySelector('#tablaReportes tbody');
-const tabla_abusos_usuarios = document.querySelector('#tabla-reportes-usuarios tbody');
+//const tabla_abusos_usuarios = document.querySelector('#tabla-reportes-usuarios tbody');
 
 const mostrar_abusos = async() => {
     let lista_abusos = await listar_abusos();
@@ -13,9 +13,12 @@ const mostrar_abusos = async() => {
         fila.insertCell().innerHTML = abuso.tipo_abuso;
         fila.insertCell().innerHTML = abuso.pruebas;
         fila.insertCell().innerHTML = abuso.comentario;
-
         let celda_estado = fila.insertCell();
+        let celda_btn_estado = fila.insertCell();
+        let boton_estado = document.createElement('button');
+
         celda_estado.innerHTML = usuario.estado;
+        boton_estado.type = 'button';
 
         switch (usuario.estado) {
             case true:
@@ -29,26 +32,15 @@ const mostrar_abusos = async() => {
                 break;
         }
 
-        let celda_editar = fila.insertCell();
-        let boton_editar = document.createElement('button');
-        boton_editar.innerText = 'Editar';
-        boton_editar.type = 'button';
-        let celda_btn_estado = fila.insertCell();
-        let boton_estado = document.createElement('button');
-        boton_estado.type = 'button';
-        if (ejercicio.estado == 'Inactivo') {
+
+        if (ejercicio.estado == false) {
             boton_estado.innerText = 'Activar';
         } else {
             boton_estado.innerText = 'Desactivar';
         }
-        boton_editar.addEventListener('click', async() => {
-            mostrar_modal_editar(ejercicio._id, ejercicio.nombre, ejercicio.zona);
-        });
         boton_estado.addEventListener('click', () => {
-            //Servicio
-            cambiar_estado(ejercicio._id, ejercicio.estado);
+            cambiar_estado(usuario._id, usuario.estado);
         });
-        celda_editar.appendChild(boton_editar);
         celda_btn_estado.appendChild(boton_estado);
 
     });
