@@ -7,6 +7,8 @@ router.post('/registrar-abuso', (req, res) => {
     console.log('Sí llega al route');
     let nuevo_abuso = new Abuso({
         usuario_reportar: req.body.usuario_reportar,
+        estado_usuario: req.body.estado_usuario,
+        id_usuario: req.body.id_usuario,
         tipo_abuso: req.body.tipo_abuso,
         pruebas: req.body.pruebas,
         comentario: req.body.comentario
