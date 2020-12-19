@@ -1,6 +1,7 @@
 'use strict';
 
 const select_usuarios = document.querySelector('#txt-usuarios');
+
 const select_abuso = document.querySelector('#txt-abuso');
 const select_pruebas = document.querySelector('#btnFoto');
 const select_comentarios = document.querySelector('#txt-comentario');
@@ -20,9 +21,8 @@ const llenarSelectsUsuario = async() => {
 
     usuarios.forEach((usuario) => {
 
-        // selectFacturas.innerHTML = `<option value="" selected>--Elegir compañero--</option>`;
         let option = document.createElement('option');
-        option.value = `${usuario.nombre} ${usuario.apellido}`;
+        option.value = `${usuario.nombre} ${usuario.apellido} ${usuario.estado} ${usuario._id} `;
         option.innerHTML = `${usuario.nombre} ${usuario.apellido}`;
         selectAbusos.appendChild(option);
     })
@@ -30,16 +30,20 @@ const llenarSelectsUsuario = async() => {
 }
 const obtener_datos = () => {
     let usuario = select_usuarios.value;
+    let estado = `${usuario.estado}`;
+    let id = `${usuario.estado}`;
     let abuso = select_abuso.value;
     let pruebas = select_pruebas.value;
     let comentario = select_comentarios.value;
 
     console.log('El usuario reportado por abuso es: ', usuario);
+    console.log('El estado del usuario reportado es: ', estado);
+    console.log('El id del usuario reportado es: ', id);
     console.log('El tipo de abuso es: ', abuso);
     console.log('Las pruebas adjuntadas son: ', pruebas);
     console.log('El comentario es: ' + comentario);
 
-    registrar_abusos(usuario, abuso, pruebas, comentario);
+    registrar_abusos(usuario, estado, id, abuso, pruebas, comentario);
 
 
 };
