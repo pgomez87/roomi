@@ -159,3 +159,8 @@ form button {
 #aplicarFacturaPagada {
     cursor: pointer !important;
 }
+
+.publicidad-imagen{
+    width: 100px;
+    /* height: 100%; */
+}
