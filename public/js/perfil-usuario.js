@@ -1,6 +1,7 @@
 let span_nombre_usuario = document.querySelector('#nombre-usuario');
 let tabla = document.querySelector('#tbl-usuario tbody');
 let btn_editar = document.querySelector('#btn-editar');
+let foto_usuario = document.querySelector('#fotoNoticias');
 
 const mostrar_modal_editar = async(_id, nombre, apellido, correo, telefono, cedula, direccion) => {
     const { value: formValues } = await Swal.fire({
@@ -77,8 +78,6 @@ const mostrar_info = async() => {
         mostrar_modal_editar(usuario._id, usuario.nombre, usuario.apellido, usuario.correo, usuario.telefono, usuario.cedula, usuario.direccion);
     });
 };
-
-localStorage.setItem('usuario_seleccionado', '5fdabd13aa78e6339c0bee6b');
 
 if (localStorage.getItem('usuario_seleccionado')) {
     mostrar_info();
