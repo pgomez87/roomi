@@ -1,14 +1,15 @@
-main{
+main {
     height: 73.5vh;
+    width: 100%;
+    background-image: url(../images/buscar-usuarios-fondo1.jpg);
+    min-height: 81.5vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 55%;
 }
 
 .busqueda {
-    background-blend-mode: luminosity;
-    background-attachment: fixed;
-    background-color: black;
-    background-image: url(../images/buscar-back.jpg);
-    background-size: cover;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.9);
+    background-color: rgba(37, 35, 35, .8);
     height: 73.5vh;
     padding: 50px;
     width: 100%;
@@ -49,37 +50,39 @@ main{
     width: 100%;
 }
 
-.container-table table {
-    background-color: white;
-    border-radius: 5px;
-    color: black;
-    opacity: .9;
-    width: 60%;
-    margin-right: auto;
-    margin-left: auto;
+table {
+    margin: 0 auto;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    margin-top: 15px;
+    margin-bottom: 35px;
 }
 
+td,
 th {
-    font-weight: bold;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 15px;
+    border: 1px solid #252323;
     text-align: left;
-}
-
-td {
-    font-size: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 15px;
-}
-
-tr:nth-child(even) {
-    background-color: #fff;
+    padding: 8px;
 }
 
 tr:nth-child(odd) {
-    background-color: darkgrey;
+    background-color: #bbbbbf;
+}
+
+tr:nth-child(even) {
+    background-color: #bbbbbf;
+}
+
+th {
+    background-color: #252323;
+    color: #52d1dc;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #52d1dc;
+    cursor: pointer;
 }
 
 button {
@@ -92,4 +95,30 @@ button {
     padding: 10px;
     border-color: #52D1DC;
     outline: none;
+}
+
+.estado-activo {
+    background: #A3CB38;
+    color: #A3CB38;
+}
+
+.estado-inactivo {
+    background: red;
+    color: red;
+}
+
+.estado-otro {
+    background: #F79F1F;
+    color: #F79F1F;
+}
+
+button {
+    background-color: #52d1dc;
+    border-radius: 20px;
+    border: none;
+    color: #252323;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    margin-left: 20%;
 }

@@ -319,3 +319,22 @@ th {
     color: #52d1dc;
     font-weight: bold;
 }
+
+#btn-cerrar-sesion {
+    float: right;
+    margin-top: 20px;
+    margin-left: 700px;
+    padding: 5px;
+    border: solid 2px #136f63;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #136f63;
+    cursor: pointer;
+    outline: none;
+}
+
+#btn-cerrar-sesion:hover {
+    background-color: #136f63;
+    border: solid 2px #136f63;
+    color: #fff;
+}

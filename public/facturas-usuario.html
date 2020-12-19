@@ -85,14 +85,26 @@
 
             <div class="container-publicidad">
                 <div class="publicidad">
-
-                    <div class="sos-boton">
+                    <div class="sos-boton" id="myBtn">
                         <div class="sos-icon">
                             <i class="fas fa-exclamation-circle"></i>
                         </div>
                         <p>SOS</p>
                     </div>
                 </div>
+            </div>
+
+            <div id="myModal" class="modal">
+
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="msj-sos">
+                        <p>¿Está seguro que desea comunicarse con su contacto de emergencia?</p>
+                    </div>
+                    <button class="si" type="button">Si</button>
+                    <button class="cancelar" type="button">Cancelar</button>
+                </div>
+
             </div>
 
 
@@ -193,11 +205,13 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <!-- js propio -->
+    <script src="js/btn-sos.js"></script>
     <script src="js/publicidad-servicio.js"></script>
     <script src="js/facturas-coordinador-controlador.js"></script>
     <script src="js/usuarios-servicio.js"></script>
     <script src="js/facturas-servicio.js"></script>
     <script src="js/listar-facturas.js"></script>
+    <!-- <script src="js/cerrar-sesion.js"></script> -->
 
 
 </body>

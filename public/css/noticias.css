@@ -4,7 +4,6 @@ body {
 
 section {
     width: 100%;
-    height: 750px;
 }
 
 .noticiasfr h1 {
@@ -13,6 +12,10 @@ section {
     margin: auto;
     padding: 1%;
     font-weight: bold;
+}
+
+.notisuario h1 {
+    font-size: 42px;
 }
 
 .notisuario {
@@ -61,6 +64,7 @@ section {
     grid-template-columns: 50% 50%;
     padding: 1%;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 div.imagen-noticia {
@@ -130,4 +134,89 @@ button {
     border: solid 2px black;
     padding: 1%;
     margin-right: 2%;
+}
+
+
+/*sección form-noticias*/
+
+.container-imagen-form-not {
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+    float: left;
+}
+
+.container-form-not {
+    height: 100%;
+    width: 50%;
+    background-color: rgba(37, 35, 35, 0.9);
+    float: left;
+}
+
+.form-noticias {
+    height: 100%;
+    width: 100%;
+    /* margin-left: 30%; */
+    /* background-color: rgba(37, 35, 35, 0.9); */
+    background-image: url(../images/img-form-not.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#formulario-noticias {
+    height: 600px;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    border: solid 1px #bbbbbf;
+    border-radius: 5px;
+    background-color: #252323;
+    opacity: 0.99;
+    color: white;
+    text-align: center;
+}
+
+form input,
+textarea {
+    display: block;
+    margin: 50px;
+    color: white;
+    background-color: rgb(37, 35, 35);
+}
+
+#formulario-noticias input {
+    height: 20px;
+    width: 200px;
+    margin-left: 120px;
+    color: white;
+    border: solid 1px #bbbbbf;
+}
+
+#formulario-noticias textarea {
+    height: 150px;
+    width: 200px;
+    margin-left: 120px;
+    color: white;
+    border: solid 1px #bbbbbf;
+}
+
+#imgNoticias {
+    border: none !important;
+}
+
+#fotoNoticias {
+    height: 100px;
+    width: 100px;
+}
+
+#btnFoto {
+    margin-bottom: 10px;
+}
+
+.cajaPrueba {
+    height: 150px;
+    width: 150px;
+    background-color: gold;
 }

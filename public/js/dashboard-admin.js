@@ -81,6 +81,12 @@ const noticiasDashboard = async() => {
 noticiasDashboard();
 proveedoresDashAdmin();
 
+let cerrarSesion = document.querySelector('#btn-cerrar-sesion');
+cerrarSesion.addEventListener('click', () => {
+    sessionStorage.clear();
+    window.location.href = 'inicio-sesion.html';
+    // alert('what');
+})
 
 
 // switch (proveedor.servicio) {

@@ -257,3 +257,8 @@ button {
     color: #ffffff;
     font-weight: bold;
 }
+
+#btn-cerrar-sesion {
+    float: right;
+    margin-top: 22px;
+}
