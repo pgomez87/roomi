@@ -1,46 +1,55 @@
-main{
+main {
     padding: 2%;
     overflow: hidden;
 }
-.select-div{
+
+.select-div {
     margin-bottom: 2%;
 }
-select{
+
+select {
     height: 25px;
     width: 150px;
     border-radius: 4px;
-    border: solid 2px  #136F63;
+    border: solid 2px #136F63;
     clear: both;
 }
-.card-container{
+
+.card-container {
     overflow: hidden;
     width: 80%;
     float: left;
 }
-.card, .card-agregar{
-    border: solid 2px  #136F63;
+
+.card,
+.card-agregar {
+    border: solid 2px #136F63;
     width: 31%;
     overflow: hidden;
     float: left;
     margin: 0 2% 2% 0;
     border-radius: 6px;
 }
-.card h2{
-    border: solid 2px  #136F63;
+
+.card h2 {
+    border: solid 2px #136F63;
     margin: -2px;
     padding: 4%;
     font-weight: bold;
-    background-color:  #52D1DC;
+    background-color: #52D1DC;
     border-radius: 6px 6px 0 0;
 }
-.card h3{
+
+.card h3 {
     font-weight: 600;
     margin: 3%;
 }
-.card p{
+
+.card p {
     margin: 3%;
 }
-.card button{
+
+.card button {
     border: none;
     height: 30px;
     background: none;
@@ -49,29 +58,45 @@ select{
     margin: 3% 0;
     margin-right: 2%;
 }
-.card button:hover{
+
+.card button:hover {
     color: #52D1DC;
 }
-.card-agregar{
+
+.card-agregar {
     padding: 9% 0;
 }
-.plus-icon{
+
+.plus-icon {
     font-size: 30pt;
     text-align: center;
 }
-.card-agregar p{
+
+.card-agregar p {
     text-align: center;
 }
-.anuncio{
+
+.anuncio {
     overflow: hidden;
     text-align: center;
     width: 15%;
     float: right;
     margin-right: 3%;
 }
-.anuncio img{
+
+.anuncio img {
     width: 100%;
 }
-.sos-boton{
+
+.sos-boton {
     margin-top: 10%;
+}
+
+.agregar-tarea {
+    color: black;
+    text-decoration: none;
+}
+
+.card-agregar:hover {
+    color: #52D1DC;
 }

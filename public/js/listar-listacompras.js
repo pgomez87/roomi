@@ -23,6 +23,7 @@ const mostrar_listascompras = async() => {
             window.location.href = 'compralista-perfil.html';
         });
 
+
         let boton_eliminar = document.createElement('button');
         boton_eliminar.type = 'button';
         boton_eliminar.innerText = 'Eliminar';
