@@ -21,16 +21,21 @@ const llenarSelectsUsuario = async() => {
     usuarios.forEach((usuario) => {
 
         let option = document.createElement('option');
-        option.value = `${usuario.nombre} ${usuario.apellido} ${usuario._id} ${usuario.estado}`;
+        option.value = `${usuario.nombre} ${usuario.apellido}`;
         option.innerHTML = `${usuario.nombre} ${usuario.apellido}`;
-        selectAbusos.appendChild(option);
+        let id_usuario = document.createElement('id_usuario');
+        id_usuario.value = `${usuario._id}`;
+        let estado = document.createElement('estado');
+        estado.value = `${usuario.estado}`;
+
+        selectAbusos.appendChild(option, id_usuario, estado);
     })
 
 }
 const obtener_datos = () => {
     let usuario = select_usuarios.value;
-    let estado = usuario.estado.value;
-    let id = usuario.id.value;
+    let estado = id_usuario;
+    let id = select_usuarios.estado;
     let abuso = select_abuso.value;
     let pruebas = select_pruebas.value;
     let comentario = select_comentarios.value;
