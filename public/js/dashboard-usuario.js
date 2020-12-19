@@ -36,3 +36,10 @@ const facturasDashoard = async() => {
 
 noticiasDashboard();
 facturasDashoard();
+
+let cerrarSesion = document.querySelector('#btn-cerrar-sesion');
+cerrarSesion.addEventListener('click', () => {
+    sessionStorage.clear();
+    window.location.href = 'inicio-sesion.html';
+    // alert('what');
+})

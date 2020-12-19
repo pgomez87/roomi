@@ -260,3 +260,8 @@ button {
     margin-right: 3%;
     align-items: center;
 }
+
+#btn-cerrar-sesion {
+    float: right;
+    margin-top: 22px;
+}
