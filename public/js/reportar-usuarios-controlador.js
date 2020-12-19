@@ -1,7 +1,6 @@
 'use strict';
 
 const select_usuarios = document.querySelector('#txt-usuarios');
-
 const select_abuso = document.querySelector('#txt-abuso');
 const select_pruebas = document.querySelector('#btnFoto');
 const select_comentarios = document.querySelector('#txt-comentario');
@@ -29,9 +28,9 @@ const llenarSelectsUsuario = async() => {
 
 }
 const obtener_datos = () => {
-    let usuario = select_usuarios.value;
-    let estado = `${usuario.estado}`;
-    let id = `${usuario.estado}`;
+    let usuario = select_usuarios.nombre.value;
+    let estado = select_usuarios.estado.value;
+    let id = select_usuarios._id.value;
     let abuso = select_abuso.value;
     let pruebas = select_pruebas.value;
     let comentario = select_comentarios.value;
