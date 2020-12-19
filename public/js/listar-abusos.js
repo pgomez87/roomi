@@ -16,6 +16,7 @@ const mostrar_abusos = async() => {
         fila.insertCell().innerHTML = abuso.pruebas;
         fila.insertCell().innerHTML = abuso.comentario;
 
+
     });
 };
 mostrar_abusos();
