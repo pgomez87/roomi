@@ -153,3 +153,51 @@ const reestablecer_contrasena = async(correo) => {
     });
 
 };
+
+const buscar_usuario = async() => {
+    let usuario;
+    await axios({
+        method: 'get',
+        params: { _id: localStorage.getItem('usuario_seleccionado') },
+        url: 'http://localhost:3000/api/buscar-usuario',
+        responseType: 'json'
+    }).then((response) => {
+        usuario = response.data.usuario;
+    }).catch((response) => {
+
+    });
+
+    return usuario;
+};
+
+const modificar_usuario = async(_id, nombre, apellido, correo, telefono, cedula, direccion) => {
+    await axios({
+        method: 'put',
+        url: 'http://localhost:3000/api/modificar-usuario',
+        responseType: 'json',
+        data: {
+            _id: _id,
+            nombre: nombre,
+            apellido: apellido,
+            telefono: telefono,
+            correo: correo,
+            cedula: cedula,
+            direccion: direccion
+        }
+    }).then((response) => {
+        Swal.fire({
+            'title': 'El usuario se modificó correctamente',
+            'icon': 'success',
+            'text': response.msj
+        }).then(() => {
+            mostrar_usuarios();
+        });
+    }).catch((response) => {
+        Swal.fire({
+            'title': response.msj,
+            'icon': 'error',
+            'text': response.err
+        })
+    });
+
+};

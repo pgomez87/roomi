@@ -39,11 +39,11 @@
 
             <div class="imagen-perfil">
                 <div class="image-container">
-                    <img src="images/profile-pic.png">
+                    <img id="fotoNoticias" src="images/profile-pic.png">
                 </div>
 
                 <div class="boton-imagen">
-                    <button type="button">Cambiar imagen</button>
+                    <button type="button" id="btnFoto">Cambiar imagen</button>
                 </div>
 
                 <table>
@@ -60,37 +60,20 @@
                 <div>
 
                     <div class="nombre">
-                        <h1>Juan Solano Castro</h1>
+                        <h1><span id="nombre-usuario"> </span></h1>
                     </div>
 
                     <div class="boton-editar">
-                        <button type="button">Editar</button>
+                        <button type="button" id="btn-editar">Editar</button>
                         <a href="cambio-contrasenna-usuario.html"><button type="button">Cambiar contraseña</button></a>
                     </div>
                 </div>
 
-                <table>
+                <table id="tbl-usuario">
+                    <thead>
+                    </thead>
                     <tbody>
-                        <tr>
-                            <td>Numero telefonico</td>
-                            <td>1234-4567</td>
-                        </tr>
-                        <tr>
-                            <td>Correo electronico</td>
-                            <td>user@roomi.com</td>
-                        </tr>
-                        <tr>
-                            <td>Edad</td>
-                            <td>25</td>
-                        </tr>
-                        <tr>
-                            <td>Profesion</td>
-                            <td>Ingeniero</td>
-                        </tr>
-                        <tr>
-                            <td>Contacto de emergencia</td>
-                            <td>1234-5678</td>
-                        </tr>
+
                     </tbody>
                 </table>
             </div>
@@ -147,7 +130,12 @@
         </div>
     </footer>
 
-    <script src="https://kit.fontawesome.com/16599b263d.js" crossorigin="anonymous"></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/usuarios-servicio.js"></script>
+    <script src="js/servicio-imagenes.js"></script>
+    <script src="js/perfil-usuario.js"></script>
 </body>
 
 </html>

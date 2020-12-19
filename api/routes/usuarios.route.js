@@ -151,6 +151,44 @@ router.put('/modificar-contrasena', (req, res) => {
 
 });
 
+router.get('/buscar-usuario', (req, res) => {
+    let _id = req.query._id;
+    Usuario.findOne({ _id: _id }).populate('usuarios').
+    exec((err, usuario) => {
+        if (err) {
+            res.json({
+                msj: 'No se encontró el usuario',
+                err
+            });
+        } else {
+            res.json({
+                msj: 'El usuario se encontró correctamente',
+                usuario: usuario
+            });
+        }
+    });
+
+});
+
+router.put('/modificar-usuario', (req, res) => {
+    Usuario.updateOne({ _id: req.body._id }, {
+        $set: req.body
+    }, (err, info) => {
+        if (err) {
+            res.json({
+                msj: 'No se pudo modificar el usuario',
+                err
+            });
+        } else {
+            res.json({
+                msj: 'El usuario se modificó correctamente',
+                info
+            });
+        }
+    });
+
+});
+
 module.exports = router;
 
 function crear_contrasena(tamano) {

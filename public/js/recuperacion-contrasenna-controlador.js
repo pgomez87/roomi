@@ -55,7 +55,8 @@ const validar = () => {
         error = true;
         caja_recaptcha.classList.add('error-input');
     }
-    if (input_nuevasenna.value == input_verificasenna.value) {
+
+    if (input_nuevasenna.value == input_verificasenna.value && error == false) {
         // Servicio
         modificar_contrasena(input_temporasenna.value, input_nuevasenna.value);
         console.log(`${input_temporasenna.value} -- ${input_nuevasenna.value}`);
