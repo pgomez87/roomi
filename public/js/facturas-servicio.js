@@ -19,6 +19,8 @@ const registrarFacturas = async(nombre, fecha, tipo, proveedor, porcentaje, usua
             'title': 'Se ha registrado la factura',
             'icon': 'success',
             'text': ''
+        }).then(() => {
+            location.reload();
         })
     }).catch((response) => {
         Swal.fire({
