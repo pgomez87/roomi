@@ -25,6 +25,7 @@ const validar = () => {
             campo.classList.add('error-input');
         } else {
             campo.classList.remove('error-input');
+
         }
     });
 
