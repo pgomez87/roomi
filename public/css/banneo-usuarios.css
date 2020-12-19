@@ -59,3 +59,18 @@ tr:hover {
     background-color: #52d1dc;
     cursor: pointer;
 }
+
+.estado-activo {
+    background: #A3CB38;
+    color: #000;
+}
+
+.estado-inactivo {
+    background: #B53471;
+    color: #000;
+}
+
+.estado-otro {
+    background: #F79F1F;
+    color: #000;
+}
