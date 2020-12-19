@@ -117,3 +117,4 @@ app.use('/api', require('./routes/usuarios.route'));
 app.use('/api', require('./routes/compras.route'));
 app.use('/api', require('./routes/lista-compras.route'));
 app.use('/api', require('./routes/publicidad.route'));
+app.use('/api', require('./routes/tareas.route'));
