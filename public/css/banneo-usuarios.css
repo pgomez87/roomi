@@ -4,6 +4,7 @@
     float: left;
     background-color: white;
     opacity: 0.9;
+    min-height: 73.3vh;
 }
 
 .info-banneo h1 {
