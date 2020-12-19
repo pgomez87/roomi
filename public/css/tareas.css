@@ -21,6 +21,12 @@ select {
     float: left;
 }
 
+.card-container-agregar {
+    overflow: hidden;
+    width: 80%;
+    float: left;
+}
+
 .card,
 .card-agregar {
     border: solid 2px #136F63;

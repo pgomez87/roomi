@@ -46,4 +46,23 @@ router.get('/listar-tareas', (req, res) => {
 });
 
 
+
+router.delete('/eliminar-tarea', (req, res) => {
+    let _id = req.body._id;
+    Tarea.findOneAndRemove({ _id: _id }, (err) => {
+        if (err) {
+            res.json({
+                msj: 'No se pudo eliminar la tarea',
+                err
+            });
+        } else {
+            res.json({
+                msj: 'La tarea se eliminó correctamente'
+            });
+        }
+    });
+});
+
+
+
 module.exports = router;
