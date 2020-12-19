@@ -8,8 +8,9 @@ const conseguir_lista = async() => {
     let lista_companeros = await listar_usuarios();
     let indice = 0;
     
+    div_companeros.innerHTML = '';
+    
     lista_companeros.forEach(usuario => {
-        div_companeros.innerHTML = '';
     
         let card = document.createElement('div');
         card.classList.add('tarjeta-companeros');
@@ -21,8 +22,14 @@ const conseguir_lista = async() => {
         nombre.innerText = usuario.nombre;
     
         let info = document.createElement('p');
+
         info.innerText = lista_descripciones[indice];
-        indice++;
+
+        if (indice > 3) {
+            indice = Math.floor(Math.random() * 5);
+        } else {
+            indice++;
+        }
     
         card.appendChild(foto);
         card.appendChild(nombre);
