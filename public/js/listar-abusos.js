@@ -1,6 +1,7 @@
 'use strict';
 
 const tabla = document.querySelector('#tablaReportes tbody');
+const tabla_abusos_usuarios = document.querySelector('#tabla-reportes-usuarios tbody');
 
 const mostrar_abusos = async() => {
     let lista_abusos = await listar_abusos();
