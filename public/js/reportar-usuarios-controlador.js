@@ -20,29 +20,29 @@ const llenarSelectsUsuario = async() => {
 
     usuarios.forEach((usuario) => {
 
-        let option = document.createElement('option');
-        option.value = `${usuario.nombre} ${usuario.apellido} ${usuario.estado} ${usuario._id} `;
-        option.innerHTML = `${usuario.nombre} ${usuario.apellido}`;
-        selectAbusos.appendChild(option);
-    })
-
+            let option = document.createElement('option');
+            option.value = `${usuario._id} `;
+            option.innerHTML = `${usuario.nombre} ${usuario.apellido}`;
+            selectAbusos.appendChild(option);
+        })
+        //${usuario.nombre} ${usuario.apellido}
 }
 const obtener_datos = () => {
-    let usuario = select_usuarios.nombre.value;
-    let estado = select_usuarios.estado.value;
-    let id = select_usuarios._id.value;
+    let usuario = select_usuarios.value;
+    //    let estado = ;
+    //    let id = ;
     let abuso = select_abuso.value;
     let pruebas = select_pruebas.value;
     let comentario = select_comentarios.value;
 
     console.log('El usuario reportado por abuso es: ', usuario);
-    console.log('El estado del usuario reportado es: ', estado);
-    console.log('El id del usuario reportado es: ', id);
+    //console.log('El estado del usuario reportado es: ', estado);
+    //console.log('El id del usuario reportado es: ', id);
     console.log('El tipo de abuso es: ', abuso);
     console.log('Las pruebas adjuntadas son: ', pruebas);
     console.log('El comentario es: ' + comentario);
 
-    registrar_abusos(usuario, estado, id, abuso, pruebas, comentario);
+    registrar_abusos(usuario, abuso, pruebas, comentario);
 
 
 };
