@@ -12,6 +12,22 @@ const limpiar = () => {
     select_comentarios.value = '';
 };
 
+const selectAbusos = document.querySelector('#txt-usuarios');
+
+const llenarSelectsUsuario = async() => {
+    const usuarios = await listarUsuariosAbusos();
+    selectAbusos.innerHTML = '<option value="" selected>Compañeros</option>';
+
+    usuarios.forEach((usuario) => {
+
+        // selectFacturas.innerHTML = `<option value="" selected>--Elegir compañero--</option>`;
+        let option = document.createElement('option');
+        option.value = `${usuario.nombre} ${usuario.apellido}`;
+        option.innerHTML = `${usuario.nombre} ${usuario.apellido}`;
+        selectAbusos.appendChild(option);
+    })
+
+}
 const obtener_datos = () => {
     let usuario = select_usuarios.value;
     let abuso = select_abuso.value;
@@ -54,5 +70,5 @@ const validar = () => {
     }
 
 };
-
+llenarSelectsUsuario();
 boton_enviar.addEventListener('click', validar);
