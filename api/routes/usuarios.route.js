@@ -69,7 +69,7 @@ router.get('/iniciar-sesion', (req, res) => {
         } else {
             if (usuario && usuario.contrasena == contrasena) {
                 res.json({
-                    estado: true,
+                    estado: usuario.estado,
                     tipo: usuario.tipo_usuario,
                     nombre: usuario.nombre,
                     cambio_contrasena: usuario.cambio_contrasena,
@@ -124,7 +124,7 @@ router.put('/modificar-contrasena', (req, res) => {
             });
         } else {
             if (usuario.contrasena == req.body.temporal) {
-                Usuario.updateOne({ correo: req.body.correo }, { $set: { contrasena: req.body.contrasena, estado: 'true', cambio_contrasena: 'no' } }, (err, info) => {
+                Usuario.updateOne({ correo: req.body.correo }, { $set: { contrasena: req.body.contrasena, estado: true, cambio_contrasena: 'no' } }, (err, info) => {
                     if (err) {
                         res.json({
                             msj: 'No se pudo modificar la contraseña',
