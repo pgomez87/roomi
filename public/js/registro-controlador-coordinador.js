@@ -31,14 +31,13 @@ const obtener_datos = () => {
     let tipo = 'coordinador';
 
     registrar_usuario(nombre, apellido, contrasena, correo, telefono, cedula, direccion, tipo);
-    console.log(nombre, apellido, contrasena, correo, telefono, cedula, direccion, tipo);
 
     Swal.fire({
         'title': 'Excelente!',
         'icon': 'success',
         'text': 'Su registro fue exitoso.'
     }).then(() => {
-        // limpiar_espacios();
+        limpiar_espacios();
     });
 };
 
