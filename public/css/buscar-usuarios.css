@@ -102,8 +102,8 @@ button {
 }
 
 .estado-inactivo {
-    background: #B53471;
-    color: #B53471;
+    background: red;
+    color: red;
 }
 
 .estado-otro {

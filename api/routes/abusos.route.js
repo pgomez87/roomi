@@ -45,36 +45,4 @@ router.get('/listar-abusos', (req, res) => {
     });
 });
 
-router.put('/desactivar-usuario', (req, res) => {
-    Usuario.updateOne({ _id: req.body._id }, { $set: { estado: false } }, (err, info) => {
-        if (err) {
-            res.json({
-                msj: 'No se pudo modificar el estado del usuario',
-                err
-            });
-        } else {
-            res.json({
-                msj: 'El usuario se modificó correctamente',
-                info
-            });
-        }
-    });
-});
-
-router.put('/activar-usuario', (req, res) => {
-    Usuario.updateOne({ _id: req.body._id }, { $set: { estado: true } }, (err, info) => {
-        if (err) {
-            res.json({
-                msj: 'No se pudo modificar el estado del usuario',
-                err
-            });
-        } else {
-            res.json({
-                msj: 'El usuario se modificó correctamente',
-                info
-            });
-        }
-    });
-});
-
 module.exports = router;
