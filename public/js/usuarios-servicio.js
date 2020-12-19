@@ -229,3 +229,34 @@ const modificar_usuario_foto = async(_id, foto) => {
     });
 
 };
+
+const cambiar_estado = async(_id, estado) => {
+    let url;
+    if (estado == 'false') {
+        url = 'http://localhost:3000/api/activar-usuario';
+    } else {
+        url = 'http://localhost:3000/api/desactivar-usuario';
+    };
+    await axios({
+        method: 'put',
+        url: url,
+        responseType: 'json',
+        data: {
+            _id: _id
+        }
+    }).then((response) => {
+        Swal.fire({
+            'title': 'El estado del usuario se modificó correctamente',
+            'icon': 'success',
+            'text': response.msj
+        }).then(() => {
+            mostrar_usuarios();
+        });
+    }).catch((response) => {
+        Swal.fire({
+            'title': response.msj,
+            'icon': 'error',
+            'text': response.err
+        });
+    });
+};

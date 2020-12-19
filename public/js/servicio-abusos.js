@@ -1,15 +1,13 @@
 'use strict';
 
 
-const registrar_abusos = async(usuario_reportar, estado_usuario, id_usuario, tipo_abuso, pruebas, comentario) => {
+const registrar_abusos = async(usuario_reportar, tipo_abuso, pruebas, comentario) => {
     await axios({
         method: 'post',
         url: 'http://localhost:3000/api/registrar-abuso',
         responseType: 'json',
         data: {
             usuario_reportar: usuario_reportar,
-            estado_usuario: estado_usuario,
-            id_usuario: id_usuario,
             tipo_abuso: tipo_abuso,
             pruebas: pruebas,
             comentario: comentario
