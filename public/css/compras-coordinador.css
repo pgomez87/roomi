@@ -109,6 +109,11 @@ section {
 
 /*Form Productos*/
 
+main table {
+    color: #fff;
+    font-weight: lighter;
+}
+
 .form-compras {
     margin-top: 10%;
     margin-left: 3%;
@@ -130,7 +135,6 @@ section {
 
 .form-compras div input {
     background-color: rgba(163, 169, 170, .65);
-    height: 4%;
     width: 50%;
     border-width: 1px;
     border-color: #ffffff;
@@ -138,6 +142,11 @@ section {
     border-style: inset;
     padding: 15px;
     color: #ffffff;
+}
+
+.form-compras div label {
+    color: #fff;
+    font-weight: lighter;
 }
 
 #btn-enviar {
@@ -148,7 +157,19 @@ section {
     padding: 4px;
     width: 100px;
     margin-top: 10px;
-    font-size: large;
+    font-size: medium;
+    cursor: pointer;
+}
+
+#btn-listas-compras {
+    background-color: #52d1dc;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    padding: 4px;
+    width: 150px;
+    margin-top: 10px;
+    font-size: medium;
     cursor: pointer;
 }
 
@@ -162,6 +183,15 @@ section {
     transition-duration: 0.3s;
     -webkit-transition-property: transform;
     transition-property: transform;
+    background-color: #52d1dc;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    padding: 4px;
+    width: 100px;
+    margin-top: 10px;
+    font-size: large;
+    cursor: pointer;
 }
 
 .hvr-grow:hover,
@@ -178,6 +208,10 @@ section {
 .container-form {
     display: inline-block;
     width: 430px;
+}
+
+.asociar {
+    padding-top: 70px;
 }
 
 
