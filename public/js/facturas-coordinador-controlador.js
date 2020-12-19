@@ -15,6 +15,22 @@ const obtenerDatos = () => {
     registrarFacturas(nombre, fecha, tipo, proveedor, porcentaje, usuario, activa);
 }
 
+const limpiar = () => {
+    let nombre = document.querySelector('#nombre-factura');
+    let fecha = document.querySelector('#fecha-factura');
+    let tipo = document.querySelector('#tipo-factura');
+    let proveedor = document.querySelector('#proveedor-crear-factura');
+    let porcentaje = document.querySelector('#porcentaje-pagar');
+    let usuario = document.querySelector('#factura-companero');
+
+
+    nombre.value = '';
+    fecha.value = '';
+    tipo.value = '';
+    proveedor.value = '';
+    porcentaje.value = '';
+    usuario.value = '';
+}
 
 const validar = () => {
     let camposRequeridos = document.querySelectorAll(':required');
@@ -71,6 +87,9 @@ const validar = () => {
         } else {
             campo.classList.remove('error-input');
         }
+
+
+
     });
 
     if (fechaConvertida >= fechaInput) {
@@ -85,10 +104,14 @@ const validar = () => {
         document.querySelector('#fecha-factura').classList.remove('error-input');
     }
 
+
+
     if (error == false) {
         obtenerDatos();
-        location.reload();
+        limpiar();
     }
+
+
 }
 
 

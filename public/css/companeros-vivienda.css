@@ -11,14 +11,15 @@
 }
 
 .container-companeros {
-    height: 769px;
     width: 100%;
     background-color: white;
     opacity: 0.95;
+    overflow: hidden;
+    padding-bottom: 20px;
 }
 
 .tarjeta-companeros {
-    height: 80%;
+    height: 58vh;
     width: 14%;
     margin: 1% 1% 0 1%;
     float: left;
