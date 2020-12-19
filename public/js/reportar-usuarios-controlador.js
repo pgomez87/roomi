@@ -30,8 +30,8 @@ const llenarSelectsUsuario = async() => {
 }
 const obtener_datos = () => {
     let usuario = select_usuarios.value;
-    let estado = usuario.estado;
-    let id = usuario._id;
+    let estado = `${usuario.estado}`;
+    let id = `${usuario.estado}`;
     let abuso = select_abuso.value;
     let pruebas = select_pruebas.value;
     let comentario = select_comentarios.value;
