@@ -12,4 +12,4 @@ const schema_listacompras = new mongoose.Schema({
     }]
 });
 
-module.exports = mongoose.model('Listacompra', schema_listacompras, 'listascompras');
+module.exports = mongoose.model('Listacompras', schema_listacompras, 'listascompras');
