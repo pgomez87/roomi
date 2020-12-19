@@ -67,9 +67,9 @@ const generar_radio_buttons = (html_element) => {
 
 const mostrar_companeros = async() => {
     const lista_companeros = await listar_usuarios();
+    seccion_cartas.innerHTML = '';
 
     lista_companeros.forEach(companero => {
-        seccion_cartas.innerHTML = '';
 
         let card = document.createElement('div');
         card.classList.add('card');
@@ -92,7 +92,7 @@ const mostrar_companeros = async() => {
         contenedor_evaluacion.classList.add('container-eva');
 
         let evaluacion = document.createElement('h6');
-        evaluacion.innerText = 'Evaluacion';
+        evaluacion.innerText = 'Evaluación';
 
         contenedor_evaluacion.appendChild(evaluacion);
 
