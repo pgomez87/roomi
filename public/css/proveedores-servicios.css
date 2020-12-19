@@ -106,6 +106,32 @@ table {
     border-spacing: 0 0.2em;
 }
 
-.boton-eliminar {
-    margin-left: 1000%;
+table {
+    margin: 0 auto;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    margin-top: 15px;
+    margin-bottom: 35px;
 }
+
+td,
+th {
+    text-align: left;
+    padding: 8px;
+    width: 500%;
+}
+
+th {
+    background-color: #252323;
+    color: #52d1dc;
+    font-weight: bold;
+    width: 50%;
+}
+
+tr:hover {
+    background-color: #52d1dc;
+    cursor: pointer;
+}
+
+.boton-eliminar {}
