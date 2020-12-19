@@ -109,7 +109,7 @@ button:hover {
 }
 
 .boton {
-    margin-top: 10%;
+    margin-top: 20px;
 }
 
 button {
@@ -123,6 +123,7 @@ button {
     margin: auto;
     border-color: #52D1DC;
     outline: none;
+    margin-top: 50px;
 }
 
 .sos-boton {
@@ -219,4 +220,8 @@ textarea {
     height: 150px;
     width: 150px;
     background-color: gold;
+}
+
+select {
+    margin: 15px;
 }

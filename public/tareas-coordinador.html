@@ -35,75 +35,15 @@
 
     <main>
         <div class="select-div">
-            <select>
+            <!-- <select>
                     <option value="">Filtrar por estado</option>
                     <option value="">Pendiente</option>
                     <option value="">Realizada</option>
                     <option value="">Atrasada</option>
-                </select>
+                </select> -->
         </div>
 
-        <div class="card-container">
-
-            <div class="card">
-                <h2>Limpiar garaje</h2>
-
-                <h3>Detalles adicionales</h3>
-                <p>recordar limpiar la mancha de aceite en el piso</p>
-
-                <h3>Area</h3>
-                <p>garaje</p>
-
-                <h3>Encargado</h3>
-                <p>Agatha Cordero</p>
-
-                <h3>Estado</h3>
-                <p>Atrasada</p>
-
-                <button type="button">Marcar como realizada</button>
-                <button type="button">Editar</button>
-                <button type="button">Eliminar</button>
-            </div>
-
-            <div class="card">
-                <h2>Limpiar cocina</h2>
-
-                <h3>Detalles adicionales</h3>
-                <p>tambien limpiar detras de la refri</p>
-
-                <h3>Area</h3>
-                <p>cocina</p>
-
-                <h3>Encargado</h3>
-                <p>Isaac Páez</p>
-
-                <h3>Estado</h3>
-                <p>Pendiente</p>
-
-                <button type="button">Marcar como realizada</button>
-                <button type="button">Editar</button>
-                <button type="button">Eliminar</button>
-            </div>
-
-            <div class="card">
-                <h2>Cortar cesped</h2>
-
-                <h3>Detalles adicionales</h3>
-                <p>la maquina de cortar sacate esta en el garaje</p>
-
-                <h3>Area</h3>
-                <p>jardin</p>
-
-                <h3>Encargado</h3>
-                <p>Jonas Nielsen</p>
-
-                <h3>Estado</h3>
-                <p>Realizada</p>
-
-                <button type="button">Marcar como realizada</button>
-                <button type="button">Editar</button>
-                <button type="button">Eliminar</button>
-            </div>
+        <div class="card-container" id="card-container">
 
             <div class="agregar-tarea-container">
                 <a class="agregar-tarea" href="formulario-tareas.html">
@@ -180,10 +120,14 @@
     </footer>
 
     <!-- scripts de terceros -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://kit.fontawesome.com/16599b263d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <!-- scripts propios -->
     <script src="js/btn-sos.js"></script>
+    <script src="js/servicio-tareas.js"></script>
+    <script src="js/listar-tareas.js"></script>
     <!-- <script src="js/cerrar-sesion.js"></script> -->
 </body>
 

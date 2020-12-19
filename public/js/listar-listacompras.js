@@ -1,6 +1,8 @@
 'use strict';
 
 const tabla = document.querySelector('#tbl-listascompras tbody');
+
+
 const mostrar_listascompras = async() => {
     let lista_listascompras = await listar_listascompras();
 

@@ -1,15 +1,13 @@
 'use strict';
 
-const tareasModel = require("../../api/models/tareas.model");
-
-const tabla = document.querySelector('#tbl-tareas tbody');
+const tabla_tarea = document.querySelector('#tbl-tareas tbody');
 const mostrar_tareas = async() => {
     let lista_tareas = await listar_tareas();
 
-    tabla.innerHTML = '';
+    tabla_tarea.innerHTML = '';
 
     lista_tareas.forEach(tarea => {
-        let fila = tabla.insertRow();
+        let fila = tabla_tarea.insertRow();
 
         fila.insertCell().innerHTML = tarea.nombre;
         fila.insertCell().innerHTML = tarea.encargado;
