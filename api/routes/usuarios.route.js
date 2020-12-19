@@ -69,6 +69,7 @@ router.get('/iniciar-sesion', (req, res) => {
         } else {
             if (usuario && usuario.contrasena == contrasena) {
                 res.json({
+                    id: usuario._id,
                     estado: usuario.estado,
                     tipo: usuario.tipo_usuario,
                     nombre: usuario.nombre,

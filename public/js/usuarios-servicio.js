@@ -55,12 +55,12 @@ const iniciar_sesion = async(correo, contrasena) => {
         });
         console.log(`${response.data.estado}`);
         if (response.data.estado == 'true') {
-            console.log(`${response.data.cambio_contrasena} servicio dentro del if`);
             Swal.fire({
                 'icon': 'success',
                 'title': 'Bienvenido',
                 'text': 'Ha iniciado sesión correctamente'
             }).then(() => {
+                localStorage.setItem('usuario_seleccionado', response.data.id);
                 sessionStorage.setItem('tipo_usuario', response.data.tipo);
                 sessionStorage.setItem('nombre_usuario', response.data.nombre);
                 if (sessionStorage.getItem('tipo_usuario') == 'regular') {
@@ -70,10 +70,8 @@ const iniciar_sesion = async(correo, contrasena) => {
                 } else if (sessionStorage.getItem('tipo_usuario') == 'administrador') {
                     window.location.href = 'dashboard-admin.html';
                 }
-
             });
         } else {
-            console.log(`${response.data.estado} -- ${response.data.cambio_contrasena}`);
             if (response.data.estado == 'sin contrasena') {
                 sessionStorage.setItem('correo_usuario', correo);
                 window.location.href = 'recuperacion-contrasenna.html';
@@ -187,6 +185,33 @@ const modificar_usuario = async(_id, nombre, apellido, correo, telefono, cedula,
     }).then((response) => {
         Swal.fire({
             'title': 'El usuario se modificó correctamente',
+            'icon': 'success',
+            'text': response.msj
+        }).then(() => {
+            mostrar_usuarios();
+        });
+    }).catch((response) => {
+        Swal.fire({
+            'title': response.msj,
+            'icon': 'error',
+            'text': response.err
+        })
+    });
+
+};
+
+const modificar_usuario_foto = async(_id, foto) => {
+    await axios({
+        method: 'put',
+        url: 'http://localhost:3000/api/modificar-usuario',
+        responseType: 'json',
+        data: {
+            _id: _id,
+            foto: foto
+        }
+    }).then((response) => {
+        Swal.fire({
+            'title': 'La foto del usuario se modificó correctamente',
             'icon': 'success',
             'text': response.msj
         }).then(() => {
