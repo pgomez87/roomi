@@ -24,8 +24,9 @@ const mostrar_compras = async() => {
         check.value = compra._id;
 
         div_compras.appendChild(div);
-        div.appendChild(check);
         div.appendChild(label);
+        div.appendChild(check);
+
 
 
     });
@@ -47,7 +48,6 @@ const obtener_datos = () => {
     });
 
     registrar_listacompras(nombre, encargado, compras_slc)
-    console.log(nombre, encargado, compras_slc)
 };
 
 

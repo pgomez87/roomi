@@ -8,9 +8,13 @@ let widgetCloudinary = cloudinary.createUploadWidget({
     uploadPreset: 'preset_3d'
 
 }, (err, result) => {
-    if (!err && result && result.event === 'success') {
+    if (!err && result && result.event == 'success') {
         console.log('Imagen subida con éxito', result.info);
         imagen.src = result.info.secure_url;
+        if (localStorage.getItem('usuario_seleccionado') != undefined) {
+            let id_user = localStorage.getItem('usuario_seleccionado');
+            modificar_usuario_foto(localStorage.getItem('usuario_seleccionado'), imagen.src);
+        }
     }
 });
 
