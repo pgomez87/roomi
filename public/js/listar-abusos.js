@@ -9,6 +9,7 @@ const mostrar_abusos = async() => {
     lista_abusos.forEach((abuso, usuario) => {
         let fila = tabla.insertRow();
         fila.insertCell().innerHTML = abuso.usuario_reportar;
+        fila.insertCell().innerHTML = usuario.id
         fila.insertCell().innerHTML = abuso.tipo_abuso;
         fila.insertCell().innerHTML = abuso.pruebas;
         fila.insertCell().innerHTML = abuso.comentario;
