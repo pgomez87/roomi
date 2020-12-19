@@ -7,7 +7,7 @@ const mostrar_abusos = async() => {
     let lista_abusos = await listar_abusos();
     tabla.innerHTML = '';
 
-    lista_abusos.forEach((abuso) => {
+    lista_abusos.forEach((abuso, usuario) => {
         let fila = tabla.insertRow();
         fila.insertCell().innerHTML = abuso.usuario_reportar;
         fila.insertCell().innerHTML = abuso.tipo_abuso;
@@ -16,6 +16,7 @@ const mostrar_abusos = async() => {
         let celda_estado = fila.insertCell();
         let celda_btn_estado = fila.insertCell();
         let boton_estado = document.createElement('button');
+        celda_btn_estado.appendChild(boton_estado);
 
         celda_estado.innerHTML = usuario.estado;
         boton_estado.type = 'button';
@@ -33,7 +34,7 @@ const mostrar_abusos = async() => {
         }
 
 
-        if (ejercicio.estado == false) {
+        if (usuario.estado == false) {
             boton_estado.innerText = 'Activar';
         } else {
             boton_estado.innerText = 'Desactivar';
@@ -41,7 +42,8 @@ const mostrar_abusos = async() => {
         boton_estado.addEventListener('click', () => {
             cambiar_estado(usuario._id, usuario.estado);
         });
-        celda_btn_estado.appendChild(boton_estado);
+
+
 
     });
 };

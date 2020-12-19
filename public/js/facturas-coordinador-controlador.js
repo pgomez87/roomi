@@ -87,6 +87,9 @@ const validar = () => {
         } else {
             campo.classList.remove('error-input');
         }
+
+
+
     });
 
     if (fechaConvertida >= fechaInput) {
@@ -103,12 +106,12 @@ const validar = () => {
 
 
 
-
-
     if (error == false) {
         obtenerDatos();
         limpiar();
     }
+
+
 }
 
 
