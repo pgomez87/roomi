@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 
 const schema_listacompras = new mongoose.Schema({
-    nombre: { type: String, required: true, unique: true },
+    nombre: { type: String, required: false, unique: true },
     encargado: { type: String, required: true, unique: false },
     estado: { type: String, required: true, unique: false },
     compras: [{

@@ -5,13 +5,15 @@ const Listacompras = require('../models/lista-compras.model');
 const router = express.Router();
 
 router.post('/registrar-listacompras', (req, res) => {
-    let listado_compras = JSON.stringify(req.body.compras_seleccionadas);
+    const listado_compras = JSON.parse(req.body.compras);
 
     let nueva_listacompras = new Listacompras({
-        nombre: req.body.cliente,
+        nombre: req.body.nombre,
         encargado: req.body.encargado,
-        estado: req.body.estado
+        estado: 'Activo'
     });
+
+
 
     listado_compras.forEach(compra => {
         nueva_listacompras.compras.push(compra);
@@ -30,6 +32,8 @@ router.post('/registrar-listacompras', (req, res) => {
             });
         }
     });
+
+
 });
 
 module.exports = router;
