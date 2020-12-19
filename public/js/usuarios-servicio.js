@@ -53,8 +53,8 @@ const iniciar_sesion = async(correo, contrasena) => {
             url: `http://localhost:3000/api/iniciar-sesion`,
             responseType: 'json'
         });
-        console.log(`${response.data_id} -- ${response.data.cambio_contrasena} -- ${correo} -- ${response.data.estado} -- servicio`);
-        if (response.data.estado == true) {
+        console.log(`${response.data.estado}`);
+        if (response.data.estado == 'true') {
             console.log(`${response.data.cambio_contrasena} servicio dentro del if`);
             Swal.fire({
                 'icon': 'success',
