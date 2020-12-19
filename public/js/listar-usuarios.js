@@ -15,6 +15,7 @@ const mostrar_usuarios = async() => {
             fila.insertCell().innerHTML = usuario.nombre;
             fila.insertCell().innerHTML = usuario.apellido;
             fila.insertCell().innerHTML = usuario._id;
+            fila.insertCell().innerHTML = usuario.correo;
 
             let celda_estado = fila.insertCell();
             let celda_btn_estado = fila.insertCell();
