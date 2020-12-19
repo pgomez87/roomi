@@ -52,11 +52,13 @@ section {
     display: inline-block;
 }
 
-.sct-compras {
+.compras {
     background-color: rgba(37, 35, 35, .8);
     width: 65%;
     padding-left: 2%;
     padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .sct-publicidad {
@@ -67,47 +69,48 @@ section {
 
 /*Tabla*/
 
-.tabla {
-    margin-top: 5%;
-    display: table;
-    width: 95%;
-    border-width: 1px;
-    border-color: #ffffff;
-    border-radius: 5px;
-    border-style: inset;
-    margin: 3%;
+table {
+    color: #fff;
+    margin-left: 20px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    margin-top: 15px;
+    margin-bottom: 35px;
 }
 
-.tabla-columnas {
-    display: table-row;
-    background-color: rgba(163, 169, 170, .8);
+td,
+th {
+    border: 1px solid #252323;
+    text-align: left;
+    padding: 8px;
 }
 
-.tabla-celdas {
-    border: 0.3px solid rgba(163, 169, 170, .8);
-    display: table-cell;
-    padding: 3px 10px;
+tr:nth-child(odd) {
+    background-color: #bbbbbf;
 }
 
-.tabla-cuerpo {
-    display: table-row-group;
+th {
+    background-color: #252323;
+    color: #52d1dc;
+    font-weight: bold;
 }
 
-#btn-guardar {
-    background-color: #52d1dc;
-    border-radius: 20px;
-    border: none;
-    color: #ffffff;
-    padding: 4px;
-    margin-left: 4%;
-    width: 100px;
-    margin-top: 10px;
-    font-size: larger;
-    cursor: pointer;
+.creacion-facturas {
+    margin-top: 50px;
 }
 
-
+td
 /*Form Productos*/
+
+select {
+    color: aqua;
+}
+
+main table {
+    color: #fff;
+    font-weight: lighter;
+}
 
 .form-compras {
     margin-top: 10%;
@@ -130,7 +133,6 @@ section {
 
 .form-compras div input {
     background-color: rgba(163, 169, 170, .65);
-    height: 4%;
     width: 50%;
     border-width: 1px;
     border-color: #ffffff;
@@ -138,6 +140,23 @@ section {
     border-style: inset;
     padding: 15px;
     color: #ffffff;
+}
+
+.form-compras div label {
+    color: #fff;
+    font-weight: lighter;
+}
+
+button {
+    background-color: #52d1dc;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    padding: 4px;
+    width: 120px;
+    margin-top: 10px;
+    font-size: medium;
+    cursor: pointer;
 }
 
 #btn-enviar {
@@ -148,7 +167,19 @@ section {
     padding: 4px;
     width: 100px;
     margin-top: 10px;
-    font-size: larger;
+    font-size: medium;
+    cursor: pointer;
+}
+
+#btn-listas-compras {
+    background-color: #52d1dc;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    padding: 4px;
+    width: 150px;
+    margin-top: 10px;
+    font-size: medium;
     cursor: pointer;
 }
 
@@ -162,6 +193,15 @@ section {
     transition-duration: 0.3s;
     -webkit-transition-property: transform;
     transition-property: transform;
+    background-color: #52d1dc;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    padding: 4px;
+    width: 100px;
+    margin-top: 10px;
+    font-size: large;
+    cursor: pointer;
 }
 
 .hvr-grow:hover,
@@ -173,6 +213,15 @@ section {
 
 .error-input {
     border: 2px solid #ee5253 !important;
+}
+
+.container-form {
+    display: inline-block;
+    width: 430px;
+}
+
+.asociar {
+    padding-top: 70px;
 }
 
 
@@ -187,6 +236,9 @@ section {
     height: 600px;
     margin-top: 25%;
 }
+
+
+/*Footer*/
 
 footer {
     margin-top: -3px;

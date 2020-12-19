@@ -49,61 +49,28 @@
                                 <i class="fas fa-search"></i>
                                 <input type="search">
                             </div>
+
+
+
                             <div class="texto">
-                                <table id="informacion-tareas">
-                                    <tr>
+                                <table id="tbl-tareas">
+                                    <thead>
                                         <th>Tarea</th>
-
+                                        <th>Encargado</th>
                                         <th>Estado</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Limpiar Garaje</td>
+                                    </thead>
+                                    <tbody>
 
-                                        <td>Atrasada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Limpiar Cocina</td>
-
-                                        <td>Pendiente</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cortar Césped</td>
-
-                                        <td>Realizada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Barrer</td>
-
-                                        <td>Realizada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cocinar</td>
-
-                                        <td>Pendiente</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Limpiar el baño</td>
-
-                                        <td>Atrasada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Botar la Basura</td>
-
-                                        <td>Atrasada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lavar la cochera</td>
-
-                                        <td>Atrasada</td>
-                                    </tr>
+                                    </tbody>
                                 </table>
                             </div>
                             <div class="botones">
-
-                                <a href="tareas-usuario.html"><button class="boton" type="button">Ver más</button></a>
+                                <a href="tareas-coordinador.html"><button class="boton" type="button" id="boton-ver-tareas">Ver más</button></a>
                             </div>
 
                         </div>
+
+
                         <div class="cajita">
                             <h2>Facturas</h2>
                             <div class="mini">
@@ -243,79 +210,23 @@
                                 <input type="search">
                             </div>
                             <div class="texto">
-                                <table id="informacion-compras">
-                                    <tr>
-                                        <th>Producto</th>
-
+                                <table id="tbl-listascompras">
+                                    <thead>
+                                        <th>Nombre</th>
+                                        <th>Encargado</th>
                                         <th>Estado</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Arroz</td>
+                                    </thead>
+                                    <tbody>
 
-                                        <td>Atrasada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Frijoles</td>
-
-                                        <td>Atrasada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Carne</td>
-
-                                        <td>Realizada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tomate</td>
-
-                                        <td>Realizada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Atún</td>
-
-                                        <td>Realizada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Manzanas</td>
-
-                                        <td>Realizada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pasta</td>
-
-                                        <td>Realizada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Vino</td>
-
-                                        <td>Realizada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cervezas</td>
-
-                                        <td>Realizada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pan integral</td>
-
-                                        <td>Realizada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Huevos</td>
-
-                                        <td>Realizada</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Leche</td>
-
-                                        <td>Realizada</td>
-                                    </tr>
+                                    </tbody>
                                 </table>
                             </div>
                             <div class="botones">
                                 <a href="compras-usuario.html"><button class="boton" type="button">Ver más</button></a>
                             </div>
-
                         </div>
+
+
                         <div class="cajita">
                             <h2>Noticias</h2>
                             <div class="mini">
@@ -412,7 +323,11 @@
     <script src="js/noticias-servicio.js"></script>
     <script src="js/facturas-servicio.js"></script>
     <script src="js/dashboard-usuario.js"></script>
-    <script src="js/cerrar-sesion.js"></script>
+    <script src="js/servicio-listacompras.js"></script>
+    <script src="js/listar-listacompras-dashboard.js"></script>
+    <script src="js/servicio-tareas.js"></script>
+    <script src="js/listar-tareas-dashboard.js"></script>
+    <script src="js/cerrar-sesio.js"></script>
 </body>
 
 </html>
