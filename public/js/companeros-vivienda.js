@@ -17,6 +17,8 @@ const conseguir_lista = async() => {
     
         let foto = document.createElement('img');
         foto.classList.add('foto-companero');
+
+        foto.src = usuario.foto;
     
         let nombre = document.createElement('h3');
         nombre.innerText = usuario.nombre;

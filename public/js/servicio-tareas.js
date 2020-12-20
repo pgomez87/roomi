@@ -44,3 +44,28 @@ const listar_tareas = async() => {
     });
     return listatareas;
 };
+
+const eliminar_tarea = async(_id) => {
+    await axios({
+        method: 'delete',
+        url: 'http://localhost:3000/api/eliminar-tarea',
+        responseType: 'json',
+        data: {
+            _id: _id
+        }
+    }).then((response) => {
+        Swal.fire({
+            'title': 'La tarea ha sido eliminada',
+            'icon': 'success',
+            'text': response.msj
+        }).then(() => {
+            location.reload();
+        });
+    }).catch((response) => {
+        Swal.fire({
+            'title': response.msj,
+            'icon': 'error',
+            'text': response.err
+        })
+    });
+};

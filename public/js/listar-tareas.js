@@ -6,7 +6,7 @@ const area = document.querySelector('#area');
 const encargado = document.querySelector('#encargado');
 const estado = document.querySelector('#estado');
 
-
+card_container.innerHTML = '';
 
 const mostrar_cards_tareas = async() => {
     let tareas = await listar_tareas();
@@ -31,6 +31,24 @@ const mostrar_cards_tareas = async() => {
         let div_estado = document.createElement('div');
         div_estado.innerHTML = `<h3>${"Estado"}</h3><p>${tarea.estado}</p>`
 
+        let div_botones = document.createElement('div');
+
+        let boton_eliminar = document.createElement('button');
+        boton_eliminar.type = 'button';
+        boton_eliminar.innerText = 'Eliminar';
+        boton_eliminar.addEventListener('click', () => {
+            Swal.fire({
+                icon: 'warning',
+                text: '¿Está seguro que desea eliminar esta lista de compras?',
+
+                confirmButtonText: 'Sí'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Servicio
+                    eliminar_tarea(tarea._id);
+                }
+            });
+        });
 
         card_container.appendChild(div_card);
         div_card.appendChild(div_nombre);
@@ -38,6 +56,8 @@ const mostrar_cards_tareas = async() => {
         div_card.appendChild(div_area);
         div_card.appendChild(div_encargado);
         div_card.appendChild(div_estado);
+        div_card.appendChild(div_botones);
+        div_botones.appendChild(boton_eliminar);
 
     });
 };
