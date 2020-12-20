@@ -1,25 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
+<!Doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/tareas.css">
-    <title>Tareas</title>
+    <link rel="stylesheet" href="css/compras-coordinador.css">
+    <title>Roomi - Lista de Compras</title>
+    <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/16599b263d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
     <header>
         <div class="container-header">
-
             <div class="logo-header">
                 <a href="landing-page.html"><img src="images/Logo_1500x600.png"></a>
             </div>
-
-
             <div class="nav-header">
                 <nav>
                     <a href="dashboard-coordinador.html">Inicio</a>
@@ -32,48 +29,31 @@
             </div>
         </div>
     </header>
-
     <main>
-        <div class="select-div">
-            <!-- <select>
-                    <option value="">Filtrar por estado</option>
-                    <option value="">Pendiente</option>
-                    <option value="">Realizada</option>
-                    <option value="">Atrasada</option>
-                </select> -->
-        </div>
 
-        <div class="card-container" id="card-container">
+        <div class="table-section">
+            <div class="compras">
+                <a href="compras-coordinador.html"><button type="button" class="hvr-grow" id="btn-listas-compras">Listas de Compras</button></a>
+                <h1>Lista de compra de <span id="nombre-listacompras"> </span></h1>
+                <table id="tbl-compras">
+                    <thead>
+                        <th>Compras</th>
 
-        </div>
+                    </thead>
+                    <tbody>
 
-
-
-        <div class="anuncio">
-            <img src="images/anuncio-mac-donalds.jpg">
-
-            <div class="sos-boton" id="myBtn">
-                <div class="sos-icon">
-                    <i class="fas fa-exclamation-circle"></i>
-                </div>
-                <p>SOS</p>
+                    </tbody>
+                </table>
             </div>
         </div>
-        <div id="myModal" class="modal">
 
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <div class="msj-sos">
-                    <p>¿Está seguro que desea comunicarse con su contacto de emergencia?</p>
-                </div>
-                <button class="si" type="button">Si</button>
-                <button class="cancelar" type="button">Cancelar</button>
-            </div>
 
-        </div>
 
+
+        <section class="sct-publicidad">
+
+        </section>
     </main>
-
     <footer>
         <div class="footer-final">
             <div class="foot-3D">
@@ -107,17 +87,16 @@
             <h2>Copyright: © 2020</h2>
         </div>
     </footer>
-
-    <!-- scripts de terceros -->
+    <!-- Scripts terceros -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
-    <script src="https://kit.fontawesome.com/16599b263d.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-    <!-- scripts propios -->
-    <script src="js/btn-sos.js"></script>
-    <script src="js/servicio-tareas.js"></script>
-    <script src="js/listar-tareas-usuarios.js"></script>
+    <!-- Scripts propios -->
+    <!-- <script src="js/servicio-listacompras.js"></script> -->
+    <script src="js/servicio-listacompras.js"></script>
+    <script src="js/perfil-listacompras.js"></script>
     <!-- <script src="js/cerrar-sesion.js"></script> -->
+
 </body>
 
 </html>
