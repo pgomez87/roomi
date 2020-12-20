@@ -4,6 +4,7 @@
     float: left;
     background-color: white;
     opacity: 0.9;
+    min-height: 74vh;
 }
 
 .info-viviendas h1 {
@@ -53,6 +54,7 @@ th {
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.95;
+    min-height: 74vh;
 }
 
 tr:hover {

@@ -22,88 +22,35 @@
 
             <div class="nav-header">
                 <nav>
-                    <a href="dashboard-usuario.html">Inicio</a>
-                    <a href="viviendas-disponibles-usuario.html">Viviendas</a>
-                    <a href="proveedores-servicios-usuarios.html">Proveedores</a>
-                    <a href="noticias-usuario.html">Noticias</a>
-                    <a href="companeros-usuario.html">Compañeros</a>
-                    <a href="perfil-usuario.html">Mi perfil</a>
+                    <a href="dashboard-coordinador.html">Inicio</a>
+                    <a href="viviendas-disponibles-coordinador.html">Viviendas</a>
+                    <a href="proveedores-servicios-coordinador.html">Proveedores</a>
+                    <a href="noticias-coordinador.html">Noticias</a>
+                    <a href="companeros-coordinador.html">Compañeros</a>
+                    <a href="perfil-coordinador.html">Mi perfil</a>
                 </nav>
             </div>
-
         </div>
     </header>
 
     <main>
         <div class="select-div">
-            <select>
+            <!-- <select>
                     <option value="">Filtrar por estado</option>
                     <option value="">Pendiente</option>
                     <option value="">Realizada</option>
                     <option value="">Atrasada</option>
-                </select>
+                </select> -->
         </div>
 
-        <div class="card-container">
-
-            <div class="card">
-                <h2>Limpiar garaje</h2>
-
-                <h3>Detalles adicionales</h3>
-                <p>recordar limpiar la mancha de aceite en el piso</p>
-
-                <h3>Area</h3>
-                <p>garaje</p>
-
-                <h3>Encargado</h3>
-                <p>Agatha Cordero</p>
-
-                <h3>Estado</h3>
-                <p>Atrasada</p>
-
-                <button type="button">Marcar como realizada</button>
-            </div>
-
-            <div class="card">
-                <h2>Limpiar cocina</h2>
-
-                <h3>Detalles adicionales</h3>
-                <p>tambien limpiar detras de la refri</p>
-
-                <h3>Area</h3>
-                <p>cocina</p>
-
-                <h3>Encargado</h3>
-                <p>Isaac Páez</p>
-
-                <h3>Estado</h3>
-                <p>Pendiente</p>
-
-                <button type="button">Marcar como realizada</button>
-            </div>
-
-            <div class="card">
-                <h2>Cortar cesped</h2>
-
-                <h3>Detalles adicionales</h3>
-                <p>la maquina de cortar sacate esta en el garaje</p>
-
-                <h3>Area</h3>
-                <p>jardin</p>
-
-                <h3>Encargado</h3>
-                <p>Jonas Nielsen</p>
-
-                <h3>Estado</h3>
-                <p>Realizada</p>
-
-                <button type="button">Marcar como realizada</button>
-            </div>
+        <div class="card-container" id="card-container">
 
         </div>
+
+
 
         <div class="anuncio">
-            <img src="images/anuncio-parrillada.jpg">
+            <img src="images/anuncio-mac-donalds.jpg">
 
             <div class="sos-boton" id="myBtn">
                 <div class="sos-icon">
@@ -162,10 +109,14 @@
     </footer>
 
     <!-- scripts de terceros -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://kit.fontawesome.com/16599b263d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <!-- scripts propios -->
     <script src="js/btn-sos.js"></script>
+    <script src="js/servicio-tareas.js"></script>
+    <script src="js/listar-tareas-usuarios.js"></script>
     <!-- <script src="js/cerrar-sesion.js"></script> -->
 </body>
 
