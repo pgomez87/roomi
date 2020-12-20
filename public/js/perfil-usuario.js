@@ -79,7 +79,7 @@ const mostrar_info = async() => {
     });
 };
 
-if (localStorage.getItem('usuario_seleccionado')) {
+if (localStorage.getItem('usuario_seleccionado') != undefined) {
     mostrar_info();
 } else {
     Swal.fire({
@@ -87,6 +87,6 @@ if (localStorage.getItem('usuario_seleccionado')) {
         text: 'Debe seleccionar un usuario primero, para ver la información',
         icon: 'warning'
     }).then(() => {
-        window.location.href = 'administrador-usuarios.html';
+        window.location.href = 'inicio-sesion.html';
     });
 }
